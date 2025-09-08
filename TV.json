@@ -324,7 +324,7 @@
 		 {
       "key": "苹果",
       "name": "🍎苹果┃不卡",
-      "jar": "./jar/fan.txt"	   
+      "jar": "./jar/fan.txt",	   
       "type": 3,
       "api": "csp_LiteAppleGuard",
       "searchable": 1,
@@ -334,7 +334,7 @@
     {
       "key": "糯米",
       "name": "🍓糯米┃秒播",
-	  "jar": "./jar/fan.txt"	
+	  "jar": "./jar/fan.txt",	
       "type": 3,
       "api": "csp_NmyswvGuard",
       "searchable": 1,
@@ -344,7 +344,7 @@
     {
       "key": "新6V",
       "name": "🧲新6V┃磁力",
-	   "jar": "./jar/fan.txt"
+	   "jar": "./jar/fan.txt",
       "type": 3,
       "api": "csp_SixVGuard",
       "searchable": 1,
@@ -355,7 +355,7 @@
        {
       "key": "文采",
       "name": "💮文采┃秒播",
-	   "jar": "./jar/fan.txt"	   
+	   "jar": "./jar/fan.txt",   
       "type": 3,
       "api": "csp_JpysGuard",
       "searchable": 1,
@@ -405,7 +405,7 @@
      {
       "key": "零度影视",
       "name": "零度｜影视",
-	   "jar": "./jar/fan.txt"
+	   "jar": "./jar/fan.txt",
       "type": 3,
       "api": "./lib/零度影视.py",
       "searchable": 1,
