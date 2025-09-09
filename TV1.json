@@ -49,18 +49,7 @@
       "quickSearch": 1,
       "filterable": 0
     },
-		        {
-            "key": "csp_Jianpian",
-            "name": "🥰荐片┃VOX",
-            "type": 3,
-            "api": "csp_Jianpian",
-            "searchable": 1,
-            "changeable": 1,
-            "ext": {
-                "filters": "./json/jianpian.json",
-                "sites": "https://ij1men.slsw6.com"
-            }
-        },
+		     
         {
             "key": "csp_GuanYing",
             "name": "😂观影┃4K",
@@ -236,6 +225,18 @@
                 "host": "https://muouapp.oss-cn-hangzhou.aliyuncs.com/MUOUAPP/godbbq.txt",
                 "name": "金牌影院（请断网再安装）",
                 "version": "4.2.0"
+            }
+        },
+		   {
+            "key": "csp_Jianpian",
+            "name": "🥰荐片┃VOX",
+            "type": 3,
+            "api": "csp_Jianpian",
+            "searchable": 1,
+            "changeable": 1,
+            "ext": {
+                "filters": "./json/jianpian.json",
+                "sites": "https://ij1men.slsw6.com"
             }
         },
         {
