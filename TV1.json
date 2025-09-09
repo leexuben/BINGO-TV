@@ -30,6 +30,17 @@
         }
     ],
     "sites": [
+		 {
+			 "key":"豆",
+			 "name":"【点此换节目】",
+			  "jar": "./jar/fan.txt",	
+			 "type":3,
+			 "api":"csp_DouDouGuard",
+			 "indexs":1,
+			 "searchable":0,
+			 "quickSearch":0,
+			 "changeable":0
+		 },
         {
             "key": "csp_Douban",
             "name": "🥰豆瓣┃VOX",
