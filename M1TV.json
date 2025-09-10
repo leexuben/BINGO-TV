@@ -44,6 +44,17 @@
       "quickSearch": 0,
       "filterable": 0
     },
+	 {
+      "key": "荐片",
+      "name": "⚔️荐片┃手机",
+	  "jar": "./jar/s9doPjDk.png",		 
+      "type": 3,
+      "api": "csp_JianpianGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    },  
     {
       "key": "贱贱",
       "name": "🐭荐片┃P2P",
