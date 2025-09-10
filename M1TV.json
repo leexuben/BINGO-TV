@@ -53,6 +53,17 @@
       "quickSearch": 1,
       "filterable": 0
     },
+	    {
+      "key": "加菲",
+      "name": "🐱加菲┃App",
+	   "jar": "./jar/fix250711.jar",	
+      "type": 3,
+      "api": "csp_JiaFeiGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    },
        {
       "key": "csp_xlys",
       "name": "修罗┃无搜索",
