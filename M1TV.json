@@ -64,6 +64,39 @@
       "filterable": 1,
       "timeout": 10
     },
+	   {
+      "key": "云云",
+      "name": "☁️云云┃App",
+	  "jar": "./jar/s9doPjDk.png",	
+      "type": 3,
+      "api": "csp_YunYunGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    }, 
+	  {
+      "key": "雄鹰",
+      "name": "🦅雄鹰┃App",
+	  "jar": "./jar/s9doPjDk.png",	  
+      "type": 3,
+      "api": "csp_XiongYingGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    },
+	{
+      "key": "咖啡",
+      "name": "🍫咖啡┃App",
+	 "jar": "./jar/s9doPjDk.png",		
+      "type": 3,
+      "api": "csp_KaFeiGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 10
+    },  
        {
       "key": "csp_xlys",
       "name": "修罗┃无搜索",
