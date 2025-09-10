@@ -229,8 +229,7 @@
             "searchable": 1,
             "changeable": 1,
             "ext": {
-                "cookie": "
-browser_verified=4945403f6163ef516f1beed4; BT_auth=c5efEGh_TRzEw-hRNoIMEGPydeN_0AZUZnjSM7KEmiuWimzUdgdnYhd3LOOEFcxkrbcK9jGDWsd2xzBVGde4u2_YGdBg5hE-GZKjW8VlZFpA9a6BXMFHV9Fo9cnW0eyDYNEIzHFBO5ZrfxA5tUDNH02z0XWIq45mxa5IYF-EJp7O0pUr0g; BT_cookietime=47e7H5pTdEoMGo-zTu8vW2rQVHEt9Qa8x5OOp5Sss2V8NSVAMpUn",
+                "cookie": "c5efEGh_TRzEw-hRNoIMEGPydeN_0AZUZnjSM7KEmiuWimzUdgdnYhd3LOOEFcxkrbcK9jGDWsd2xzBVGde4u2_YGdBg5hE-GZKjW8VlZFpA9a6BXMFHV9Fo9cnW0eyDYNEIzHFBO5ZrfxA5tUDNH02z0XWIq45mxa5IYF-EJp7O0pUr0g",
                 "filters": "./json/guanying.json",
                 "sites": "https://www.gyg.la,https://www.gyg.si,https://www.gying.net,https://www.gying.org,https://www.gying.si,https://www.gying.in"
             }
