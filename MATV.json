@@ -235,6 +235,7 @@
 		{
 			"key":"csp_xml_39",
 			"name":"🎭影趣影视🎭",
+			"jar": "./jar/星辰.jar"
 			"type":1,
 			"api":"https://www.yingqu1.com//api.php/provide/vod/",
 			"searchable":1,
