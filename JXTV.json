@@ -1,5 +1,13 @@
 {
    "lives": [
+	    {
+      "name": "live",
+      "type": 0,
+      "url": "https://www.huichunniao.cn/xh/lib/live.txt",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
         {
             "name": "Gather.电视直播",
             "type": 0,
