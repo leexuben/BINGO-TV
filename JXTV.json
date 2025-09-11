@@ -70,11 +70,11 @@
 	  "jar": "./jar/fty.jar",
 	  "playerType":1,
 	  "type": 3,
-	  "api": "https://raw.githubusercontent.com/leexuben/Liu-box/refs/heads/main/libs/tv/zb.min.js",
+	  "api": "./tv/zb.min.js",
 	  "searchable": 1,
 	  "quickSearch": 0,
 	  "filterable": 0,
-	  "ext": "https://raw.githubusercontent.com/leexuben/Liu-box/refs/heads/main/libs/tv/zb.json"
+	  "ext": "./tv/zb.json"
 	},
 	{
      "key": "csp_xlys",
