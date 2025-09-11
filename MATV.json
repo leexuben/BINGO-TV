@@ -48,6 +48,15 @@
       "filterable": 1
     },
     {
+      "key":"公众号",
+      "name":"🎥4K线路🎥",
+      "type":3,
+      "jar":"./jar/4K线路.jar",
+      "api":"csp_YDjisu",
+      "searchable":1,
+      "changeable":1
+    },
+    {
       "key": "csp_xlys",
       "name": "修罗┃无搜索",
       "type": 3,
@@ -203,6 +212,17 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0
+    },
+    {
+      "key":"人人影视",
+      "name":"🎬人人蓝光🎬",
+      "type":3,
+      "api":"csp_XBPQ",
+      "jar":"https://gitee.com/lwlxh/tvhome/raw/master/o.jar",
+      "searchable":1,
+      "quickSearch":1,
+      "filterable":1,
+      "ext":{"影片类型":"圥忈制作","简介":"请勿相信影片中的广告，以免上当受骗。+<div class=\"stui-pannel_bd\"&&</div>","分类url":"https://www.567dyy.com/list/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html","分类":"电影$1#电视剧$2#动漫$4#综艺$3#短剧$5"}
     },
     {
       "key": "ttys",
