@@ -1,15 +1,6 @@
 {
   "sites": [
     {
-      "key": "豆",
-      "name": "【点此换节目】",
-      "type": 3,
-      "api": "csp_DouDouGuard",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0
-    },
-    {
       "key": "csp_Douban",
       "name": "🥰豆瓣┃VOX",
       "type": 3,
@@ -18,6 +9,15 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": "./json/douban.json"
+    },
+    {
+      "key": "豆",
+      "name": "【点此换节目】",
+      "type": 3,
+      "api": "csp_DouDouGuard",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
     },
     {
       "key": "贱贱",
@@ -48,13 +48,13 @@
       "filterable": 1
     },
     {
-      "key":"公众号",
-      "name":"🎥4K线路🎥",
-      "type":3,
-      "jar":"./jar/4K线路.jar",
-      "api":"csp_YDjisu",
-      "searchable":1,
-      "changeable":1
+      "key": "公众号",
+      "name": "🎥4K线路🎥",
+      "type": 3,
+      "api": "csp_YDjisu",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
     },
     {
       "key": "csp_xlys",
@@ -214,69 +214,64 @@
       "filterable": 0
     },
     {
-      "key":"人人影视",
-      "name":"🎬人人蓝光🎬",
-      "type":3,
-      "api":"csp_XBPQ",
-      "jar":"./jar/人人蓝光.jar",
-      "searchable":1,
-      "quickSearch":1,
-      "filterable":1,
-      "ext":{"影片类型":"圥忈制作","简介":"请勿相信影片中的广告，以免上当受骗。+<div class=\"stui-pannel_bd\"&&</div>","分类url":"https://www.567dyy.com/list/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html","分类":"电影$1#电视剧$2#动漫$4#综艺$3#短剧$5"}
+      "key": "人人影视",
+      "name": "🎬人人蓝光🎬",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "[object Object]"
     },
     {
       "key": "ttys",
       "name": "🚀腾腾影视🚀",
-      "jar":"./jar/星辰.jar",
       "type": 3,
-      "api": "./js/dr.min.js",
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "./js/腾腾.js"
+      "ext": "http://150.158.112.123/jar/tx.js"
     },
     {
       "key": "mgys",
       "name": "🍎果果影视🍎",
-      "jar":"./jar/星辰.jar",
       "type": 3,
-      "api": "./js/dr.min.js",
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "./js/果果.js"
+      "ext": "http://150.158.112.123/jar/mg.js"
     },
     {
       "key": "qqys",
       "name": "✨奇奇影视✨",
-      "jar":"./jar/星辰.jar", 
       "type": 3,
-      "api": "./js/dr.min.js",
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "./js/aqy.js"
+      "ext": "http://150.158.112.123/jar/aqy.js"
     },
     {
       "key": "yyys",
       "name": "🌊悠悠影视🌊",
       "type": 3,
-      "api": "./js/drpy2.min.js",
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "./js/youku.js"
+      "ext": "http://150.158.112.123/jar/youku.js"
     },
     {
       "key": "hipy_js_腾云驾雾[官]",
       "name": "🐎腾腾4K🐎",
-      "jar":"./jar/星辰.jar",
       "type": 3,
-      "api": "./js/dr.min.js",
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./js/tx4k.js"
+      "ext": "http://150.158.112.123/jar/tx4k.js"
     },
     {
       "key": "csp_Jianpian",
