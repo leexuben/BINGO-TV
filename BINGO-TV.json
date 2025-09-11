@@ -227,6 +227,7 @@
     {
       "key": "ttys",
       "name": "🚀腾腾影视🚀",
+      "jar":"./jar/星辰.jar",
       "type": 3,
       "api": "./js/dr.min.js",
       "searchable": 1,
@@ -237,6 +238,7 @@
     {
       "key": "mgys",
       "name": "🍎果果影视🍎",
+      "jar":"./jar/星辰.jar",
       "type": 3,
       "api": "./js/dr.min.js",
       "searchable": 1,
@@ -247,6 +249,7 @@
     {
       "key": "qqys",
       "name": "✨奇奇影视✨",
+      "jar":"./jar/星辰.jar", 
       "type": 3,
       "api": "./js/dr.min.js",
       "searchable": 1,
@@ -267,6 +270,7 @@
     {
       "key": "hipy_js_腾云驾雾[官]",
       "name": "🐎腾腾4K🐎",
+      "jar":"./jar/星辰.jar",
       "type": 3,
       "api": "./js/dr.min.js",
       "searchable": 1,
