@@ -3,7 +3,7 @@
 	    {
       "name": "live",
       "type": 0,
-      "url": "https://www.huichunniao.cn/xh/lib/live.txt",
+      "url": "./tv.txt",
       "playerType": 1,
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png"
@@ -64,6 +64,18 @@
       "quickSearch": 1,
       "filterable": 0
     },
+	{
+	  "key": "直播转点播",
+	  "name": "📺︎┃电视┃点播",
+	  "jar": "./jar/fty.jar",
+	  "playerType":1,
+	  "type": 3,
+	  "api": "./tv/zb.min.js",
+	  "searchable": 1,
+	  "quickSearch": 0,
+	  "filterable": 0,
+	  "ext": "./tv/zb.json"
+	},
 	{
      "key": "csp_xlys",
       "name": "修罗┃无搜索",
