@@ -1,13 +1,13 @@
 {
    "lives": [
-	      {
-            "name": "直播",
-            "type": 0,
-            "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/iptv.txt",
-            "ua": "okhttp/3.15",
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://epg.112114.xyz/logo/{name}.png"
-        },
+	    {
+      "name": "live",
+      "type": 0,
+      "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/iptv.txt",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
         {
             "name": "Gather.电视直播",
             "type": 0,
@@ -64,6 +64,18 @@
       "quickSearch": 1,
       "filterable": 0
     },
+	{
+	  "key": "直播转点播",
+	  "name": "📺︎┃电视┃点播",
+	  "jar": "./jar/fty.jar",
+	  "playerType":1,
+	  "type": 3,
+	  "api": "./tv/zb.min.js",
+	  "searchable": 1,
+	  "quickSearch": 0,
+	  "filterable": 0,
+	  "ext": "./tv/zb.json"
+	},
 	{
      "key": "csp_xlys",
       "name": "修罗┃无搜索",
@@ -283,16 +295,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "[object Object]"
-    },
-	    {
-      "key": "南瓜",
-      "name": "🎃南瓜┃多线",
-	  "jar": "./jar/南瓜.txt",
-      "type": 3,
-      "api": "csp_NanGua",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
     },
     {
       "key": "ttys",
