@@ -785,6 +785,13 @@
       "quickSearch": 1,
       "filterable": 0
     },
+	{
+            "key": "Dygang",
+            "name": "电影港[边下边播]",
+	   	    "jar": "./jar/yingshi.jar",	
+            "type": 3,
+            "api": "csp_Dygang"
+        },  
     {
       "key": "360资源",
       "name": "360资源-采集",
