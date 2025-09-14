@@ -1,3 +1,102 @@
+香港,#genre#
+凤凰中文音频,http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
+凤凰资讯音频,http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
+凤凰中文,https://xukzhao.dpdns.org/tv/php/hk.php?id=zw
+凤凰中文,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzw
+凤凰中文,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/hk.php?id=zw
+凤凰中文,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/fh.php?id=1
+凤凰中文,http://php.jdshipin.com/TVOD/iptv.php?id=fhzw
+凤凰中文,http://php.jdshipin.com/TVOD/iptv.php?id=fhzw2
+凤凰中文,http://162.62.120.19/qctv.fengshows.cn/live/0701pcc72.flv
+
+
+凤凰资讯,https://xukzhao.dpdns.org/tv/php/hk.php?id=zx
+凤凰资讯,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/hk.php?id=zx
+凤凰资讯,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/fh.php?id=2
+凤凰资讯,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzx
+凤凰资讯,http://php.jdshipin.com/TVOD/iptv.php?id=fhzx
+凤凰资讯,http://162.62.120.19/qctv.fengshows.cn/live/0701pin72.flv
+凤凰资讯,https://cdn3.163189.xyz/live/fhzx/stream.m3u8
+
+凤凰香港,https://xukzhao.dpdns.org/tv/php/hk.php?id=hk
+凤凰香港,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/hk.php?id=hk
+凤凰香港,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/fh.php?id=3
+凤凰香港,http://162.62.120.19/qctv.fengshows.cn/live/0701phk72.flv
+
+
+翡翠台,http://api.mytv666.top/api/hk.php?id=6133373062306330636436323766386638333930633734343164306361626637267469643d74762669643d3234
+翡翠台,https://live.tvfix.org/live/jade/index.m3u8
+翡翠台,https://smt.520761.xyz/Smart.php?id=jade_twn
+翡翠台,https://live.cdn.com.mp/live/fct/stream.m3u8
+翡翠台,https://cdn3.163189.xyz/live/fct/stream.m3u8
+翡翠台,http://php.jdshipin.com/smt.php?id=jade_twn
+翡翠台,http://php.jdshipin.com/TVOD/iptv.php?id=fct2
+翡翠台,http://php.jdshipin.com/TVOD/iptv.php?id=fct3
+翡翠台,http://php.jdshipin.com/TVOD/iptv.php?id=fct4
+
+无线新闻,http://api.mytv666.top/api/hk.php?id=3437643561316430306564303532666566613235653961373961303464386662267469643d74762669643d3235
+无线新闻,http://push-rtmp-hs-spe-f5.douyincdn.com/live/awei_wxxw.flv
+无线新闻,https://live.tvfix.org/live/inews/index.m3u8
+无线新闻,http://php.jdshipin.com:8880/smt.php?id=inews_twn
+无线新闻,http://php.jdshipin.com/TVOD/iptv.php?id=tvbxw
+无线新闻,http://php.jdshipin.com/TVOD/iptv.php?id=wxxwt
+无线新闻,http://aktv-stream.m16tv.cfd/stream/aktv2/null-1/AKTV.m3u8
+
+有线新闻,http://api.mytv666.top/api/hk.php?id=3432323435666131343964353936633530396335663430623762353532623439267469643d74762669643d3239
+
+无线星河,http://php.jdshipin.com:8880/PLTV/iptv.php?id=xinghe
+无线星河,http://php.jdshipin.com:8880/smt.php?id=Xinhe
+无线星河,http://ali.hlspull.yximgs.com/live/hp2keozt_akllkuyterwgebfns.flv
+无线星河,http://ali.hlspull.yximgs.com/live/hp2keozt_wertyyuhjgfdscxvc.flv
+
+
+J2,http://php.jdshipin.com:8880/PLTV/iptv.php?id=j2
+J2,http://php.jdshipin.com:8880/TVOD/iptv.php?id=j2
+
+香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
+香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq.flv
+
+香港面包,https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
+星光视界,http://ali.hlspull.yximgs.com/live/zxcvbnm9852.flv
+
+
+央视/卫视,#genre#
+
+
+
+广西,#genre#
+广东,#genre#
+
+广东珠江,https://tv.cdn.com.mp/live/gdzj/stream.m3u8
+广东珠江,http://php.jdshipin.com/TVOD/iptv.php?id=gdzj
+广东珠江,https://stream1.freetv.fun/yan-dong-zhu-jiang-5.ctv
+广东珠江,https://stream1.freetv.fun/yan-dong-zhu-jiang-12.ctv
+广东珠江,http://cdn2.163189.xyz/live/gdzj/stream.m3u8
+
+
+广州综合,https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=e8a54fced9025a5af7cec5c05d5dc530&txTime=19072465600
+广州综合,https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=f0147ae6453a80f5989f382368b72aad&txTime=18d00acf487
+广州综合,http://php.jdshipin.com:8880/gztv.php?id=zhonghe
+广州影视,https://tencentplay.gztv.com/live/yingshi.m3u8?txSecret=da4e7946ce44b3e1150e257961439a77&txTime=19071ed9221
+广州影视,https://tencentplay.gztv.com/live/yingshi.m3u8?txSecret=7e9bddad7c8911626ed1d2c09fc605d9&txTime=18d00acf487
+广州影视,http://php.jdshipin.com:8880/gztv.php?id=yingshi
+广州新闻,https://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=dd1b312cc1b5cbe9fad85bf5ddce4b10&txTime=190723b940c
+广州新闻,https://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=6f73647cae387d01a3c2132074132a83&txTime=18d00acf487
+广州新闻,http://php.jdshipin.com:8880/gztv.php?id=xinwen
+广州法治,https://tencentplay.gztv.com/live/fazhi.m3u8?txSecret=31e9eb294789e59e351fc1f0ab3178bc&txTime=18d00acf487
+广州法治,http://php.jdshipin.com:8880/gztv.php?id=fazhi
+南国都市,https://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=c82f82d7a6beda92b2b1ce93753dcacb&txTime=18e4a381d46
+南国都市,https://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=627498b93bc6f5d6e2460d0823bf81a3&txTime=18e6df74fc2
+南国都市,http://php.jdshipin.com:8880/gztv.php?id=shenghuo
+
+东莞生活资讯,https://stream.sun0769.com/dgrtv1/mp4tv2_1500/index.m3u8
+东莞生活资讯,https://xukzhao.dpdns.org/tv/php/dg.php?id=5
+东莞生活资讯,http://php.jdshipin.com:8880/0769.php?id=shzx
+东莞生活资讯,https://zmeoicom.eu-central-1.clawcloudrun.com/tv/dg.php?id=5
+
+东莞新闻综合,https://stream.sun0769.com/dgrtv1/mp4tv1_1500/index.m3u8
+东莞新闻综合,https://xukzhao.dpdns.org/tv/php/dg.php
+东莞新闻综合,http://php.jdshipin.com:8880/0769.php?id=xwzh
 🏛经典剧场,#genre#
 笑傲江湖,http://lu.wqwqwq.sbs/yy/1354930909
 笑傲江湖,https://live.iill.top/huya/23865142
