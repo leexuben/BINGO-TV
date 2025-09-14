@@ -202,6 +202,26 @@
             "playerType": 2,
             "ext": "http://124.222.30.115/mb/api.php/provide/vod/|okhttp/4.9.1|qiaoji"
         },  
+	  {
+            "key": "360_spider",
+            "name": "360┃解析",
+		   "jar": "./jar/yingshi.jar",
+            "api": "csp_SP360",
+            "type": 3,
+            "filterable": 1,
+            "quickSearch": 1,
+            "searchable": 1,
+            "playerType": 2,
+            "ext": ""
+        },
+	   {
+      "key": "畅梦",
+      "name": "畅梦┃秒播",
+	  "jar": "./jar/yingshi.jar",   
+      "type": 3,
+      "api": "./js/cm.js",
+      "ext": "./js/changmeng.js"
+    },
     {
       "key": "百度",
       "name": "百度┃采集",
