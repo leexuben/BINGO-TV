@@ -3,7 +3,7 @@
 	    {
       "name": "live",
       "type": 0,
-      "url": "./zb.txt",
+      "url": "https://raw.kkgithub.com/leexuben/BINGO-TV/main/tv/iptv.txt",
       "playerType": 1,
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png"
