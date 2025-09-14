@@ -40,9 +40,6 @@ J2,http://php.jdshipin.com:8880/TVOD/iptv.php?id=j2
 东莞新闻综合,http://php.jdshipin.com:8880/0769.php?id=xwzh
 东莞新闻综合,https://xukzhao.dpdns.org/tv/php/dg.php
 
-🇨🇳河南地方,#genre#
-国学频道,rtmp://rtmp.tv.stream3.hndt.com/tv/647f9277018410008cf925e200000000?wsSecret=9a23316ee66e918684e097f&wsSecret=4d6dcd56a3b22579d38828a5162cecc8&wsTime=1757653214
-
 🇨🇳IPV4线路,#genre#
 CCTV1,https://migu.188766.xyz/?migutoken=6d5869efdc2bc8bef3b887e9ebd5bc5d&id=CCTV1&type=yy
 CCTV1,http://218.17.33.178:53290/tsfile/live/1001_1.m3u8?key=txiptv
