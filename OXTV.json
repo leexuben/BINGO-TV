@@ -88,6 +88,53 @@
       "quickSearch": 1,
       "changeable": 1
     },  
+	 {
+      "key": "Lib",
+      "name": "🌟立播┃秒播",
+	  "jar": "./jar/南瓜.txt",		 
+      "type": 3,
+      "api": "csp_Libvio",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": {
+        "quarkCookie": "tvfan/cookie.txt",
+        "from": "4k|auto|fhd"
+      }
+    }, 
+	 {
+      "key": "原创",
+      "name": "☀原创┃不卡",
+	  "jar": "./jar/南瓜.txt",		 
+      "type": 3,
+      "api": "csp_YCyz",
+      "timeout": 15,
+      "playerType": 1,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },  
+	{
+      "key": "低端",
+      "name": "⏮️低端┃外剧",
+	  "jar": "./jar/南瓜.txt",	
+      "type": 3,
+      "api": "csp_Ddrk",
+      "playerType": "2",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },  
+	{
+      "key": "比特",
+      "name": "🍄比特┃秒播",
+	  "jar": "./jar/南瓜.txt",		
+      "type": 3,
+      "api": "csp_Bttwoo",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },  
 	{
      "key": "csp_xlys",
       "name": "修罗┃无搜索",
@@ -616,6 +663,20 @@
       "filterable": 0,
       "ext": "[object Object]"
     },
+	 {
+      "key": "Aid",
+      "name": "🚑急救┃教学",
+	  "jar": "./jar/南瓜.txt",		 
+      "type": 3,
+      "api": "csp_FirstAid",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 3.8
+      }
+    },  
     {
       "key": "csp_ShuaiJiao",
       "name": "🤺摔跤┃体育",
