@@ -344,17 +344,18 @@
       "quickSearch": 1,
       "filterable": 0
     },
-    {
-      "key": "人人影视",
-      "name": "🎬人人蓝光🎬",
-	  "jar": "./jar/人人蓝光.jar",  	
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "[object Object]"
-    },
+ {
+            "key": "南瓜",
+            "name": "南瓜┃App",
+	        "jar": "./jar/yingshi.jar",	
+            "type": 3,
+            "api": "csp_NanGua",
+            "searchable": 1,
+            "quickSearch": 1,
+            "playerType": 2,
+            "filterable": 1,
+            "ext": ""
+        },
     {
       "key": "ttys",
       "name": "🚀腾腾影视🚀",
