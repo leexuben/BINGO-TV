@@ -225,6 +225,16 @@
       "quickSearch": 1,
       "filterable": 0
     },
+	   {
+      "key": "南瓜",
+      "name": "🎃南瓜┃多线",
+	  "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1733932725378/fan.txt;md5;f98827d83bb8ca104b0b1ead61a98c5b",  	   
+      "type": 3,
+      "api": "csp_NanGua",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
      {
             "key": "金牌影院",
             "name": "🥇金牌┃APP",
