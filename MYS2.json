@@ -54,6 +54,38 @@
       "filterable": 0,
       "ext": "./json/douban.json"
     },
+	{
+      "key": "tenteng",
+      "name": "♨️腾腾┃4K",
+      "type": 3,
+      "api": "./js/ljlfct01.js",
+      "ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/%E8%85%BE%E4%BA%914k.js"
+    },
+
+
+ {
+      "key": "mangmang",
+      "name": "♨️芒芒┃4K",
+      "type": 3,
+      "api": "./js/ljlfct01.js",
+      "ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/%E8%8A%92%E6%9E%9C4k.js"
+    },  
+	 {
+      "key": "飞翼",
+      "name": "♨️飞翼┃4k",
+      "type": 1,
+      "api": "http://7.qqqtv.top/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "推荐",
+        "电影",
+        "电视剧",
+        "综艺",
+        "动漫"
+      ]
+    },  
     {
       "key": "贱贱",
       "name": "🐭荐片┃P2P",
