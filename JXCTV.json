@@ -76,6 +76,18 @@
 	  "filterable": 0,
 	  "ext": "./tv/zb.json"
 	},
+	    {
+      "key": "南瓜",
+      "name": "🎃南瓜┃多线",
+	  "jar": "./jar/南瓜.txt",		
+      "type": 3,
+      "api": "csp_NanGua",
+      "timeout": 15,
+      "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },  
 	{
      "key": "csp_xlys",
       "name": "修罗┃无搜索",
