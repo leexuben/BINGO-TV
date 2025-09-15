@@ -102,7 +102,7 @@
     {
       "key": "黑狐",
       "name": "黑狐┃影视",
-	   "jar": "./jar/黑狐.jar",  	
+	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "searchable": 1,
       "quickSearch": 1,
@@ -145,7 +145,7 @@
 	{
       "key": "人人影视",
       "name": "人人┃影视",
-	  "jar": "./jar/黑狐.jar",  
+	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -161,7 +161,7 @@
     {
       "key": "kimivod",
       "name": "柯觅┃影视",
-	 "jar": "./jar/黑狐.jar",  	
+	  "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -184,7 +184,7 @@
     {
       "key": "星辰xBPQ",
       "name": "星辰┃影视",
-		"jar": "./jar/黑狐.jar",  	
+	 "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f", 	
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -202,7 +202,7 @@
 	{
       "key": "骚火影视",
       "name": "骚火┃影视",
-	   "jar": "./jar/黑狐.jar",  
+	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "api": "csp_SaoHuo",
       "searchable": 1,
