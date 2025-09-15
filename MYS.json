@@ -141,7 +141,74 @@
         "分类": "电影$1#电视剧$2#动漫$3#综艺$4",
         "分类url": "http://fagmn.com/list/{cateId}_{catePg}.html?order=time"
       }
-    },	  
+    },
+	{
+      "key": "人人影视",
+      "name": "人人┃影视",
+	  "jar": "./jar/黑狐.jar",  
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "影片类型": "玉玉软件库",
+        "简介": "请勿相信影片中的广告，以免上当受骗。+<div class=\"stui-pannel_bd\"&&</div>",
+        "分类url": "https://www.567dyy.com/list/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html",
+        "分类": "电影$1#电视剧$2#动漫$4#综艺$3#短剧$5"
+      }
+    },
+    {
+      "key": "kimivod",
+      "name": "柯觅┃影视",
+	 "jar": "./jar/黑狐.jar",  	
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "图片": "data-src=\"&&\"",
+        "副标题": "<div class=\"absolute right bottom small-margin small-round black white-text small-text\">&nbsp;&&&nbsp;",
+        "影片地区": "玉玉软件库",
+        "影片类型": "<nav class=\"scroll no-margin\"&&</nav>",
+        "导演": "導演:&&</a>",
+        "主演": "主演:&&</p>",
+        "简介": "请勿相信影片中的广告，以免上当受骗。+<p style=\"position: relative; display: inline-block;\"&&</div>",
+        "线路数组": "<a data-ui=\"&&</div>",
+        "线路标题": ">&&</span>",
+        "分类url": "https://kimivod.com/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html",
+        "分类": "电影$2#电视剧$1#动漫$3#综艺$4#短剧$39"
+      }
+    },
+    {
+      "key": "星辰xBPQ",
+      "name": "星辰┃影视",
+		"jar": "./jar/黑狐.jar",  	
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "分类url": "https://citytv.cc/tv/dianying/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}",
+        "分类": "电视剧$dianshiju#电影$dianying#动漫$dongman#综艺$zongyi#短剧$duanju",
+        "简介": "玉玉软件库友情提醒🔺勿信广告，避免受骗🔺+class=\"detail-sketch\">&&</span>",
+        "线路数组": "#playlist&&</li>",
+        "线路标题": "玉玉软件库💠+>&&</a>[排序:神马云播>阿里云播>]",
+        "播放标题": ">&&<[不包含:1080P]"
+      }
+    },  
+	{
+      "key": "骚火影视",
+      "name": "骚火┃影视",
+	   "jar": "./jar/黑狐.jar",  
+      "type": 3,
+      "api": "csp_SaoHuo",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },  
 	{
 	  "key": "直播转点播",
 	  "name": "📺︎┃电视┃点播",
