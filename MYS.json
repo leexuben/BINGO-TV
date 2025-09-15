@@ -57,6 +57,7 @@
 	{
       "key": "tenteng",
       "name": "♨️腾腾┃4K",
+      "jar": "./jar/ljlfct01.jar",  	
       "type": 3,
       "api": "./js/ljlfct01.js",
       "ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/%E8%85%BE%E4%BA%914k.js"
@@ -66,6 +67,7 @@
  {
       "key": "mangmang",
       "name": "♨️芒芒┃4K",
+	 "jar": "./jar/ljlfct01.jar",  
       "type": 3,
       "api": "./js/ljlfct01.js",
       "ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/%E8%8A%92%E6%9E%9C4k.js"
@@ -73,6 +75,7 @@
 	 {
       "key": "飞翼",
       "name": "♨️飞翼┃4k",
+	"jar": "./jar/ljlfct01.jar",  	 
       "type": 1,
       "api": "http://7.qqqtv.top/api.php/provide/vod/",
       "searchable": 1,
