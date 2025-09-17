@@ -72,23 +72,57 @@
       "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
       "ext": "https://ghfast.top/https://raw.githubusercontent.com/ljlfct01/ljlfct01.github.io/refs/heads/main/%E8%8A%92%E6%9E%9C4k.js"
     },  
-	 {
-      "key": "飞翼",
-      "name": "♨️飞翼┃4k",
-	"jar": "./jar/ljlfct01.jar",  	 
-      "type": 1,
-      "api": "http://7.qqqtv.top/api.php/provide/vod/",
+	    {
+      "key": "ttys",
+      "name": "🚀腾腾影视🚀",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/tx.js"
+    },
+    {
+      "key": "mgys",
+      "name": "🍎果果影视🍎",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/mg.js"
+    },
+    {
+      "key": "qqys",
+      "name": "✨奇奇影视✨",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/aqy.js"
+    },
+    {
+      "key": "yyys",
+      "name": "🌊悠悠影视🌊",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/youku.js"
+    },
+    {
+      "key": "hipy_js_腾云驾雾[官]",
+      "name": "🐎腾腾4K🐎",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "推荐",
-        "电影",
-        "电视剧",
-        "综艺",
-        "动漫"
-      ]
-    },  
+      "ext": "http://150.158.112.123/jar/tx4k.js"
+    },
+	
     {
       "key": "贱贱",
       "name": "🐭荐片┃P2P",
@@ -102,7 +136,7 @@
     {
       "key": "黑狐",
       "name": "黑狐┃影视",
-	   "jar": "./jar/黑狐.jar",  	
+	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "searchable": 1,
       "quickSearch": 1,
@@ -142,10 +176,44 @@
         "分类url": "http://fagmn.com/list/{cateId}_{catePg}.html?order=time"
       }
     },
+	 {
+            "key": "Aries不承担任何风险-飘花影院",
+            "name": "🌺飘花┃影院",
+            "type": 3,
+            "api": "csp_XBPQ",
+             "jar": "./jar/厂长PY.jar",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "请求头": "User-Agent$MOBILE_UA",
+                "编码": "UTF-8",
+                "主页": "https://www.7itv.com/",
+                "二次截取": "class=\"module-main module-page\"&&id=\"page\"",
+                "简介": "<p>&&</p>",
+                "数组": "/voddetail/&&</a>",
+                "链接": "/voddetail/+&&\"",
+                "标题": "title=\"&&\"",
+                "图片": "data-original=\"&&\"",
+                "副标题": "note\">&&<",
+                "线路数组": "class=\"module-tab-item tab-item\"&&</div>",
+                "线路标题": ">&&</span>",
+                "播放数组": "class=\"module-play-list-content&&</div>",
+                "倒序": "0",
+                "播放列表": "<a&&/a>",
+                "播放标题": ">&&</span>",
+                "播放链接": "href=\"&&\"",
+                "跳转播放链接": "urlDecode(Base64(var player_*url\":\"&&\"))",
+                "分类url": "https://www.7itv.com/vodshow/{cateId}--{by}---{letter}---{catePg}---{year}.html",
+                "分类": "电影$1#电视剧$2#综艺$3#动漫$4",
+                "筛选": "1",
+                "类型": "动作片$6#喜剧片$7#爱情片$8#科幻片$9#恐怖片$10#剧情片$11#战争片$12#其他片$22#纪录片$21||国产剧$13#港台剧$14#日韩剧$15#欧美剧$16#其它剧$20||空||空"
+            }
+        },
 	{
       "key": "人人影视",
       "name": "人人┃影视",
-	  "jar": "./jar/黑狐.jar",  
+	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -161,7 +229,7 @@
     {
       "key": "kimivod",
       "name": "柯觅┃影视",
-	 "jar": "./jar/黑狐.jar",  	
+	  "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -184,7 +252,7 @@
     {
       "key": "星辰xBPQ",
       "name": "星辰┃影视",
-		"jar": "./jar/黑狐.jar",  	
+	 "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f", 	
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -202,37 +270,14 @@
 	{
       "key": "骚火影视",
       "name": "骚火┃影视",
-	   "jar": "./jar/黑狐.jar",  
+	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
       "type": 3,
       "api": "csp_SaoHuo",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },  
-	{
-	  "key": "直播转点播",
-	  "name": "📺︎┃电视┃点播",
-	  "jar": "./jar/fty.jar",
-	  "playerType":1,
-	  "type": 3,
-	  "api": "./tv/zb.min.js",
-	  "searchable": 1,
-	  "quickSearch": 0,
-	  "filterable": 0,
-	  "ext": "./tv/zb.json"
-	},
-	    {
-      "key": "南瓜",
-      "name": "🎃南瓜┃多线",
-	  "jar": "./jar/南瓜.txt",		
-      "type": 3,
-      "api": "csp_NanGua",
-      "timeout": 15,
-      "playerType": 2,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },  
+
 	 {
       "key": "Lib",
       "name": "🌟立播┃秒播",
@@ -380,6 +425,23 @@
             "playerType": 2,
             "ext": ""
         },
+		 {
+      "key": "飞翼",
+      "name": "♨️飞翼┃4k",
+	"jar": "./jar/ljlfct01.jar",  	 
+      "type": 1,
+      "api": "http://7.qqqtv.top/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "推荐",
+        "电影",
+        "电视剧",
+        "综艺",
+        "动漫"
+      ]
+    },  
 	   {
       "key": "畅梦",
       "name": "畅梦┃秒播",
@@ -1494,40 +1556,6 @@
             }
         },
 	   {
-            "key": "Aries不承担任何风险-飘花影院",
-            "name": "🌺飘花┃影院",
-            "type": 3,
-            "api": "csp_XBPQ",
-             "jar": "./jar/厂长PY.jar",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "请求头": "User-Agent$MOBILE_UA",
-                "编码": "UTF-8",
-                "主页": "https://www.7itv.com/",
-                "二次截取": "class=\"module-main module-page\"&&id=\"page\"",
-                "简介": "<p>&&</p>",
-                "数组": "/voddetail/&&</a>",
-                "链接": "/voddetail/+&&\"",
-                "标题": "title=\"&&\"",
-                "图片": "data-original=\"&&\"",
-                "副标题": "note\">&&<",
-                "线路数组": "class=\"module-tab-item tab-item\"&&</div>",
-                "线路标题": ">&&</span>",
-                "播放数组": "class=\"module-play-list-content&&</div>",
-                "倒序": "0",
-                "播放列表": "<a&&/a>",
-                "播放标题": ">&&</span>",
-                "播放链接": "href=\"&&\"",
-                "跳转播放链接": "urlDecode(Base64(var player_*url\":\"&&\"))",
-                "分类url": "https://www.7itv.com/vodshow/{cateId}--{by}---{letter}---{catePg}---{year}.html",
-                "分类": "电影$1#电视剧$2#综艺$3#动漫$4",
-                "筛选": "1",
-                "类型": "动作片$6#喜剧片$7#爱情片$8#科幻片$9#恐怖片$10#剧情片$11#战争片$12#其他片$22#纪录片$21||国产剧$13#港台剧$14#日韩剧$15#欧美剧$16#其它剧$20||空||空"
-            }
-        },
-	   {
             "key": "✨xmxone影视✨",
             "name": "✨xmxone影视✨",
             "type": 3,
@@ -1711,56 +1739,6 @@
             "filterable": 1,
             "ext": ""
         },
-    {
-      "key": "ttys",
-      "name": "🚀腾腾影视🚀",
-      "type": 3,
-      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "http://150.158.112.123/jar/tx.js"
-    },
-    {
-      "key": "mgys",
-      "name": "🍎果果影视🍎",
-      "type": 3,
-      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "http://150.158.112.123/jar/mg.js"
-    },
-    {
-      "key": "qqys",
-      "name": "✨奇奇影视✨",
-      "type": 3,
-      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "http://150.158.112.123/jar/aqy.js"
-    },
-    {
-      "key": "yyys",
-      "name": "🌊悠悠影视🌊",
-      "type": 3,
-      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "http://150.158.112.123/jar/youku.js"
-    },
-    {
-      "key": "hipy_js_腾云驾雾[官]",
-      "name": "🐎腾腾4K🐎",
-      "type": 3,
-      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "http://150.158.112.123/jar/tx4k.js"
-    },
     {
       "key": "厂长资源",
       "name": "🙀厂长┃资源",
