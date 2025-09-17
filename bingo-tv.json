@@ -349,7 +349,6 @@
     {
       "key": "公众号",
       "name": "🎥4K线路🎥",
-	  "jar": "./jar/4K线路.jar",
       "type": 3,
       "api": "csp_YDjisu",
       "searchable": 1,
@@ -2129,5 +2128,5 @@
     "s3t3d2y8.afcdn.net"
   ],
   "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
-  "spider": "./jar/vox.jar"
+  "spider": "./jar/bingo.jar"
 }
