@@ -1,43 +1,9 @@
 {
-   "lives": [
-	    {
-      "name": "live",
-      "type": 0,
-      "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/ZBTV.txt",
-      "playerType": 1,
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://epg.112114.xyz/logo/{name}.png"
-    },
-        {
-            "name": "Gather.电视直播",
-            "type": 0,
-            "url": "https://tv-1.iill.top/m3u/Gather",
-            "ua": "okhttp/3.15",
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://epg.112114.xyz/logo/{name}.png"
-        },
-        {
-            "name": "Gather.体育直播",
-            "type": 0,
-            "url": "https://tv-1.iill.top/m3u/Sport",
-            "ua": "okhttp/3.15",
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://epg.112114.xyz/logo/{name}.png"
-        },
-        {
-            "name": "Gather.网络直播",
-            "type": 0,
-            "url": "https://tv-1.iill.top/m3u/Live",
-            "ua": "okhttp/3.15",
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://epg.112114.xyz/logo/{name}.png"
-        }
-    ],
   "sites": [
-        {
+    {
       "key": "豆",
       "name": "【点此换节目】",
-      "jar": "./jar/fan.txt",     
+	  "jar": "./jar/fan.txt", 	
       "type": 3,
       "api": "csp_DouDouGuard",
       "searchable": 0,
@@ -54,25 +20,29 @@
       "filterable": 0,
       "ext": "./json/douban.json"
     },
-	 {
+    {
       "key": "tenteng",
       "name": "♨️腾腾┃4K",
-	   "jar": "./jar/ljlfct01.jar",   
+	  "jar": "./jar/ljlfct01.jar",  	
       "type": 3,
       "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
       "ext": "https://ghfast.top/https://raw.githubusercontent.com/ljlfct01/ljlfct01.github.io/refs/heads/main/%E8%85%BE%E4%BA%914k.js"
     },
-
-
- {
+    {
       "key": "mangmang",
       "name": "♨️果果┃4K",
-	  "jar": "./jar/ljlfct01.jar",  
+	  "jar": "./jar/ljlfct01.jar",  	
       "type": 3,
       "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
       "ext": "https://ghfast.top/https://raw.githubusercontent.com/ljlfct01/ljlfct01.github.io/refs/heads/main/%E8%8A%92%E6%9E%9C4k.js"
-    },  
-	    {
+    },
+    {
       "key": "ttys",
       "name": "🚀腾腾影视🚀",
       "type": 3,
@@ -122,10 +92,10 @@
       "filterable": 1,
       "ext": "http://150.158.112.123/jar/tx4k.js"
     },
-	   {
+    {
       "key": "公众号",
       "name": "🎥4K线路🎥",
-	  "jar": "./jar/4K线路.jar",
+	  "jar": "./jar/4K线路.jar",	
       "type": 3,
       "api": "csp_YDjisu",
       "searchable": 1,
@@ -135,14 +105,14 @@
     {
       "key": "贱贱",
       "name": "🐭荐片┃P2P",
-      "jar": "./jar/fan.txt",  
+	  "jar": "./jar/fan.txt",  	
       "type": 3,
       "api": "csp_JPJGuard",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0
     },
-    {
+ {
       "key": "黑狐",
       "name": "黑狐┃影视",
 	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
@@ -185,7 +155,7 @@
         "分类url": "http://fagmn.com/list/{cateId}_{catePg}.html?order=time"
       }
     },
-	 {
+   {
             "key": "Aries不承担任何风险-飘花影院",
             "name": "🌺飘花┃影院",
             "type": 3,
@@ -219,7 +189,7 @@
                 "类型": "动作片$6#喜剧片$7#爱情片$8#科幻片$9#恐怖片$10#剧情片$11#战争片$12#其他片$22#纪录片$21||国产剧$13#港台剧$14#日韩剧$15#欧美剧$16#其它剧$20||空||空"
             }
         },
-	{
+   {
       "key": "人人影视",
       "name": "人人┃影视",
 	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
@@ -235,40 +205,7 @@
         "分类": "电影$1#电视剧$2#动漫$4#综艺$3#短剧$5"
       }
     },
-	      {
-      "key":"黑木耳",
-      "name":"🌸|黑木耳🥇",
-	 "jar": "./jar/索尼.jar",		  
-      "type":3,
-      "api":"csp_XBPQ",
-      "ext":{
-        "数组":"{&&}",
-        "图片":"vod_pic\"*\"&&\"",
-        "标题":"vod_name\"*\"&&\"",
-        "副标题":"🌸+vod_remarks\"*\"&&\"+🌸",
-        "链接":"https://json.heimuer.xyz/api.php/provide/vod/?ac=detail&ids=+\"vod_id\":&&,",
-        "搜索url":"https://json.heimuer.xyz/api.php/provide/vod/?ac=detail&wd={wd}",
-        "影片年代":"vod_year\"*\"&&\"",
-        "影片地区":"🌏+vod_area\"*\"&&\"+🌏",
-        "导演":"⚡️+vod_director\"*\"&&\"+⚡️",
-        "主演":"🎯+vod_actor\"*\"&&\"+🎯",
-        "简介":"🌸+vod_remarks\"*\"&&\"+🌸+🔥+vod_blurb\"*\"&&\"+🔥",
-        "线路标题":"🌸+vod_play_from\"*\"&&\"+🌸",
-        "播放数组":"vod_play_url\"*\"&&\"+#",
-        "播放列表":"&&#",
-        "播放标题":"&&",
-        "分类":"全部$0#電影$1#電視劇$2#動漫$3#綜藝$4#短劇$27#",
-        "分类url":"https://heimuer.tv/index.php/ajax/data?mid=1&tid={cateId}&page={catePg}",
-        "筛选":{
-          "1":[{"key":"cateId","name":"類型","value":[{"n":"全部","v":""},{"n":"劇情片","v":"6"},{"n":"動作片","v":"7"},{"n":"冒險片","v":"8"},{"n":"同性片","v":"9"},{"n":"喜劇片","v":"10"},{"n":"奇幻片","v":"11"},{"n":"恐怖片","v":"12"},{"n":"懸疑片","v":"20"},{"n":"驚悚片","v":"21"},{"n":"災難片","v":"22"},{"n":"愛情片","v":"23"},{"n":"犯罪片","v":"24"},{"n":"科幻片","v":"25"},{"n":"動畫片","v":"26"},{"n":"歌舞片","v":"33"},{"n":"戰爭片","v":"34"},{"n":"經典片","v":"35"},{"n":"網路片","v":"36"},{"n":"其它片","v":"37"}]}],
-          "2":[{"key":"cateId","name":"類型","value":[{"n":"全部","v":""},{"n":"台劇","v":"29"},{"n":"陸劇","v":"13"},{"n":"日劇","v":"16"},{"n":"韓劇","v":"15"},{"n":"港劇","v":"14"},{"n":"泰劇","v":"28"},{"n":"歐美劇","v":"30"},{"n":"新馬劇","v":"31"},{"n":"其他劇","v":"32"}]}],
-          "3":[{"key":"cateId","name":"類型","value":[{"n":"全部","v":""},{"n":"港台動漫","v":"61"},{"n":"中國動漫","v":"60"},{"n":"日本動漫","v":"58"},{"n":"韓國動漫","v":"59"},{"n":"歐美動漫","v":"57"},{"n":"新馬泰動漫","v":"62"},{"n":"其他動漫","v":"63"}]}],
-          "4":[{"key":"cateId","name":"類型","value":[{"n":"全部","v":""},{"n":"港台綜藝","v":"39"},{"n":"中國綜藝","v":"38"},{"n":"日本綜藝","v":"41"},{"n":"韓國綜藝","v":"40"},{"n":"歐美綜藝","v":"42"},{"n":"新馬泰綜藝","v":"43"},{"n":"其他綜藝","v":"44"}]}],
-          "27":[{"key":"cateId","name":"類型","value":[{"n":"全部","v":""},{"n":"古裝短劇","v":"45"},{"n":"虐戀短劇","v":"46"},{"n":"逆襲短劇","v":"47"},{"n":"懸疑短劇","v":"48"},{"n":"神豪短劇","v":"49"},{"n":"重生短劇","v":"50"},{"n":"復仇短劇","v":"51"},{"n":"穿越短劇","v":"52"},{"n":"甜寵短劇","v":"53"},{"n":"強者短劇","v":"54"},{"n":"其它短劇","v":"56"},{"n":"合集短劇","v":"64"}]}]
-        }
-      }
-    },
-    {
+   {
       "key":"索尼",
       "name":"📺|索尼🥇",
 	"jar": "./jar/索尼.jar",		
@@ -750,7 +687,7 @@
         "播放标题": ">&&<[不包含:1080P]"
       }
     },  
-	{
+   {
       "key": "骚火影视",
       "name": "骚火┃影视",
 	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
@@ -759,9 +696,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
-    },  
-
-	 {
+    }, 
+     {
       "key": "Lib",
       "name": "🌟立播┃秒播",
 	  "jar": "./jar/南瓜.txt",		 
@@ -774,8 +710,8 @@
         "quarkCookie": "tvfan/cookie.txt",
         "from": "4k|auto|fhd"
       }
-    }, 
-	 {
+    },
+     {
       "key": "原创",
       "name": "☀原创┃不卡",
 	  "jar": "./jar/南瓜.txt",		 
@@ -786,8 +722,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
-    },  
-	{
+    }, 
+    {
       "key": "低端",
       "name": "⏮️低端┃外剧",
 	  "jar": "./jar/南瓜.txt",	
@@ -808,7 +744,7 @@
       "quickSearch": 1,
       "changeable": 1
     },  
-	{
+    {
      "key": "csp_xlys",
       "name": "修罗┃无搜索",
       "jar": "./jar/fix250711.jar",
@@ -820,7 +756,7 @@
       "filterable": 0,
       "ext": "7lj763gg402i7942476492jlg94li29kk6gi8448ij"
     },
-       {
+   {
       "key": "巧技二",
       "name": "巧技┃仅搜索",
       "jar": "./jar/fix250711.jar",
@@ -865,7 +801,7 @@
             "playerType": 2,
             "ext": "http://124.222.30.115/mb/api.php/provide/vod/|okhttp/4.9.1|qiaoji"
         },  
-	  {
+    {
             "key": "360_spider",
             "name": "360┃解析",
 		   "jar": "./jar/yingshi.jar",
@@ -877,10 +813,10 @@
             "playerType": 2,
             "ext": ""
         },
-		 {
-      "key": "飞翼",
+	 { 
+     "key": "飞翼",
       "name": "♨️飞翼┃4k",
-	"jar": "./jar/ljlfct01.jar",  	 
+	  "jar": "./jar/ljlfct01.jar",  	 
       "type": 1,
       "api": "http://7.qqqtv.top/api.php/provide/vod/",
       "searchable": 1,
@@ -893,8 +829,8 @@
         "综艺",
         "动漫"
       ]
-    },  
-	   {
+    }, 
+       {
       "key": "畅梦",
       "name": "畅梦┃秒播",
 	  "jar": "./jar/yingshi.jar",   
@@ -902,7 +838,7 @@
       "api": "./js/cm.js",
       "ext": "./js/changmeng.js"
     },
-    {
+   {
       "key": "百度",
       "name": "百度┃采集",
       "type": 1,
@@ -1215,7 +1151,7 @@
         "海外动漫"
       ]
     },
-	{
+   {
             "key": "厂长影院",
             "name": "厂长┃影院",
             "type": 3,
@@ -1448,7 +1384,7 @@
                 }
             }
         },
-        {
+      {
             "key": "低端影视",
             "name": "低端｜影视",
             "type": 3,
@@ -1459,7 +1395,7 @@
             "quickSearch": 1,
             "filterable": 1
         },
-        {
+   {
             "key": "Aries不承担任何风险-555电影",
             "name": "5️⃣555┃电影",
             "type": 3,
@@ -1914,7 +1850,7 @@
                 "类型": "动作片$6#喜剧片$7#爱情片$8#科幻片$9#恐怖片$10#剧情片$11#战争片$12#动画片$24#纪录片$23||国产剧$13#香港剧$14#韩国剧$15#欧美剧$16#台湾剧$20#日本剧$21#其它剧$22||大陆综艺$25#日韩综艺$26#港台综艺$27#欧美综艺$28||国产动漫$29#日韩动漫$30#欧美动漫$31#其它动漫$32||空||空"
             }
         },
-        {
+   {
             "key": "Aries不承担任何风险-全民影院1",
             "name": "👩🏻‍🌾全民┃影院",
             "type": 3,
@@ -2119,7 +2055,7 @@
       "quickSearch": 1,
       "filterable": 0
     },
-     {
+      {
             "key": "金牌影院",
             "name": "🥇金牌┃APP",
             "type": 3,
@@ -2132,7 +2068,7 @@
                 "version": "4.2.0"
             }
         },
-        {
+      {
             "key": "豆丁",
             "name": "🥔豆丁┃APP",
             "type": 3,
@@ -2144,7 +2080,7 @@
                 "datakey": "Xasdasd!123123dd"
             }
         },
-        {
+      {
             "key": "mifun",
             "name": "🐸mifun｜APP",
             "type": 3,
@@ -2156,7 +2092,7 @@
                 "datakey": "GETMIFUNGEIMIFUN"
             }
         },
-        {
+    {
             "key": "Max",
             "name": "❤️下饭┃Max",
             "type": 3,
@@ -2179,7 +2115,7 @@
       "quickSearch": 1,
       "filterable": 0
     },
- {
+     {
             "key": "南瓜",
             "name": "南瓜┃App",
 	        "jar": "./jar/yingshi.jar",	
@@ -2191,16 +2127,6 @@
             "filterable": 1,
             "ext": ""
         },
-    {
-      "key": "厂长资源",
-      "name": "🙀厂长┃资源",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "./xb/厂长资源.json"
-    },
     {
       "key": "追剧狂人",
       "name": "😛追剧┃狂人",
@@ -2230,7 +2156,7 @@
       "quickSearch": 1,
       "filterable": 1
     },
-     {
+    {
             "key": "厂长资源",
             "name": "🙀厂长┃资源",
             "type": 3,
@@ -2380,96 +2306,16 @@
       "searchable":1,
       "quickSearch":1,
       "changeable":1
-    },
+	},  
     {
-      "key": "py_两个BTPY",
-      "name": "🥭两个┃BT",
-      "type": 3,
-      "api": "./py/两个BT.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "py_盘友圈",
-      "name": "🤒盘友┃PY",
-      "type": 3,
-      "api": "./py/盘友圈.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "csp_DuanJu",
-      "name": "😵短剧┃日更",
-      "type": 3,
-      "api": "csp_DuanJu",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
-      "key": "csp_YHDM",
-      "name": "😍樱花┃动漫",
-      "type": 3,
-      "api": "csp_YHDM",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
-      "key": "csp_Bili",
-      "name": "🅱️哔哩┃合集",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "[object Object]"
-    },
-    {
-      "key": "csp_Biliyy",
-      "name": "🅱️哔哩┃音乐",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "[object Object]"
-    },
-    {
-      "key": "py_YYMP3音乐网",
-      "name": "🤗音乐┃PY",
-      "type": 3,
-      "api": "./py/YYMP3音乐网.py",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "csp_Jzb",
-      "name": "⚽看球┃体育",
-      "type": 3,
-      "api": "csp_Jzb",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": "[object Object]"
-    },
-	 {
       "key": "Aid",
       "name": "🚑急救┃教学",
-	  "jar": "./jar/南瓜.txt",		 
       "type": 3,
       "api": "csp_FirstAid",
       "searchable": 0,
       "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 3.8
-      }
-    },  
+      "filterable": 0
+    },
     {
       "key": "csp_ShuaiJiao",
       "name": "🤺摔跤┃体育",
@@ -2569,11 +2415,6 @@
           "User-Agent": "okhttp/4.9.1"
         }
       }
-    },
-    {
-      "name": "自定义解析名称",
-      "type": 1,
-      "url": "自定义解析链接"
     }
   ],
   "ads": [
