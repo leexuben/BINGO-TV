@@ -112,10 +112,19 @@
       "quickSearch": 1,
       "filterable": 0
     },
+    {
+      "key": "csp_Guazi",
+      "name": "😳瓜子┃优质",
+      "type": 3,
+      "api": "csp_Guazi",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },	  
  {
       "key": "黑狐",
       "name": "黑狐┃影视",
-	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
+	  "jar": "./jar/xc1209.jar", 
       "type": 3,
       "searchable": 1,
       "quickSearch": 1,
@@ -192,7 +201,7 @@
    {
       "key": "人人影视",
       "name": "人人┃影视",
-	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
+	   "jar": "./jar/xc1209.jar", 
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -649,7 +658,7 @@
     {
       "key": "kimivod",
       "name": "柯觅┃影视",
-	  "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
+	   "jar": "./jar/xc1209.jar", 
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -672,7 +681,7 @@
     {
       "key": "星辰xBPQ",
       "name": "星辰┃影视",
-	 "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f", 	
+	  "jar": "./jar/xc1209.jar",  	
       "type": 3,
       "api": "csp_XBPQ",
       "searchable": 1,
@@ -690,7 +699,7 @@
    {
       "key": "骚火影视",
       "name": "骚火┃影视",
-	   "jar": "https://lz.qaiu.top/lz/iiCeK2hicw6d;md5;7ee82ff7f6b078cf17f3475515bfa32f",
+	   "jar": "./jar/xc1209.jar", 
       "type": 3,
       "api": "csp_SaoHuo",
       "searchable": 1,
@@ -2046,15 +2055,6 @@
                 "类型": "动作片$dongzuopian#爱情片$aiqingpian#科幻片$kehuanpian#恐怖片$kongbupian#战争片$zhanzhengpian#喜剧片$xijupian#纪录片$jilupian#剧情片$juqingpian||国产剧$guocanju#港台剧$gangtaiju#欧美剧$oumeiju#日韩剧$rihanju#短剧$duanju||空||空"
             }
         },
-    {
-      "key": "csp_Guazi",
-      "name": "😳瓜子┃优质",
-      "type": 3,
-      "api": "csp_Guazi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
       {
             "key": "金牌影院",
             "name": "🥇金牌┃APP",
