@@ -20,6 +20,17 @@
       "filterable": 0,
       "ext": "./json/douban.json"
     },
+		{
+			"key": "py_jianpian",
+			"name": "荐片(T3)",
+			"spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/jar/pg.jar",
+			"type": 3,
+			"api": "./js/py/plugin/html/新荐片.py",
+			"searchable": 1,
+			"quickSearch": 0,
+			"filterable": 0,
+			"changeable": 0
+		},  
 	 {
             "key": "低端影视",
             "name": "低端｜影视",
