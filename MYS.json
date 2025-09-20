@@ -108,6 +108,7 @@
 	    {
       "key": "贱贱",
       "name": "贱贱丨P2P",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "searchable": 1,
       "quickSearch": 1,
@@ -119,6 +120,7 @@
     {
       "key": "🌞腾腾4K解析_js",
       "name": "免扫丨腾4K",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "searchable": 1,
@@ -130,6 +132,7 @@
     {
       "key": "果果4K解析_js",
       "name": "免扫丨果4K",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "searchable": 1,
@@ -141,6 +144,7 @@
     {
       "key": "腾讯",
       "name": "腾翼丨翔天",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs//drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/腾讯VIP.js"
@@ -148,6 +152,7 @@
     {
       "key": "金牌影视",
       "name": "天微丨影院",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs//drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/金牌影视.js"
@@ -155,6 +160,7 @@
     {
       "key": "优酷",
       "name": "流光丨酷影",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs//drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/优酷.js"
@@ -162,6 +168,7 @@
    {
             "key": "小米弹幕",
             "name": "小米｜弹幕",
+	        "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
             "type": 3,
             "api": "csp_Nmys",
             "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/qqwxx.jar",
@@ -175,6 +182,7 @@
  {
       "key": "兔子",
       "name": "弹幕丨兔子",
+	 "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/米兔.js"
@@ -182,6 +190,7 @@
     {
       "key": "金色",
       "name": "弹幕丨金色",
+	"jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/金牌.js"
@@ -189,6 +198,7 @@
     {
       "key": "雨滴",
       "name": "弹幕丨雨滴",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/雨滴.js"
@@ -196,6 +206,7 @@
     {
       "key": "纸质",
       "name": "弹幕┃纸质",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/纸质.js"
@@ -203,6 +214,7 @@
     {
       "key": "爱奇艺",
       "name": "爱奇艺｜视频",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/爱奇艺.js"
@@ -210,6 +222,7 @@
     {
       "key": "爱奇艺弹幕",
       "name": "爱奇艺｜弹幕",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/爱奇艺弹幕.js"
@@ -217,6 +230,7 @@
     {
       "key": "hipy_js_布蕾",
       "name": "布蕾丨HD",
+      "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "searchable": 1,
@@ -228,6 +242,7 @@
     {
       "key": "hipy_js_CNHD",
       "name": "金牌丨HD",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
       "searchable": 1,
@@ -239,6 +254,7 @@
     {
       "key": "Kuaikan",
       "name": "万能 | 快看",
+	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
       "type": 3,
       "api": "csp_Kuaikan",
       "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/wanneng.jar",
