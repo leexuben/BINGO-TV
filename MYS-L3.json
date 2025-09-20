@@ -1,4 +1,38 @@
 {
+   "lives": [
+	    {
+      "name": "live",
+      "type": 0,
+      "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/iptv.txt",
+      "playerType": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
+        {
+            "name": "Gather.电视直播",
+            "type": 0,
+            "url": "https://tv-1.iill.top/m3u/Gather",
+            "ua": "okhttp/3.15",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "Gather.体育直播",
+            "type": 0,
+            "url": "https://tv-1.iill.top/m3u/Sport",
+            "ua": "okhttp/3.15",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "Gather.网络直播",
+            "type": 0,
+            "url": "https://tv-1.iill.top/m3u/Live",
+            "ua": "okhttp/3.15",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        }
+    ],	
   "sites": [
     {
       "key": "豆",
