@@ -353,18 +353,6 @@
                 "danmu": true
             }
      },  
-	    {
-      "key": "贱贱",
-      "name": "贱贱丨P2P",
-	  "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",	
-      "type": 3,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "playerType": "1",
-      "api": "https://framagit.org/168/myys/-/raw/main/bb/drpy_libs/drpy2.min.js",
-      "ext": "https://framagit.org/168/myys/-/raw/main/bb/lib/jp.js"
-   },
        {
       "key": "贱贱",
       "name": "🐭荐片┃P2P",
