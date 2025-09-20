@@ -60,7 +60,7 @@
 		  	"spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/pg.jar",
 			"type": 3,
 			"api": "./js/高清4K专用.js",
-			"ext": "./js/高清4K专用.js"
+			"ext": "./js/高清4K.js"
 		},
 		{
 			"key": "小苹果",
