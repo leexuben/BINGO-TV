@@ -23,7 +23,7 @@
 		{
 			"key": "py_jianpian",
 			"name": "荐片(T3)",
-			"spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/jar/pg.jar",
+			"spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/pg.jar",
 			"type": 3,
 			"api": "./js/py/plugin/html/新荐片.py",
 			"searchable": 1,
