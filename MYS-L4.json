@@ -72,6 +72,29 @@
 				"danmu": true
 			}
 		},
+	  	 {
+            "key": "小苹果弹幕",
+            "name": "苹果丨影视",
+            "type": 3,
+            "api": "csp_Xpg",
+            "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "danmu": true
+            }
+     },  
+       {
+      "key": "贱贱",
+      "name": "🐭荐片┃P2P",
+	  "jar": "./jar/fan.txt",  	
+      "type": 3,
+      "api": "csp_JPJGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },	
 	     {
       "key": "ttys",
       "name": "🚀腾腾影视🚀",
@@ -442,29 +465,6 @@
       "filterable": 0,
       "ext": "https://ghfast.top/https://raw.githubusercontent.com/ljlfct01/ljlfct01.github.io/refs/heads/main/%E8%8A%92%E6%9E%9C4k.js"
     },
-	 {
-            "key": "小苹果弹幕",
-            "name": "苹果丨影视",
-            "type": 3,
-            "api": "csp_Xpg",
-            "jar": "https://framagit.org/168/myys/-/raw/main/bb/jar/fenghuang.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true
-            }
-     },  
-       {
-      "key": "贱贱",
-      "name": "🐭荐片┃P2P",
-	  "jar": "./jar/fan.txt",  	
-      "type": 3,
-      "api": "csp_JPJGuard",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },	
     {
       "key": "公众号",
       "name": "🎥4K线路🎥",
