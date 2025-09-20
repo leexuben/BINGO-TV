@@ -2214,5 +2214,5 @@
     "cms.qdwght.com"
   ],
   "wallpaper": "https://jianbian.chuqiuyu.workers.dev",
-  "spider": "./jar/fan.txt;md5;98ca59a872d6d4d89c8c7e2aafb4dae1"
+  "spider": "./jar/fan.txt"
 }
