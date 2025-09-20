@@ -65,7 +65,6 @@
 		{
 			"key": "小苹果",
 			"name": "苹果弹幕",
-			"spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/pg.jar",
 			"type": 3,
 			"api": "csp_Xpg",
 			"jar": "./jar/fenghuang.jar",
