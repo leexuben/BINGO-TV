@@ -56,11 +56,11 @@
     }, 
 	  {
 			"key": "tt",
-			"name": "高清｜4K",
-		  	"spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/pg.jar",
+			"name": "老三｜4K",
+		  "spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/pg.jar",
 			"type": 3,
-			"api": "./js/高清4K专用.js",
-			"ext": "./js/高清4K.js"
+			"api": "https://gitee.com/yuyu10588/tt/raw/t/t/drpy2.min.js",
+			"ext": "https://gh.clun.top/raw.githubusercontent.com/ljlfct01/ljlfct01.github.io/main/%E8%85%BE%E4%BA%914k.js"
 		},
 		{
 			"key": "小苹果",
