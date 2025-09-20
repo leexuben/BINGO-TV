@@ -31,6 +31,56 @@
 			"filterable": 0,
 			"changeable": 0
 		},  
+	     {
+      "key": "ttys",
+      "name": "🚀腾腾影视🚀",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/tx.js"
+    },
+    {
+      "key": "mgys",
+      "name": "🍎果果影视🍎",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/mg.js"
+    },
+    {
+      "key": "qqys",
+      "name": "✨奇奇影视✨",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/aqy.js"
+    },
+    {
+      "key": "yyys",
+      "name": "🌊悠悠影视🌊",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://150.158.112.123/jar/youku.js"
+    },
+    {
+      "key": "hipy_js_腾云驾雾[官]",
+      "name": "🐎腾腾4K🐎",
+      "type": 3,
+      "api": "http://150.158.112.123/js/dr/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "http://150.158.112.123/jar/tx4k.js"
+    },
 	 {
             "key": "低端影视",
             "name": "低端｜影视",
