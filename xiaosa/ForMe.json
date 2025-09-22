@@ -16,6 +16,7 @@
 	{"key": "芒果视频","name": "芒果｜视频","type": 3,"api": "./js/drpy2.min.js","ext": "./js/芒果视频.js"},
 	{"key": "爱奇艺","name": "爱奇异｜视频","type": 3,"api": "./js/drpy2.min.js","ext": "./js/爱奇艺.js"},
 	{"key": "三六零","name": "三六零｜视频","type": 3,"api": "csp_SP360"},
+	{"key": "csp_ShuaiJiao","name": "🤺摔跤┃体育", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/vox.jar","type": 3,"api": "csp_ShuaiJiao","searchable": 0,"quickSearch": 1,"filterable": 0,"ext": "[object Object]"},	
 	{"key": "小苹果","name": "苹果弹幕","type": 3,"api": "csp_Xpg","jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/fenghuang.jar","ext":{"danmu": true}},
     {"key": "荐片","name": "荐片♨️｜磁力","api": "csp_Jianpian","type": 3,"ext": "https://api.ztcgi.com","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/moatv/refs/heads/master/xiaosa/spider.jar;md5;95dffdc8f15cec18013cd1dfeeae1164"},  
     {"key": "小苹果弹幕","name": "苹果丨影视","type": 3,"api":"csp_Xpg","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/fenghuang.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"danmu": true}},  
