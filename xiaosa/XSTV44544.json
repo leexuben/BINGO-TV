@@ -32,7 +32,7 @@
 	{"key": "飞翼","name": "♨️飞翼┃4k","jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/ljlfct01.jar","type": 1,"api": "http://7.qqqtv.top/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["推荐","电影","电视剧","综艺","动漫"]},
 	{"key": "小斑快映","name": "快映｜4K","type": 3,"api": "csp_PanWebShare","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 1,"ext": "./json/xbky.json"},
 	{"key": "天翼影视","name": "天翼｜影视","type": 1,"api": "http://7.qqqtv.top/api.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": ["推荐","电影","电视剧","综艺","动漫"]},
-	{"key": "猎手影视","name": "猎手｜影视","type": 3,"api": "./PY/猎手影视.py","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
+	{"key": "猎手影视","name": "猎手｜影视","type": 3,"api": "./py/猎手影视.py","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
 	{"key": "厂长影视","name": "厂长｜影视","type": 3,"playerType": "2","api": "csp_Czsapp","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.czzymovie.com/"},
 	{"key": "金牌影视","name": "金牌｜影视","type": 3,"api": "csp_Jpys","ext": "https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn"},
 	{"key": "云播影视","name": "云播｜影视","type": 3,"api": "csp_Tvyb","ext": "http://www.viptv01.com"},
