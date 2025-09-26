@@ -18,7 +18,7 @@
 	{"key": "爱奇艺","name": "爱奇异｜视频","type": 3,"api": "./js/drpy2.min.js","ext": "./js/爱奇艺.js"},
 	{"key": "三六零","name": "三六零｜视频","type": 3,"api": "csp_SP360"},
 	{"key": "荐片","name": "♨️荐片｜磁力","api": "csp_Jianpian","type": 3,"ext": "https://api.ztcgi.com"},	
-	{"key": "py_jianpian","name": "荐片(T3)", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/pg.jar","type": 3,"api": "./py/新荐片.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
+	{"key": "py_jianpian","name": "荐片(T3)", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/pg.jar","type": 3,"api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/py/新荐片.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
 	{"key": "csp_ShuaiJiao","name": "🤺摔跤┃体育", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/vox.jar","type": 3,"api": "csp_ShuaiJiao","searchable": 0,"quickSearch": 1,"filterable": 0,"ext": "[object Object]"},	
 	{"key": "小苹果","name": "苹果弹幕","type": 3,"api": "csp_Xpg","jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/fenghuang.jar","ext":{"danmu": true}},
     {"key": "贱贱","name": "🐭荐片🐭┃P2P", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/fan.txt","type": 3,"api": "csp_JPJGuard","searchable": 1,"quickSearch": 1,"filterable": 0},
