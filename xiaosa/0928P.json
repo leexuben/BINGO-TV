@@ -18,7 +18,19 @@
 	{"key": "优酷视频","name": "优酷｜视频","type": 3,"api": "./js/drpy2.min.js","ext": "./js/优酷视频.js"},
 	{"key": "芒果视频","name": "芒果｜视频","type": 3,"api": "./js/drpy2.min.js","ext": "./js/芒果视频.js"},
 	{"key": "爱奇艺","name": "爱奇异｜视频","type": 3,"api": "./js/drpy2.min.js","ext": "./js/爱奇艺.js"},
-    {"key": "黑木耳","name": "黑木耳","jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/jar/yt-aa.jar","type": 4,"api": "http://zhangqun66.com/225.php","style": {"type": "rect","ratio": 1.33},"changeable": 1},
+    {
+		"key": "黑木耳",
+		"name": "黑木耳",
+		"jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/tvbox/refs/heads/main/jar/yt-aa.jar",
+		"type": 4,
+		"api": "http://zhangqun66.com/225.php",
+		"style": 
+		{
+			"type": "rect",
+			"ratio": 1.33
+		},
+		"changeable": 1
+	},
 	{"key": "三六零","name": "三六零｜视频","type": 3,"api": "csp_SP360"},
 	{"key": "文才弹幕","name": "💘文才｜弹幕","type": 3,"api": "csp_Jpys","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"danmu": true}},
 	{"key":"天天弹幕","name":"💘天天｜弹幕","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true,"site":"aHR0cDovL29wLnlzZHFqcy5jbg=="},"jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/欧哥.jar"},
