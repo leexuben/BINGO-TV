@@ -15,7 +15,7 @@
   ],
   "wallpaper": "https://jianbian.chuqiuyu.workers.dev",
   "sites": [
-    {"key": "豆瓣","name": "搜索｜点击换站","type": 3,"api": "csp_Douban","searchable": 0,"jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/moatv/refs/heads/master/xiaosa/spider.jar"},
+    {"key": "豆瓣","name": "搜索｜点击换站","type": 3,"api": "csp_Douban","searchable": 0},
 	{ "key": "竹生", "name": "💖免扫网盘①|4K", "type": 3, "api": "csp_HBT4", "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qVTROall2ZEdWemRDNXdhSEEvYzJsMFpUMXNZV0pwSXlNamJHRmlhUT09", "jar": "http://47.120.41.246:8025/vip/jar/banhu.php" },
     { "key": "归安", "name": "💖免扫网盘②|4K", "type": 3, "api": "csp_HBT4", "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qUTROall2ZEdWemRDNXdhSEEvYzJsMFpUMXRhV2hrY2lNakkyMXBhR1J5", "jar": "http://47.120.41.246:8025/vip/jar/banhu.php" },
     { "key": "薄心", "name": "💖免扫网盘③|4K", "type": 3, "api": "csp_HBT4", "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qUTROall2ZEdWemRDNXdhSEEvYzJsMFpUMWxjbmhwWVc4akl5TmxjbmhwWVc4PQ==", "jar": "http://47.120.41.246:8025/vip/jar/banhu.php" },
