@@ -23,8 +23,8 @@
 		
 	{ "key": "jianpian", "name": "感谢ljlfct01♨️荐片♨️|弹幕","jar":"http://103.45.162.207:25252/仅供测试/custom_spider.jar", "type": 3, "api": "csp_Jianpian", "ext": "http://4icnx7.qyjzlh.com" },	
 	{"key": "如意采集资源","name": "感谢ljlfct01♨️🔥如意┃采集","jar": "http://47.120.41.246:8025/vip/jar/xiaomi.php","type": 1,"api": "https://cj.rycjapi.com/api.php/provide/vod/","playerType": 1,"searchable": 1,"changeable": 1},	
-	{ "key": "热播影视", "name": "感谢ljlfct01♨️🔥热播┃影视","jar": "http://47.120.41.246:8025/vip/jar/ouge.php", "type": 3, "api": "csp_AppRJ", "searchable": 1, "quickSearch": 1, "filterable": 0, "ext": { "url": "http://v.rbotv.cn" },
-    { "key": "浪酷影视", "name": "感谢ljlfct01♨️🔥浪酷┃影视","jar": "http://47.120.41.246:8025/vip/jar/ouge.php", "type": 3, "api": "csp_AppRJ", "searchable": 1, "quickSearch": 1, "filterable": 0, "ext": { "url": "http://v.lkuys.cn" },
+	{ "key": "热播影视", "name": "🔥热播┃影视", "jar": "http://47.120.41.246:8025/vip/jar/ouge.php" "type": 3, "api": "csp_AppRJ", "searchable": 1, "quickSearch": 1, "filterable": 0, "ext": { "url": "http://v.rbotv.cn" } },
+    { "key": "浪酷影视", "name": "🔥浪酷┃影视", "jar": "http://47.120.41.246:8025/vip/jar/ouge.php" "type": 3, "api": "csp_AppRJ", "searchable": 1, "quickSearch": 1, "filterable": 0, "ext": { "url": "http://v.lkuys.cn" } },
 	{ "key": "至尊", "name": "感谢ljlfct01♨️💖官解①|4K弹幕", "type": 3, "api": "csp_AppZzun", "ext": "http://154.219.113.13:12121/json/app.txt", "jar": "http://47.120.41.246:8025/vip/jar/banhu.php" },
     { "key": "魔尊", "name": "感谢ljlfct01♨️💖官解②|4K弹幕", "type": 3, "api": "csp_HBcms10", "ext": "http://154.219.113.13:12121/json/cms.txt", "jar": "http://47.120.41.246:8025/vip/jar/banhu.php" },
     { "key": "竹生", "name": "感谢ljlfct01♨️💖免扫网盘①|4K", "type": 3, "api": "csp_HBT4", "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qVTROall2ZEdWemRDNXdhSEEvYzJsMFpUMXNZV0pwSXlNamJHRmlhUT09", "jar": "http://47.120.41.246:8025/vip/jar/banhu.php" },
