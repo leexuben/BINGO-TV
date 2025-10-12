@@ -1,5 +1,5 @@
 {
-    "spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/spider.jar",
+    "spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/moatv/refs/heads/master/jar/spider.jar",
 	 "lives": [
         {"name": "live","type": 0,"url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/TVS.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
         {"name": "tv","type": 0,"url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/ZBTV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
