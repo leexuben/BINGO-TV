@@ -4,22 +4,26 @@
     "description": "自动合并的影视站点集合",
     "sources": [
       {
-        "path": "OK/api.json",
+        "path": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/OK/api.json",
         "sites_count": 0
       },
       {
-        "path": "王二小/api.json",
+        "path": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/api.json",
         "sites_count": 0
       },
       {
-        "path": "潇洒/api.json",
+        "path": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json",
         "sites_count": 0
       },
       {
-        "path": "巧技/api.json",
+        "path": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/影视",
+        "sites_count": 0
+      },
+      {
+        "path": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/api.json",
         "sites_count": 0
       }
     ],
-    "last_updated": "a153f80"
+    "last_updated": "8dc3c6f"
   }
 }
