@@ -1,0 +1,121 @@
+name: Merge Sites Data
+
+on:
+  workflow_dispatch:  # 允许手动触发
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC时间0点自动运行
+
+jobs:
+  merge-sites:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout source repo
+      uses: actions/checkout@v4
+      with:
+        repository: leexuben/TV-BOX
+        path: tvbox-src
+        
+    - name: Checkout target repo
+      uses: actions/checkout@v4
+      with:
+        repository: leexuben/BINGO-TV
+        path: bingo-tv
+        token: ${{ secrets.GH_TOKEN }}  # 需要有写入权限的token
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run merge script
+      run: |
+        python << 'EOF'
+        import json
+        import os
+        from pathlib import Path
+
+        # 配置路径
+        SOURCE_DIR = os.path.join(os.getcwd(), "tvbox-src/tvbox")
+        TARGET_FILE = os.path.join(os.getcwd(), "bingo-tv/综合影视.json")
+        
+        # 要处理的文件列表
+        SOURCE_FILES = [
+            "OK/api.json",
+            "王二小/api.json",
+            "潇洒/api.json",
+            "巧技/api.json"
+        ]
+
+        def load_json(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"加载 {path} 失败: {e}")
+                return {}
+
+        def save_json(data, path):
+            with open(path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+
+        def main():
+            all_sites = []
+            processed_files = []
+            
+            # 处理每个源文件
+            for rel_path in SOURCE_FILES:
+                abs_path = os.path.join(SOURCE_DIR, rel_path)
+                print(f"处理文件: {abs_path}")
+                
+                data = load_json(abs_path)
+                sites = data.get('sites', [])
+                all_sites.extend(sites)
+                processed_files.append({
+                    "path": rel_path,
+                    "sites_count": len(sites)
+                })
+                print(f"  提取到 {len(sites)} 个站点")
+
+            # 去重 (基于key字段)
+            unique_sites = []
+            seen_keys = set()
+            for site in all_sites:
+                key = site.get('key', '')
+                if key not in seen_keys:
+                    unique_sites.append(site)
+                    seen_keys.add(key)
+
+            # 加载或创建目标文件
+            target_data = load_json(TARGET_FILE) or {
+                "sites": [],
+                "metadata": {
+                    "description": "自动合并的影视站点集合",
+                    "sources": []
+                }
+            }
+
+            # 更新数据
+            target_data["sites"] = unique_sites
+            target_data["metadata"]["sources"] = processed_files
+            target_data["metadata"]["last_updated"] = os.getenv("GITHUB_SHA")[:7]
+
+            # 保存结果
+            save_json(target_data, TARGET_FILE)
+            print(f"\n合并完成! 总站点数: {len(unique_sites)}")
+
+        if __name__ == "__main__":
+            main()
+        EOF
+
+    - name: Commit and push changes
+      run: |
+        cd bingo-tv
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add 综合影视.json
+        git commit -m "Auto-update: Merged sites data [skip ci]"
+        git push
