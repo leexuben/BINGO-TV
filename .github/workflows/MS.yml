@@ -30,16 +30,14 @@ jobs:
         import json
         import requests
         import re
-        import os
 
-        # 源文件配置
         SOURCE_CONFIGS = [
             {
                 "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/api.json",
                 "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar"
             },
             {
-                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json",
+                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json", 
                 "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar"
             },
             {
@@ -54,170 +52,68 @@ jobs:
         
         TARGET_FILE = "bingo-tv/综合影视.json"
 
-        def extract_json_from_xml(content):
-            try:
-                json_start = content.find('{')
-                json_end = content.rfind('}') + 1
-                if json_start != -1 and json_end > json_start:
-                    json_content = content[json_start:json_end]
-                    return json.loads(json_content)
-            except:
-                pass
-            return None
-
-        def extract_sites_with_regex(content):
-            try:
-                pattern = r'"sites"\s*:\s*\[(.*?)\]'
-                match = re.search(pattern, content, re.DOTALL)
-                if match:
-                    sites_content = match.group(1)
-                    full_array = f'[{sites_content}]'
-                    return json.loads(full_array)
-            except:
-                pass
-            return []
-
-        def extract_sites_from_content(content):
+        def extract_sites(content):
             try:
                 data = json.loads(content)
-                sites = data.get('sites', [])
-                if sites:
-                    return sites
+                return data.get('sites', [])
             except:
-                pass
-            
-            xml_data = extract_json_from_xml(content)
-            if xml_data:
-                sites = xml_data.get('sites', [])
-                if sites:
-                    return sites
-            
-            sites = extract_sites_with_regex(content)
-            if sites:
-                return sites
-            
+                try:
+                    json_start = content.find('{')
+                    json_end = content.rfind('}') + 1
+                    if json_start != -1:
+                        data = json.loads(content[json_start:json_end])
+                        return data.get('sites', [])
+                except:
+                    try:
+                        match = re.search(r'"sites"\s*:\s*\[(.*?)\]', content, re.DOTALL)
+                        if match:
+                            return json.loads(f'[{match.group(1)}]')
+                    except:
+                        pass
             return []
 
-        def fetch_url_content(url):
+        all_sites = []
+        
+        for config in SOURCE_CONFIGS:
             try:
-                response = requests.get(url, timeout=30)
-                response.raise_for_status()
-                return response.text
+                response = requests.get(config["api_url"], timeout=30)
+                content = response.text
+                sites = extract_sites(content)
+                
+                for site in sites:
+                    if 'jar' not in site or not site['jar']:
+                        site['jar'] = config["jar_url"]
+                    all_sites.append(site)
+                    
             except Exception as e:
-                print(f"   ❌ 获取失败: {e}")
-                return None
+                pass
 
-        def add_jar_to_site(site, jar_url):
-            # 如果已经有jar字段，保持不变
-            if 'jar' in site and site['jar']:
-                return site, False
-            
-            # 如果jar字段为空或没有jar字段，添加jar
-            site['jar'] = jar_url
-            return site, True
-
-        def main():
-            print("🚀 开始合并站点数据...")
-            print("=" * 60)
-            
-            all_sites = []
-            
-            for config in SOURCE_CONFIGS:
-                api_url = config["api_url"]
-                jar_url = config["jar_url"]
-                
-                print(f"📥 处理: {api_url}")
-                
-                content = fetch_url_content(api_url)
-                if content:
-                    sites = extract_sites_from_content(content)
-                    if sites:
-                        jar_added = 0
-                        jar_existing = 0
-                        
-                        for site in sites:
-                            modified_site, added = add_jar_to_site(site, jar_url)
-                            all_sites.append(modified_site)
-                            if added:
-                                jar_added += 1
-                            else:
-                                jar_existing += 1
-                        
-                        print(f"   ✅ 提取到 {len(sites)} 个站点")
-                        if jar_added > 0:
-                            print(f"       新增JAR: {jar_added} 个")
-                        if jar_existing > 0:
-                            print(f"       已有JAR: {jar_existing} 个")
-                    else:
-                        print(f"   ⚠️  未找到sites数据")
-                else:
-                    print(f"   ❌ 无法获取文件内容")
-                print("-" * 40)
-            
-            if not all_sites:
-                print("❌ 未提取到任何站点数据")
-                return
-            
-            # 去重处理
-            unique_sites = []
-            seen_keys = set()
-            duplicate_count = 0
-            
-            for site in all_sites:
-                key = site.get('key', '')
-                if key and key in seen_keys:
-                    duplicate_count += 1
-                    continue
-                
+        # 去重
+        unique_sites = []
+        seen_keys = set()
+        
+        for site in all_sites:
+            key = site.get('key', '')
+            if key not in seen_keys:
                 unique_sites.append(site)
-                if key:
-                    seen_keys.add(key)
-            
-            print("📊 合并统计:")
-            print(f"   总站点数: {len(all_sites)}")
-            print(f"   去重后站点数: {len(unique_sites)}")
-            print(f"   重复站点数: {duplicate_count}")
-            
-            # 只保留sites数组
-            result_data = {
-                "sites": unique_sites
-            }
-            
-            with open(TARGET_FILE, 'w', encoding='utf-8') as f:
-                json.dump(result_data, f, ensure_ascii=False, indent=2)
-            
-            print("✅ 合并完成!")
-            
-            # 显示前3个站点的最终结构
-            print(f"\n🔍 前3个站点最终结构:")
-            for i, site in enumerate(unique_sites[:3]):
-                print(f"   {i+1}. {json.dumps(site, ensure_ascii=False)}")
+                seen_keys.add(key)
 
-        if __name__ == "__main__":
-            main()
+        # 直接保存数组
+        with open(TARGET_FILE, 'w', encoding='utf-8') as f:
+            json.dump(unique_sites, f, ensure_ascii=False, indent=2)
+
         EOF
 
-    - name: Configure Git and commit changes
+    - name: Commit and push
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         cd bingo-tv
-        
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/leexuben/BINGO-TV.git
-        
         git fetch origin
-        git pull origin main --rebase
-        
+        git reset --hard origin/main
         git add .
-        
-        if git diff --cached --quiet; then
-          echo "📝 没有更改需要提交"
-          exit 0
-        fi
-        
-        git commit -m "Auto-update: Merged sites data $(date +'%Y-%m-%d %H:%M:%S')"
+        git commit -m "Update: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
         git push origin main
-        
-        echo "✅ 更改已成功提交并推送"
