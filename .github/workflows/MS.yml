@@ -1,27 +1,20 @@
-name: Merge Sites Data
-
 on:
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0点自动运行
+    - cron: '0 0 * * *'
 
 jobs:
   merge-sites:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout source repo
-      uses: actions/checkout@v4
-      with:
-        repository: leexuben/TV-BOX
-        path: tvbox-src
-        
     - name: Checkout target repo
       uses: actions/checkout@v4
       with:
         repository: leexuben/BINGO-TV
         path: bingo-tv
-        token: ${{ secrets.GH_TOKEN }}  # 需要有写入权限的token
+        token: ${{ secrets.GH_TOKEN }}
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -35,78 +28,177 @@ jobs:
       run: |
         python << 'EOF'
         import json
+        import requests
+        import re
+        from datetime import datetime
         import os
-        from pathlib import Path
 
-        # 配置路径
-        SOURCE_DIR = os.path.join(os.getcwd(), "tvbox-src/tvbox")
-        TARGET_FILE = os.path.join(os.getcwd(), "bingo-tv/综合影视.json")
-        
-        # 要处理的文件列表
-        SOURCE_FILES = [
-            "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/OK/api.json",
+        # 源文件URL列表
+        SOURCE_URLS = [
             "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/api.json",
             "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json",
-            "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/影视",
-            "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/api.json"
+            "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/api.json",
+            "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/影视"
         ]
+        
+        # 目标文件路径
+        TARGET_FILE = "bingo-tv/综合影视.json"
 
-        def load_json(path):
+        def extract_json_from_xml(content):
+            """从XML内容中提取JSON数据"""
             try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    return json.load(f)
+                # 查找JSON开始和结束位置
+                json_start = content.find('{')
+                json_end = content.rfind('}') + 1
+                
+                if json_start != -1 and json_end > json_start:
+                    json_content = content[json_start:json_end]
+                    return json.loads(json_content)
+                return None
             except Exception as e:
-                print(f"加载 {path} 失败: {e}")
-                return {}
+                print(f"XML提取失败: {e}")
+                return None
 
-        def save_json(data, path):
-            with open(path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
+        def extract_sites_with_regex(content):
+            """使用正则表达式提取sites数组"""
+            try:
+                # 匹配 "sites": [ ... ] 模式，支持各种格式
+                pattern = r'"sites"\s*:\s*\[(.*?)\]'
+                match = re.search(pattern, content, re.DOTALL)
+                
+                if match:
+                    sites_content = match.group(1)
+                    # 尝试构建完整的JSON数组
+                    full_array = f'[{sites_content}]'
+                    return json.loads(full_array)
+            except Exception as e:
+                print(f"正则提取失败: {e}")
+            
+            return []
+
+        def fetch_and_extract_sites(url):
+            """获取URL内容并提取sites数据"""
+            try:
+                print(f"📥 获取: {url}")
+                response = requests.get(url, timeout=30)
+                response.raise_for_status()
+                
+                content = response.text
+                print(f"   ✅ 获取成功，长度: {len(content)} 字符")
+                
+                # 方法1: 尝试直接解析JSON
+                try:
+                    data = json.loads(content)
+                    sites = data.get('sites', [])
+                    if sites:
+                        print(f"   ✅ 直接解析获取 {len(sites)} 个站点")
+                        return sites
+                except:
+                    pass
+                
+                # 方法2: 处理XML包装的JSON
+                xml_data = extract_json_from_xml(content)
+                if xml_data:
+                    sites = xml_data.get('sites', [])
+                    if sites:
+                        print(f"   ✅ XML提取获取 {len(sites)} 个站点")
+                        return sites
+                
+                # 方法3: 使用正则表达式提取
+                sites = extract_sites_with_regex(content)
+                if sites:
+                    print(f"   ✅ 正则提取获取 {len(sites)} 个站点")
+                    return sites
+                
+                print(f"   ⚠️  未找到sites数据")
+                return []
+                
+            except Exception as e:
+                print(f"   ❌ 处理失败: {e}")
+                return []
 
         def main():
+            print("🚀 开始合并站点数据...")
+            print("=" * 60)
+            
             all_sites = []
             processed_files = []
             
-            # 处理每个源文件
-            for rel_path in SOURCE_FILES:
-                abs_path = os.path.join(SOURCE_DIR, rel_path)
-                print(f"处理文件: {abs_path}")
-                
-                data = load_json(abs_path)
-                sites = data.get('sites', [])
-                all_sites.extend(sites)
-                processed_files.append({
-                    "path": rel_path,
-                    "sites_count": len(sites)
-                })
-                print(f"  提取到 {len(sites)} 个站点")
-
-            # 去重 (基于key字段)
+            # 处理所有源文件
+            for url in SOURCE_URLS:
+                sites = fetch_and_extract_sites(url)
+                if sites:
+                    all_sites.extend(sites)
+                    processed_files.append({
+                        "url": url,
+                        "sites_count": len(sites)
+                    })
+                    print(f"   📊 当前累计: {len(all_sites)} 个站点")
+                print("-" * 40)
+            
+            if not all_sites:
+                print("❌ 未提取到任何站点数据")
+                return
+            
+            # 去重处理（基于key字段）
             unique_sites = []
             seen_keys = set()
+            duplicate_count = 0
+            
             for site in all_sites:
                 key = site.get('key', '')
-                if key not in seen_keys:
-                    unique_sites.append(site)
+                if key and key in seen_keys:
+                    duplicate_count += 1
+                    continue
+                
+                unique_sites.append(site)
+                if key:
                     seen_keys.add(key)
-
-            # 加载或创建目标文件
-            target_data = load_json(TARGET_FILE) or {
-                "sites": [],
+            
+            print("=" * 60)
+            print("📊 合并统计:")
+            print(f"   总站点数: {len(all_sites)}")
+            print(f"   去重后站点数: {len(unique_sites)}")
+            print(f"   重复站点数: {duplicate_count}")
+            print(f"   成功处理文件数: {len(processed_files)}")
+            
+            # 按类型统计
+            type_stats = {}
+            for site in unique_sites:
+                site_type = site.get('type', 'unknown')
+                type_stats[site_type] = type_stats.get(site_type, 0) + 1
+            
+            print(f"\n📋 站点类型统计:")
+            for site_type, count in sorted(type_stats.items()):
+                print(f"   type {site_type}: {count} 个站点")
+            
+            # 创建合并结果
+            result_data = {
+                "sites": unique_sites,
                 "metadata": {
                     "description": "自动合并的影视站点集合",
-                    "sources": []
+                    "total_sites": len(unique_sites),
+                    "processed_files": processed_files,
+                    "source_count": len(SOURCE_URLS),
+                    "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "workflow_run": os.getenv("GITHUB_RUN_ID", "unknown")
                 }
             }
-
-            # 更新数据
-            target_data["sites"] = unique_sites
-            target_data["metadata"]["sources"] = processed_files
-            target_data["metadata"]["last_updated"] = os.getenv("GITHUB_SHA")[:7]
-
-            # 保存结果
-            save_json(target_data, TARGET_FILE)
-            print(f"\n合并完成! 总站点数: {len(unique_sites)}")
+            
+            # 保存到目标文件
+            with open(TARGET_FILE, 'w', encoding='utf-8') as f:
+                json.dump(result_data, f, ensure_ascii=False, indent=2)
+            
+            print(f"\n✅ 合并完成! 结果已保存到: {TARGET_FILE}")
+            
+            # 显示前几个站点示例
+            print(f"\n🔍 前3个站点示例:")
+            for i, site in enumerate(unique_sites[:3]):
+                name = site.get('name', '未知名称')
+                key = site.get('key', '无key')
+                site_type = site.get('type', '未知类型')
+                print(f"   {i+1}. {name}")
+                print(f"      key: {key}, type: {site_type}")
 
         if __name__ == "__main__":
             main()
@@ -117,7 +209,16 @@ jobs:
         cd bingo-tv
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
+        
+        # 检查是否有更改
+        if git diff --quiet --exit-code; then
+          echo "📝 没有更改需要提交"
+          exit 0
+        fi
+        
+        # 拉取最新更改并提交
+        git pull origin main --rebase
         git add 综合影视.json
-        git commit -m "Auto-update: Merged sites data [skip ci]"
-        git push origin main --rebase
-    
+        git commit -m "Auto-update: Merged sites data [$(date +'%Y-%m-%d %H:%M')]"
+        git push origin main
+        echo "✅ 更改已提交并推送"
