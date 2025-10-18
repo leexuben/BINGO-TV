@@ -30,6 +30,7 @@ jobs:
         import json
         import requests
         import re
+        import os
 
         SOURCE_CONFIGS = [
             {
@@ -37,7 +38,7 @@ jobs:
                 "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar"
             },
             {
-                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json", 
+                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json",
                 "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar"
             },
             {
@@ -77,16 +78,21 @@ jobs:
         for config in SOURCE_CONFIGS:
             try:
                 response = requests.get(config["api_url"], timeout=30)
+                response.raise_for_status()
                 content = response.text
                 sites = extract_sites(content)
                 
+                print(f"从 {config['api_url']} 提取到 {len(sites)} 个站点")
+                
                 for site in sites:
+                    # 只为没有jar的站点添加jar
                     if 'jar' not in site or not site['jar']:
                         site['jar'] = config["jar_url"]
+                    
                     all_sites.append(site)
                     
             except Exception as e:
-                pass
+                print(f"处理 {config['api_url']} 失败: {e}")
 
         # 去重
         unique_sites = []
@@ -98,22 +104,50 @@ jobs:
                 unique_sites.append(site)
                 seen_keys.add(key)
 
+        print(f"合并完成: 总{len(all_sites)}个站点, 去重后{len(unique_sites)}个")
+
         # 直接保存数组
         with open(TARGET_FILE, 'w', encoding='utf-8') as f:
             json.dump(unique_sites, f, ensure_ascii=False, indent=2)
 
         EOF
 
-    - name: Commit and push
+    - name: Check file changes
+      run: |
+        cd bingo-tv
+        echo "=== 文件状态 ==="
+        ls -la
+        echo "=== 文件内容检查 ==="
+        head -20 综合影视.json
+        echo "=== Git 状态 ==="
+        git status
+
+    - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         cd bingo-tv
+        
+        # 配置Git
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/leexuben/BINGO-TV.git
-        git fetch origin
-        git reset --hard origin/main
-        git add .
-        git commit -m "Update: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+        
+        # 检查文件差异
+        echo "=== 文件差异 ==="
+        git diff 综合影视.json || echo "无差异"
+        
+        # 添加文件
+        git add 综合影视.json
+        
+        # 检查是否有更改
+        if git diff --cached --quiet; then
+          echo "❌ 没有检测到更改，文件可能没有更新"
+          exit 1
+        fi
+        
+        # 提交并推送
+        git commit -m "Auto-update: Merged sites data $(date +'%Y-%m-%d %H:%M:%S')"
         git push origin main
+        
+        echo "✅ 文件已成功更新并推送"
