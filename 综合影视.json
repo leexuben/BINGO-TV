@@ -8,7 +8,9 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
-      "ext": "./json/douban.json"
+      "ext": "./json/douban.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Doubana",
@@ -18,7 +20,9 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
-      "ext": "./json/douban.json"
+      "ext": "./json/douban.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexconfig",
@@ -27,7 +31,9 @@
       "api": "csp_WexconfigGuard",
       "searchable": 0,
       "changeable": 0,
-      "indexs": 0
+      "indexs": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexokconfig",
@@ -36,7 +42,9 @@
       "api": "csp_WexokconfigGuard",
       "searchable": 0,
       "changeable": 0,
-      "indexs": 0
+      "indexs": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexerxiaoziyuan",
@@ -44,7 +52,9 @@
       "type": 3,
       "api": "csp_WexerxiaoziyuanGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "玩偶",
@@ -52,7 +62,9 @@
       "type": 3,
       "api": "csp_WoggGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexzhizhen",
@@ -60,7 +72,9 @@
       "type": 3,
       "api": "csp_WexzhizhenGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexnullname",
@@ -69,7 +83,9 @@
       "api": "csp_WexnullnameGuard",
       "searchable": 1,
       "changeable": 1,
-      "timeout": 120
+      "timeout": 120,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexseedhub",
@@ -78,7 +94,9 @@
       "api": "csp_WexseedhubGuard",
       "searchable": 1,
       "changeable": 1,
-      "timeout": 120
+      "timeout": 120,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexFox4KGuard",
@@ -87,7 +105,9 @@
       "api": "csp_WexFox4KGuard",
       "searchable": 1,
       "changeable": 1,
-      "timeout": 120
+      "timeout": 120,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexduoduoziyuanGuard",
@@ -96,7 +116,9 @@
       "api": "csp_WexduoduoziyuanGuard",
       "searchable": 1,
       "changeable": 1,
-      "timeout": 120
+      "timeout": 120,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexsayangziyuan",
@@ -104,7 +126,9 @@
       "type": 3,
       "api": "csp_Wexsayangziyuan",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexmuougg",
@@ -112,7 +136,9 @@
       "type": 3,
       "api": "csp_WexmuouggGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexshuangzixingGuard",
@@ -120,7 +146,9 @@
       "type": 3,
       "api": "csp_WexshuangzixingGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexXuexi",
@@ -128,7 +156,9 @@
       "type": 3,
       "api": "csp_WexXuexiGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexfeimaoziyuanGuard",
@@ -136,7 +166,9 @@
       "type": 3,
       "api": "csp_WexfeimaoziyuanGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexhubanGuard",
@@ -144,7 +176,9 @@
       "type": 3,
       "api": "csp_WexhubanGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "趣盘",
@@ -155,7 +189,9 @@
       "changeable": 1,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "盘他",
@@ -163,7 +199,9 @@
       "type": 3,
       "api": "csp_WexYDpantaGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "雷鲸",
@@ -171,7 +209,9 @@
       "type": 3,
       "api": "csp_WexleijingGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "夸父",
@@ -179,7 +219,9 @@
       "type": 3,
       "api": "csp_WexQKkuafuGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexydbixinGuard",
@@ -187,7 +229,9 @@
       "type": 3,
       "api": "csp_WexydbixinGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexalllive",
@@ -195,7 +239,9 @@
       "type": 3,
       "api": "csp_WexallliveGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexhanxiaoquan",
@@ -203,7 +249,9 @@
       "type": 3,
       "api": "csp_WexhanxiaoquanGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexrenrenyingshi",
@@ -211,7 +259,9 @@
       "type": 3,
       "api": "csp_WexrenrenyingshiGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "賤賤",
@@ -219,7 +269,9 @@
       "type": 3,
       "api": "csp_WexJianpianGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexkuihuatvGuard",
@@ -227,7 +279,9 @@
       "type": 3,
       "api": "csp_WexkuihuatvGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexwencai",
@@ -235,7 +289,9 @@
       "type": 3,
       "api": "csp_WexwencaiGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexxpgtv",
@@ -243,7 +299,9 @@
       "type": 3,
       "api": "csp_WexxpgtvGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexshandian",
@@ -251,7 +309,9 @@
       "type": 3,
       "api": "csp_WexshandianGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wex4Kav",
@@ -259,7 +319,9 @@
       "type": 3,
       "api": "csp_Wex4KavGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexbaozitv",
@@ -267,7 +329,9 @@
       "type": 3,
       "api": "csp_WexbaozitvGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "csp_Nmys",
@@ -275,7 +339,9 @@
       "type": 3,
       "api": "csp_WexNmysGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Diduanys",
@@ -283,7 +349,9 @@
       "type": 3,
       "api": "csp_WexDiduanysGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexBDys",
@@ -291,7 +359,9 @@
       "type": 3,
       "api": "csp_WexBDysGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexF4kvmGuard",
@@ -299,7 +369,9 @@
       "type": 3,
       "api": "csp_WexF4kvmGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexbttwoGuard",
@@ -307,7 +379,9 @@
       "type": 3,
       "api": "csp_WexbttwoGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexikanbotGuard",
@@ -315,7 +389,9 @@
       "type": 3,
       "api": "csp_WexikanbotGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "新6V",
@@ -323,7 +399,9 @@
       "type": 3,
       "api": "csp_WexXb6vGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexemby",
@@ -331,7 +409,9 @@
       "type": 3,
       "api": "csp_WexembyGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexduanjuquark",
@@ -342,7 +422,9 @@
       "changeable": 1,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexduanjuvip",
@@ -350,7 +432,9 @@
       "type": 3,
       "api": "csp_WexduanjuvipGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexduanjuvop",
@@ -358,7 +442,9 @@
       "type": 3,
       "api": "csp_WexduanjuvopGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexduanjuhema",
@@ -366,7 +452,9 @@
       "type": 3,
       "api": "csp_WexduanjuhemaGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexduanju001",
@@ -374,7 +462,9 @@
       "type": 3,
       "api": "csp_Wexduanju001Guard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexduanjuvmpGuard",
@@ -382,7 +472,9 @@
       "type": 3,
       "api": "csp_WexduanjuvmpGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexlaobaitingshu",
@@ -390,7 +482,9 @@
       "type": 3,
       "api": "csp_WexlaobaitingshuGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wex275tingshu",
@@ -398,7 +492,9 @@
       "type": 3,
       "api": "csp_Wex275tingshuGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexliyuan",
@@ -410,7 +506,9 @@
       "style": {
         "type": "rect",
         "ratio": 2
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wextangdou",
@@ -422,7 +520,9 @@
       "style": {
         "type": "rect",
         "ratio": 2
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexergeduoduo",
@@ -434,7 +534,9 @@
       "style": {
         "type": "rect",
         "ratio": 2
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexbaobaobashi",
@@ -446,7 +548,9 @@
       "style": {
         "type": "rect",
         "ratio": 2
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexbeiwa",
@@ -458,7 +562,9 @@
       "style": {
         "type": "rect",
         "ratio": 2
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wextuxiaobei",
@@ -470,7 +576,9 @@
       "style": {
         "type": "rect",
         "ratio": 2
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Pandalivetv",
@@ -478,7 +586,9 @@
       "type": 3,
       "api": "csp_WexPandalivetvGuard",
       "searchable": 0,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Iktv",
@@ -486,7 +596,9 @@
       "type": 3,
       "api": "csp_WexIktvGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexxifan",
@@ -494,7 +606,9 @@
       "type": 3,
       "api": "csp_WexxifanGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexDm84",
@@ -502,7 +616,9 @@
       "type": 3,
       "api": "csp_WexDm84Guard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexYsj",
@@ -510,7 +626,9 @@
       "type": 3,
       "api": "csp_WexYsjGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "自定义",
@@ -521,7 +639,9 @@
       "changeable": 0,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "AList",
@@ -529,7 +649,9 @@
       "type": 3,
       "api": "csp_AListGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexbiliys",
@@ -537,7 +659,9 @@
       "type": 3,
       "api": "csp_WexbiliysGuard",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "bili",
@@ -553,7 +677,9 @@
       },
       "ext": {
         "json": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1730557872081/bili001.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "biliych",
@@ -569,7 +695,9 @@
       },
       "ext": {
         "json": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1730557798499/bilisong.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "少儿教育",
@@ -585,7 +713,9 @@
       "changeable": 0,
       "ext": {
         "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/3C3AB7A_773_ertong_20250828171550247newMediaImage.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "小学课堂",
@@ -601,7 +731,9 @@
       "changeable": 0,
       "ext": {
         "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/4A3AA71_773_xiaoxue_20250828171535645newMediaImage.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "初中课堂",
@@ -617,7 +749,9 @@
       "changeable": 0,
       "ext": {
         "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/19B1839_773_chuzhong_20250828171521929newMediaImage.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "高中教育",
@@ -633,7 +767,9 @@
       "changeable": 0,
       "ext": {
         "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/345A587_773_gaozhong_20250828171449997newMediaImage.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexqingfengdj",
@@ -641,7 +777,9 @@
       "type": 3,
       "api": "csp_WexqingfengdjGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexLunhuiDJ",
@@ -649,7 +787,9 @@
       "type": 3,
       "api": "csp_WexLunhuiDJGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wexwwe",
@@ -657,7 +797,9 @@
       "type": 3,
       "api": "csp_WexwweGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "看球",
@@ -668,7 +810,9 @@
       "changeable": 0,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "926看球",
@@ -679,7 +823,9 @@
       "changeable": 0,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "瓜子看球",
@@ -690,7 +836,9 @@
       "changeable": 0,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexTJso",
@@ -698,7 +846,9 @@
       "type": 3,
       "api": "csp_WexTJsoGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "Wextyso",
@@ -706,7 +856,9 @@
       "type": 3,
       "api": "csp_WextysoGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexbaidusoGuard",
@@ -714,7 +866,9 @@
       "type": 3,
       "api": "csp_WexbaidusoGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexAiPanGuard",
@@ -722,7 +876,9 @@
       "type": 3,
       "api": "csp_WexAiPanGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexHaiYinsoGuard",
@@ -730,7 +886,9 @@
       "type": 3,
       "api": "csp_WexHaiYinsoGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexZhaoPansoGuard",
@@ -738,7 +896,9 @@
       "type": 3,
       "api": "csp_WexZhaoPansoGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "115",
@@ -750,7 +910,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "tianyi",
@@ -762,7 +924,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "夸克",
@@ -774,7 +938,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "优熙",
@@ -786,7 +952,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "异动",
@@ -798,7 +966,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "WexWo123panGuard",
@@ -810,7 +980,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "xunlei",
@@ -822,7 +994,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "baidu",
@@ -834,7 +1008,9 @@
       "timeout": 50,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "push_agent",
@@ -842,27 +1018,35 @@
       "type": 3,
       "api": "csp_PushGuard",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+      "source": "王二小"
     },
     {
       "key": "豆瓣",
       "name": "豆瓣｜首页",
       "type": 3,
       "api": "csp_Douban",
-      "searchable": 0
+      "searchable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "预告",
       "name": "新片｜预告",
       "type": 3,
       "api": "csp_YGP",
-      "searchable": 0
+      "searchable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "本地",
       "name": "本地｜视频",
       "type": 3,
-      "api": "csp_LocalFile"
+      "api": "csp_LocalFile",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "配置中心",
@@ -875,7 +1059,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "热播影视",
@@ -887,7 +1073,9 @@
       "filterable": 0,
       "ext": {
         "url": "http://v.rbotv.cn"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "浪酷影视",
@@ -899,7 +1087,9 @@
       "filterable": 0,
       "ext": {
         "url": "http://v.lkuys.cn"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "和友",
@@ -912,7 +1102,9 @@
         "siteKey": "rectangleadsadxa",
         "listKey": "gHSLmx3JQRasgztO",
         "parsesKey": "gHSLmx3JQRasgztO"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "加菲",
@@ -928,7 +1120,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "咖啡",
@@ -944,7 +1138,9 @@
         "deviceId": "",
         "version": "101",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔滴",
@@ -960,7 +1156,9 @@
         "deviceId": "",
         "version": "120",
         "ua": "okhttp/3.10.0 BDYS/109.0.0.8"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "云云",
@@ -975,7 +1173,9 @@
         "dataIv": "staraugust123456",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "若雪",
@@ -990,7 +1190,9 @@
         "dataIv": "ZX10ysTYZWtIJCTU",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "蓝鹰",
@@ -1005,7 +1207,9 @@
         "dataIv": "ca94b06ca359d80e",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "仓鼠",
@@ -1020,7 +1224,9 @@
         "dataIv": "da61247f5b662597",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "鲸鱼",
@@ -1035,7 +1241,9 @@
         "dataIv": "AAdgrdghjfgswerA",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "一三",
@@ -1051,7 +1259,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "热剧",
@@ -1067,7 +1277,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "星星",
@@ -1083,7 +1295,9 @@
         "deviceId": "",
         "version": "",
         "ua": "okhttp/3.10.0 BDYS/109.0.0.8"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "斗量",
@@ -1099,7 +1313,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "魔方",
@@ -1115,7 +1331,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "稀饭",
@@ -1131,7 +1349,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "爱看",
@@ -1147,7 +1367,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "布雷",
@@ -1163,7 +1385,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "五八",
@@ -1179,7 +1403,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "狂人",
@@ -1195,7 +1421,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "万能",
@@ -1211,7 +1439,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "驿站",
@@ -1227,7 +1457,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "外剧",
@@ -1243,7 +1475,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "小猪",
@@ -1259,7 +1493,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "爱影",
@@ -1275,7 +1511,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "蔬菜",
@@ -1291,7 +1529,9 @@
         "deviceId": "",
         "version": "140",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "云端",
@@ -1306,7 +1546,9 @@
         "dataIv": "k9o3p2c8b7m3z0o8",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "光影",
@@ -1320,7 +1562,9 @@
         "dataIv": "230fnsodfsdhfon2",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "莱米",
@@ -1335,7 +1579,9 @@
         "dataIv": "ce032244d093b3e2",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "灵虎",
@@ -1350,7 +1596,9 @@
         "dataIv": "#getapp@TMD@2025",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "旗星",
@@ -1365,7 +1613,9 @@
         "dataIv": "2SWSPFxugBLPPOKo",
         "deviceId": "",
         "version": "120"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "丫丫",
@@ -1379,7 +1629,9 @@
         "dataIv": "qkxnwkfjwpcnwycl",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "云速",
@@ -1394,7 +1646,9 @@
         "dataIv": "4d83b87c4c5ea111",
         "deviceId": "",
         "version": "105"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "萝卜",
@@ -1408,7 +1662,9 @@
         "dataIv": "apiapplbyskey168",
         "deviceId": "",
         "version": "107"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "米兔",
@@ -1422,7 +1678,9 @@
         "dataIv": "d032c12876bc6848",
         "deviceId": "",
         "version": "200"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "白蛇",
@@ -1437,7 +1695,9 @@
         "dataIv": "n3l2tx5jdkp9s2c8",
         "deviceId": "",
         "version": "361"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "移动",
@@ -1448,7 +1708,9 @@
       "quickSearch": 1,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩视频",
@@ -1466,41 +1728,53 @@
       "ext": {
         "json": "https://gitee.com/PizazzXS/another-d/raw/master/movie/json/BLSP.json",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "腾讯视频",
       "name": "腾讯｜视频",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/TXSP.js"
+      "ext": "./js/TXSP.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "优酷视频",
       "name": "优酷｜视频",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/YKSP.js"
+      "ext": "./js/YKSP.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "芒果视频",
       "name": "芒果｜视频",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/MGSP.js"
+      "ext": "./js/MGSP.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "爱奇艺",
       "name": "爱奇艺｜视频",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/AQY.js"
+      "ext": "./js/AQY.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "三六零",
       "name": "三六零｜视频",
       "type": 3,
-      "api": "csp_SP360"
+      "api": "csp_SP360",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "小斑快映",
@@ -1511,7 +1785,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/xbky.json"
+      "ext": "./json/xbky.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "玩偶哥哥",
@@ -1522,7 +1798,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/wogg.json"
+      "ext": "./json/wogg.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "木偶",
@@ -1533,7 +1811,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/mogg.json"
+      "ext": "./json/mogg.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "蜡笔",
@@ -1544,7 +1824,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/lb.json"
+      "ext": "./json/lb.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "至臻",
@@ -1555,7 +1837,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/zz.json"
+      "ext": "./json/zz.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "多多",
@@ -1566,7 +1850,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/yyds.json"
+      "ext": "./json/yyds.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "欧哥",
@@ -1577,7 +1863,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/og.json"
+      "ext": "./json/og.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "二小",
@@ -1588,7 +1876,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/ex.json"
+      "ext": "./json/ex.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "虎斑",
@@ -1599,7 +1889,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./json/hb.json"
+      "ext": "./json/hb.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "团长",
@@ -1609,7 +1901,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "海绵",
@@ -1624,7 +1918,9 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "./json/hm.json"
+      "ext": "./json/hm.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "双星",
@@ -1634,7 +1930,9 @@
       "ext": "./js/SX.js",
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "校长",
@@ -1644,7 +1942,9 @@
       "ext": "./js/XZ.js",
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "人人电影网",
@@ -1654,7 +1954,9 @@
       "ext": "./js/RRDYW.js",
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "糖果",
@@ -1663,7 +1965,9 @@
       "api": "csp_TGSou",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "夸克盘搜",
@@ -1675,7 +1979,9 @@
       "filterable": 1,
       "ext": {
         "cloudDrives": "quark"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "UC盘搜",
@@ -1687,7 +1993,9 @@
       "filterable": 1,
       "ext": {
         "cloudDrives": "uc"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "天翼盘搜",
@@ -1699,7 +2007,9 @@
       "filterable": 1,
       "ext": {
         "cloudDrives": "tianyi"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "123盘搜",
@@ -1711,7 +2021,9 @@
       "filterable": 1,
       "ext": {
         "cloudDrives": "123"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "百度盘搜",
@@ -1723,43 +2035,57 @@
       "filterable": 1,
       "ext": {
         "cloudDrives": "baidu"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "百酷",
       "name": "百酷｜搜索",
       "type": 3,
-      "api": "csp_Baiku"
+      "api": "csp_Baiku",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "米搜",
       "name": "米搜｜搜索",
       "type": 3,
-      "api": "csp_MiSou"
+      "api": "csp_MiSou",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "派派",
       "name": "派派｜搜索",
       "type": 3,
-      "api": "csp_PPQPan"
+      "api": "csp_PPQPan",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "短剧大全",
       "name": "短剧｜大全",
       "type": 3,
-      "api": "csp_DuanjuDQ"
+      "api": "csp_DuanjuDQ",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "短剧合集",
       "name": "短剧｜合集",
       "type": 3,
-      "api": "csp_DuanjuHJ"
+      "api": "csp_DuanjuHJ",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "短剧鬼鬼",
       "name": "短剧｜鬼鬼",
       "type": 3,
-      "api": "csp_DuanjuGG"
+      "api": "csp_DuanjuGG",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "星芽短剧",
@@ -1768,7 +2094,9 @@
       "api": "csp_AppXY",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 0
+      "filterable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "甜圈短剧",
@@ -1778,7 +2106,9 @@
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "锦鲤短剧",
@@ -1788,7 +2118,9 @@
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "剧王短剧",
@@ -1798,7 +2130,9 @@
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "短剧屋",
@@ -1808,7 +2142,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./json/DJWu.json"
+      "ext": "./json/DJWu.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "天翼影视",
@@ -1824,7 +2160,9 @@
         "电视剧",
         "综艺",
         "动漫"
-      ]
+      ],
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "猎手影视",
@@ -1834,7 +2172,9 @@
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "厂长影视",
@@ -1845,27 +2185,35 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://www.czzymovie.com/"
+      "ext": "https://www.czzymovie.com/",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "金牌影视",
       "name": "金牌｜影视",
       "type": 3,
       "api": "csp_Jpys",
-      "ext": "https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn"
+      "ext": "https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "云播影视",
       "name": "云播｜影视",
       "type": 3,
       "api": "csp_Tvyb",
-      "ext": "http://www.viptv01.com"
+      "ext": "http://www.viptv01.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "奇优影视",
       "name": "奇优｜影视",
       "type": 3,
-      "api": "csp_Qiyou"
+      "api": "csp_Qiyou",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "苹果影视",
@@ -1874,20 +2222,26 @@
       "api": "csp_LiteApple",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "全网影视",
       "name": "全看｜影视",
       "type": 3,
       "api": "csp_Quanwk",
-      "ext": "https://www.91qkw.com"
+      "ext": "https://www.91qkw.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "饺子影视",
       "name": "饺子｜影视",
       "type": 3,
-      "api": "csp_Jiaozi"
+      "api": "csp_Jiaozi",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "低端影视",
@@ -1896,7 +2250,9 @@
       "api": "csp_Ddys",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "瓜子影视",
@@ -1905,7 +2261,9 @@
       "api": "csp_Gz360",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "骚火影视",
@@ -1913,21 +2271,27 @@
       "type": 3,
       "api": "csp_SaoHuo",
       "playerType": 2,
-      "ext": "https://shdy5.us"
+      "ext": "https://shdy5.us",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "农民影视",
       "name": "农民｜影视",
       "type": 3,
       "api": "csp_Wwys",
-      "ext": "https://www.wwgz.cn"
+      "ext": "https://www.wwgz.cn",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "采集之王",
       "name": "采集｜合集",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/CJZW.js?type=url&params=https://gitee.com/PizazzXS/another-d/raw/master/movie/json/CJJT.json$1$1"
+      "ext": "./js/CJZW.js?type=url&params=https://gitee.com/PizazzXS/another-d/raw/master/movie/json/CJJT.json$1$1",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "爱看机器人",
@@ -1936,42 +2300,54 @@
       "api": "csp_Ikanbot",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "面包影视",
       "name": "面包｜影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "ext": "./json/MBYS.json"
+      "ext": "./json/MBYS.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "永乐影视",
       "name": "永乐｜影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "ext": "./json/YLYS.json"
+      "ext": "./json/YLYS.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "雪糕影视",
       "name": "雪糕｜影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "ext": "./json/XGYS.json"
+      "ext": "./json/XGYS.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "三九影视",
       "name": "三九｜影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "ext": "./json/SJYS.json"
+      "ext": "./json/SJYS.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "剧圈圈",
       "name": "剧圈｜影视",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/JQQ.js"
+      "ext": "./js/JQQ.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "1905",
@@ -1980,7 +2356,9 @@
       "api": "csp_Web1905",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 0
+      "filterable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哆啦新番社",
@@ -1990,28 +2368,36 @@
       "style": {
         "type": "list"
       },
-      "ext": "./json/DLXFS.json"
+      "ext": "./json/DLXFS.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "56动漫",
       "name": "56｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/56DM.js"
+      "ext": "./js/56DM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "NT动漫",
       "name": "NT｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/NTDM.js"
+      "ext": "./js/NTDM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "Anime1",
       "name": "A1｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/Anime1.js"
+      "ext": "./js/Anime1.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "漫国",
@@ -2023,7 +2409,9 @@
         "siteKey": "rectangleadsadxa",
         "listKey": "aassddwwxxllsx1x",
         "parsesKey": "aassddwwxxllsx1x"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "方舟",
@@ -2039,7 +2427,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "元咲",
@@ -2055,7 +2445,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "番薯",
@@ -2071,7 +2463,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "凛冬",
@@ -2087,7 +2481,9 @@
         "deviceId": "",
         "version": "",
         "ua": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "曼波动漫",
@@ -2101,7 +2497,9 @@
         "dataIv": "66dc309cbeeca454",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "稀饭动漫",
@@ -2116,7 +2514,9 @@
         "dataIv": "1yZ2Spn9krnzVKoC",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "咕咕动漫",
@@ -2130,7 +2530,9 @@
         "dataIv": "nKfZ8KX6JTNWRzTD",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "多多动漫",
@@ -2145,7 +2547,9 @@
         "dataIv": "qqqqqqqqqqqqqqqq",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "派对动漫",
@@ -2159,7 +2563,9 @@
         "dataIv": "AmtMYFCJDPoTlK7z",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "米饭",
@@ -2174,98 +2580,126 @@
         "dataIv": "GETMIFUNGEIMIFUN",
         "deviceId": "",
         "version": ""
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "樱花动漫",
       "name": "樱花｜动漫",
       "type": 3,
       "api": "csp_XBPQ",
-      "ext": "./json/YHDM.json"
+      "ext": "./json/YHDM.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "巴士动漫",
       "name": "巴士｜动漫",
       "type": 3,
       "api": "csp_XYQHiker",
-      "ext": "./json/bsdm.json"
+      "ext": "./json/bsdm.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "好看动漫",
       "name": "好看｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/HKDM.js"
+      "ext": "./js/HKDM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "奇米动漫",
       "name": "奇米｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/QMDM.js"
+      "ext": "./js/QMDM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "花子动漫",
       "name": "花子｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/HZDM.js"
+      "ext": "./js/HZDM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "动画片",
       "name": "动画片｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/DHPDQ.js"
+      "ext": "./js/DHPDQ.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "路漫漫",
       "name": "路漫漫｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/LMM.js"
+      "ext": "./js/LMM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "动漫岛",
       "name": "动漫岛｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/DMD.js"
+      "ext": "./js/DMD.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "去看吧",
       "name": "去看吧｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/QKB.js"
+      "ext": "./js/QKB.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "爱弹幕",
       "name": "爱弹幕｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/ADM.js"
+      "ext": "./js/ADM.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "异世界",
       "name": "异世界｜动漫",
       "type": 3,
       "api": "./api/drpy2.min.js",
-      "ext": "./js/YSJ.js"
+      "ext": "./js/YSJ.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "荐片",
       "name": "荐片｜磁力",
       "api": "csp_Jianpian",
       "type": 3,
-      "ext": "https://api.ztcgi.com"
+      "ext": "https://api.ztcgi.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "修罗",
       "name": "修罗｜磁力",
       "api": "csp_Xlys",
       "type": 3,
-      "ext": "https://xl01.com.de"
+      "ext": "https://xl01.com.de",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "七味",
@@ -2277,7 +2711,9 @@
       "filterable": 1,
       "ext": {
         "url": "https://www.pkmp4.xyz,https://www.qwnull.com,https://www.qwmkv.com,https://www.qwfilm.com,https://www.qnmp4.com,https://www.qnnull.com,https://www.qnhot.com"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "80S",
@@ -2287,7 +2723,9 @@
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "New6v",
@@ -2297,7 +2735,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://www.xb6v.com"
+      "ext": "https://www.xb6v.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "美剧迷",
@@ -2306,7 +2746,9 @@
       "api": "csp_MeijuMi",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "迅雷吧",
@@ -2315,7 +2757,9 @@
       "api": "csp_Xunlei8",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "电影港",
@@ -2325,7 +2769,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./json/DYG.json"
+      "ext": "./json/DYG.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "狐狸君",
@@ -2336,7 +2782,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "./json/HLJ.json"
+      "ext": "./json/HLJ.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "Mp4电影",
@@ -2345,7 +2793,9 @@
       "api": "csp_Mp4Mov",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "美剧天堂",
@@ -2354,7 +2804,9 @@
       "api": "csp_MeijuTT",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "电影天堂",
@@ -2363,7 +2815,9 @@
       "api": "csp_DyGod",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "夸克云盘",
@@ -2377,7 +2831,9 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "./json/quarkShare.json"
+      "ext": "./json/quarkShare.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "UC",
@@ -2391,7 +2847,9 @@
         "type": "list",
         "ratio": 1.433
       },
-      "ext": "./json/ucShare.json"
+      "ext": "./json/ucShare.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "百度云盘",
@@ -2404,7 +2862,9 @@
       "style": {
         "type": "list",
         "ratio": 1.433
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "88看球",
@@ -2414,19 +2874,25 @@
       "gridview": 3,
       "style": {
         "type": "list"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "网络直播",
       "name": "网络｜直播",
       "type": 3,
-      "api": "./api/WLZB.py"
+      "api": "./api/WLZB.py",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩直播",
       "name": "哔哩｜直播",
       "type": 3,
-      "api": "./api/BLZB.py"
+      "api": "./api/BLZB.py",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩合集",
@@ -2444,7 +2910,9 @@
       "ext": {
         "json": "https://gitee.com/PizazzXS/another-d/raw/master/movie/json/BLHJ.json",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩哔哩戏曲",
@@ -2461,7 +2929,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩哔哩听书",
@@ -2478,7 +2948,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩哔哩相声",
@@ -2495,7 +2967,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "哔哩哔哩小品",
@@ -2512,7 +2986,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "急救教学",
@@ -2526,7 +3002,9 @@
         "type": "rect",
         "ratio": 3.8
       },
-      "gridview": "0-0-4.1"
+      "gridview": "0-0-4.1",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "养生堂",
@@ -2537,7 +3015,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.597
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+      "source": "潇洒"
     },
     {
       "key": "天天",
@@ -2545,7 +3025,9 @@
       "type": 3,
       "api": "csp_TTian",
       "playerType": 2,
-      "ext": "7lj763gg0939791h1l3888jig44gi291li"
+      "ext": "7lj763gg0939791h1l3888jig44gi291li",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "拾光",
@@ -2553,7 +3035,9 @@
       "type": 3,
       "api": "csp_Hmys",
       "playerType": 1,
-      "ext": "https://dy.jmzp.net.cn"
+      "ext": "https://dy.jmzp.net.cn",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "csp_xlys",
@@ -2564,7 +3048,9 @@
       "playerType": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "7lj763gg402i7942476492jlg94li29kk6gi8448ij"
+      "ext": "7lj763gg402i7942476492jlg94li29kk6gi8448ij",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "追剧",
@@ -2572,7 +3058,9 @@
       "type": 3,
       "api": "csp_TTian",
       "playerType": 2,
-      "ext": "7lj763gg0939791h1l2681i6g94li291li"
+      "ext": "7lj763gg0939791h1l2681i6g94li291li",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "剧评",
@@ -2580,7 +3068,9 @@
       "type": 3,
       "api": "csp_Jpys",
       "playerType": 1,
-      "ext": "7lj763gg402i7942463j9j9jh8579590k3hjii5gi4i73l2k5l"
+      "ext": "7lj763gg402i7942463j9j9jh8579590k3hjii5gi4i73l2k5l",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "巧技二",
@@ -2588,7 +3078,9 @@
       "type": 3,
       "api": "csp_qiao2",
       "playerType": 2,
-      "ext": "7lj763gg402i79425739i7jghj118797l4hj840gi18633331l4708g2h7145403549g44l8ii56i187681hkjj3hhgh1ih3l32j250lk1k786lj20j468hk3hli4l46gig4i3g7g2722328j0136h01i7g5183k22k7gg3i72hk81gl8k9839kl7i0707"
+      "ext": "7lj763gg402i79425739i7jghj118797l4hj840gi18633331l4708g2h7145403549g44l8ii56i187681hkjj3hhgh1ih3l32j250lk1k786lj20j468hk3hli4l46gig4i3g7g2722328j0136h01i7g5183k22k7gg3i72hk81gl8k9839kl7i0707",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "yunyun",
@@ -2596,7 +3088,9 @@
       "type": 3,
       "api": "csp_Qiji",
       "playerType": 2,
-      "ext": "7lj763gg402i79425h2384j4g949j899hll9990i9kjl6l740h1342hjlg1848401g8610h9995i998j351gl38kklkj1hkhll757010k7hji6h377ih37k060g35161jhl3i5h0l2702g7299452l4297k5697g5390lk6935k2i9g48l8j2kh27l1g014k7j9475g8"
+      "ext": "7lj763gg402i79425h2384j4g949j899hll9990i9kjl6l740h1342hjlg1848401g8610h9995i998j351gl38kklkj1hkhll757010k7hji6h377ih37k060g35161jhl3i5h0l2702g7299452l4297k5697g5390lk6935k2i9g48l8j2kh27l1g014k7j9475g8",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "lanyingys",
@@ -2604,7 +3098,9 @@
       "type": 3,
       "api": "csp_Muou",
       "playerType": 2,
-      "ext": "7lj763gg0939790i5g649ki3hj5k98jil1g6jqiaoji6jg2458hhjjh9i4i62271j0hj124lj80ll9i8"
+      "ext": "7lj763gg0939790i5g649ki3hj5k98jil1g6jqiaoji6jg2458hhjjh9i4i62271j0hj124lj80ll9i8",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "kafeiys",
@@ -2612,7 +3108,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg402i7942422493i0g712948hk8k7i75hj59g6l73010l0lkhkj0h0g5i48i208k1il0gihj36j48k9j0g4gj04h6g233200hh2k593g471j368g73ill1i5ig9g790"
+      "ext": "7lj763gg402i7942422493i0g712948hk8k7i75hj59g6l73010l0lkhkj0h0g5i48i208k1il0gihj36j48k9j0g4gj04h6g233200hh2k593g471j368g73ill1i5ig9g790",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "huomaoys",
@@ -2620,7 +3118,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg402i79424930jkj8lk488382hjhjj851829j24354k104ighgi16580i4j9504k1ih03ihj03901kij4gkg919k4l2367707h2k19gg4728721g03ll9"
+      "ext": "7lj763gg402i79424930jkj8lk488382hjhjj851829j24354k104ighgi16580i4j9504k1ih03ihj03901kij4gkg919k4l2367707h2k19gg4728721g03ll9",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "yizys",
@@ -2628,7 +3128,9 @@
       "type": 3,
       "api": "csp_Qiji",
       "playerType": 2,
-      "ext": "7lj763gg402i7942552h8ljjlj0jjki7g4lg99099jjh6l6l514k08hjl807161j139753h090539gig3604gi80lgl30jk3hk637h53gh9ljkij2lig30k277g50354k2k3jkl1g17i2820ii582l0483g61k6i79k7kk7274h1i5g6jjj833h2390k42396hik71kigl18k613"
+      "ext": "7lj763gg402i7942552h8ljjlj0jjki7g4lg99099jjh6l6l514k08hjl807161j139753h090539gig3604gi80lgl30jk3hk637h53gh9ljkij2lig30k277g50354k2k3jkl1g17i2820ii582l0483g61k6i79k7kk7274h1i5g6jjj833h2390k42396hik71kigl18k613",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "主角",
@@ -2636,7 +3138,9 @@
       "type": 3,
       "api": "csp_Muou",
       "playerType": 2,
-      "ext": "7lj763gg402i794247258k9jh6598585l3g6ij13il8g20g9qiaoji8j9i9k1g3k90h7i507i213k5j602"
+      "ext": "7lj763gg402i794247258k9jh6598585l3g6ij13il8g20g9qiaoji8j9i9k1g3k90h7i507i213k5j602",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "柚子",
@@ -2644,7 +3148,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg402i7942463j9j9jh7498j9gl6k6i952i1i66j6l46590lklll457g593li27lkkhj0gh0j56j48kkj2kglg4gi6g744207ihj9793jl77j368g03kh11k10g8"
+      "ext": "7lj763gg402i7942463j9j9jh7498j9gl6k6i952i1i66j6l46590lklll457g593li27lkkhj0gh0j56j48kkj2kglg4gi6g744207ihj9793jl77j368g03kh11k10g8",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "永夜",
@@ -2652,7 +3158,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg402i794248398hi3g05j9i9hhig7j94k818g326i41491kljk31l5k00559751hk81479j872853hk8ilhh31lk2k4616457ggg6j3k83gg46il2649h7j71l7l9ii87g2513821g55k1j0493li7k5643hil46002h2k8h6jih135l2384h"
+      "ext": "7lj763gg402i794248398hi3g05j9i9hhig7j94k818g326i41491kljk31l5k00559751hk81479j872853hk8ilhh31lk2k4616457ggg6j3k83gg46il2649h7j71l7l9ii87g2513821g55k1j0493li7k5643hil46002h2k8h6jih135l2384h",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "趣看",
@@ -2660,7 +3168,9 @@
       "type": 3,
       "api": "csp_Qiji",
       "playerType": 2,
-      "ext": "7lj763gg402i7942522k849kg4499i9hl1k5ik48i38l292l1l4l1klgl41255091i8313k2ik478h8j751kh28kh9gj56l3k874684ll3h7j9k83l9034li7lhi5g45k8k3jhhkk760276g8h5h295i9jk7597177g3kk773hh59kl8"
+      "ext": "7lj763gg402i7942522k849kg4499i9hl1k5ik48i38l292l1l4l1klgl41255091i8313k2ik478h8j751kh28kh9gj56l3k874684ll3h7j9k83l9034li7lhi5g45k8k3jhhkk760276g8h5h295i9jk7597177g3kk773hh59kl8",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "星河",
@@ -2668,7 +3178,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg402i7942463j9j9jgg568780llhk844hi59920376g4402k6j3314g3g30876g828i65g6982j25h89gk3j63kl6i44h6569j1g6lii93gj66jg1"
+      "ext": "7lj763gg402i7942463j9j9jgg568780llhk844hi59920376g4402k6j3314g3g30876g828i65g6982j25h89gk3j63kl6i44h6569j1g6lii93gj66jg1",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "时常",
@@ -2676,7 +3188,9 @@
       "type": 3,
       "api": "csp_Qiji",
       "playerType": 2,
-      "ext": "7lj763gg402i7942423k8hi1h1498h87k1hi9h0l9ljj69771i4k08k0h4145543139753h0825g9i91751ih18gklk916k4k32k7751k9lj9gh2329j29kl7ih94i52lhk2i5h7k563732gii1669038kk45i6760h0kl6932l5jgljj7j87jl43k03423j31"
+      "ext": "7lj763gg402i7942423k8hi1h1498h87k1hi9h0l9ljj69771i4k08k0h4145543139753h0825g9i91751ih18gklk916k4k32k7751k9lj9gh2329j29kl7ih94i52lhk2i5h7k563732gii1669038kk45i6760h0kl6932l5jgljj7j87jl43k03423j31",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "巧技三",
@@ -2684,7 +3198,9 @@
       "type": 3,
       "api": "csp_Qiji",
       "playerType": 2,
-      "ext": "7lj763gg0939791i5820839jhg498h93ljh9i353ihi73l2k5l5j48g4l21j035j01850ig6i904998l6j09g1j0g1l712hlg37g670ll5k39jl62jj329kl3ilj19"
+      "ext": "7lj763gg0939791i5820839jhg498h93ljh9i353ihi73l2k5l5j48g4l21j035j01850ig6i904998l6j09g1j0g1l712hlg37g670ll5k39jl62jj329kl3ilj19",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "优质",
@@ -2692,7 +3208,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg402i7942503g83j2g04i8090khhh8451ik902l6l53510hg9gi410i5607974jhk994283883904gk88l3k549h1g87i754kkjh3jhki2g8724k064g85411gigljkl3g620"
+      "ext": "7lj763gg402i7942503g83j2g04i8090khhh8451ik902l6l53510hg9gi410i5607974jhk994283883904gk88l3k549h1g87i754kkjh3jhki2g8724k064g85411gigljkl3g620",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "客星",
@@ -2700,7 +3218,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg0939790i413gi486k509jgi3ggk6j244j6j36j76041707h0lk124l0l0h867j83h576h3j66h4lk89lh5lh1jl3l170647kj09lklji74j56lg673li1h16"
+      "ext": "7lj763gg0939790i413gi486k509jgi3ggk6j244j6j36j76041707h0lk124l0l0h867j83h576h3j66h4lk89lh5lh1jl3l170647kj09lklji74j56lg673li1h16",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "蝴蝶",
@@ -2708,7 +3228,9 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 2,
-      "ext": "7lj763gg093979590464ji85lk0jj9i5hill9j0795jj6k761j451lhjkj0l4l1223974kh3994197i56g4lkkj2g4gl1ik3ki58754jk0h3j8l867j46lg03kll1k44lkkh91l2g2"
+      "ext": "7lj763gg093979590464ji85lk0jj9i5hill9j0795jj6k761j451lhjkj0l4l1223974kh3994197i56g4lkkj2g4gl1ik3ki58754jk0h3j8l867j46lg03kll1k44lkkh91l2g2",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "柠檬",
@@ -2716,7 +3238,9 @@
       "type": 3,
       "api": "csp_Nmvod",
       "playerType": 2,
-      "ext": "7lj763gg402i7942503g839jg74h8h88highi40799jh6i6k454419l0l5184k0g549h0kg2i01i838i2h42g891lgg1"
+      "ext": "7lj763gg402i7942503g839jg74h8h88highi40799jh6i6k454419l0l5184k0g549h0kg2i01i838i2h42g891lgg1",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "AI2",
@@ -2727,7 +3251,9 @@
       "quickSearch": 1,
       "filterable": 0,
       "playerType": 2,
-      "ext": "7lj763gg0939795i037ki481k20ki2i3g3lk840883843k6k5l4354l2k91k151k138612g78g5j858j3l18l295l9l857lhjj6l6k57k8hkigh373ih6jh327804i43l3l9j6gjk57l7938h64i28509kh7656771l1j55j67jk8kljj5h478l457485g2l40j537l4h67ih345g420686258i648jh8k4l6ij828lk496588370j9ijj5h69591i411g0i38l10jg4j8l45j3jj87h78kj324hg71hj92i20l8326gk9464360kk4257l6j98h07j91ji35k7kg45i"
+      "ext": "7lj763gg0939795i037ki481k20ki2i3g3lk840883843k6k5l4354l2k91k151k138612g78g5j858j3l18l295l9l857lhjj6l6k57k8hkigh373ih6jh327804i43l3l9j6gjk57l7938h64i28509kh7656771l1j55j67jk8kljj5h478l457485g2l40j537l4h67ih345g420686258i648jh8k4l6ij828lk496588370j9ijj5h69591i411g0i38l10jg4j8l45j3jj87h78kj324hg71hj92i20l8326gk9464360kk4257l6j98h07j91ji35k7kg45i",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "AI3",
@@ -2738,7 +3264,9 @@
       "quickSearch": 1,
       "filterable": 0,
       "playerType": 2,
-      "ext": "7lj763gg0939795i037ki481k20ki2i3g3lk840883843k6k5l4354k0k10k48411g8654l9885g83ih2h0lh295lll81jg8k66l7011l8hji0l432912jhi3hk3140kghkhj3ghl7782871"
+      "ext": "7lj763gg0939795i037ki481k20ki2i3g3lk840883843k6k5l4354k0k10k48411g8654l9885g83ih2h0lh295lll81jg8k66l7011l8hji0l432912jhi3hk3140kghkhj3ghl7782871",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "Dygang",
@@ -2747,7 +3275,9 @@
       "api": "csp_Dygang",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 0
+      "filterable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "Lib",
@@ -2757,7 +3287,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "7lj763gg402i7942463j9j9jhi558k84lhg7845kili62l35535512l0h61j48410h9g5igk9j40908h351hh484h8l60h"
+      "ext": "7lj763gg402i7942463j9j9jhi558k84lhg7845kili62l35535512l0h61j48410h9g5igk9j40908h351hh484h8l60h",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "NoSearch_csp_DiDuan",
@@ -2767,7 +3299,9 @@
       "searchable": 1,
       "playerType": 2,
       "quickSearch": 1,
-      "filterable": 0
+      "filterable": 0,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "快看",
@@ -2777,7 +3311,9 @@
       "searchable": 1,
       "playerType": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "360_spider",
@@ -2788,7 +3324,9 @@
       "quickSearch": 1,
       "searchable": 1,
       "playerType": 2,
-      "ext": ""
+      "ext": "",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "ZXZJ",
@@ -2799,7 +3337,9 @@
       "quickSearch": 1,
       "searchable": 1,
       "playerType": 2,
-      "ext": "7lj763gg402i7942463j9j9jgg449698khhh845ki38473"
+      "ext": "7lj763gg402i7942463j9j9jgg449698khhh845ki38473",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "csp_CZSPP",
@@ -2810,7 +3350,9 @@
       "playerType": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "7lj763gg402i7942463j9j9jh346968hg5ll845ki38473"
+      "ext": "7lj763gg402i7942463j9j9jh346968hg5ll845ki38473",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "csp_sbb",
@@ -2821,7 +3363,9 @@
       "playerType": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "7lj763gg402i7942463j9j9jg3498k93lhggih54828g332i1j"
+      "ext": "7lj763gg402i7942463j9j9jg3498k93lhggih54828g332i1j",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "csp_Auete",
@@ -2831,7 +3375,9 @@
       "searchable": 1,
       "playerType": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "NoSearch_csp_BBB",
@@ -2841,7 +3387,9 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "7lj763gg402i7942463j9j9jg1558j9jl8g19213il86316k465719lik1585907179l13hj8h5j9j"
+      "ext": "7lj763gg402i7942463j9j9jg1558j9jl8g19213il86316k465719lik1585907179l13hj8h5j9j",
+      "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+      "source": "巧技"
     },
     {
       "key": "drpy_js_豆瓣",
@@ -2860,7 +3408,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "order_num": 0,
-      "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/豆瓣[官].js"
+      "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/豆瓣[官].js",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "应用商店",
@@ -2959,7 +3509,9 @@
       "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/",
       "playerType": 1,
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "如意采集资源",
@@ -2968,7 +3520,9 @@
       "api": "https://cj.rycjapi.com/api.php/provide/vod/",
       "playerType": 1,
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "hipy_js_6V新版[磁]",
@@ -2979,7 +3533,9 @@
       "quickSearch": 1,
       "filterable": 1,
       "order_num": 0,
-      "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/6V新版[磁].js"
+      "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/6V新版[磁].js",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "仓鼠2",
@@ -2988,7 +3544,9 @@
       "searchable": 1,
       "type": 3,
       "api": "csp_AppQi",
-      "ext": "lo54N2bJ4DtrhxC9P676hHekMnvMvX1mNNhVKf3kE5Wgy3H/b30VkkDKAYauTqZsEMYaTrPKBtx3YUMTA+XHh7FPLmLfqp6gWseDzGVsgesALIba2gHVzuE75Sx1II8A"
+      "ext": "lo54N2bJ4DtrhxC9P676hHekMnvMvX1mNNhVKf3kE5Wgy3H/b30VkkDKAYauTqZsEMYaTrPKBtx3YUMTA+XHh7FPLmLfqp6gWseDzGVsgesALIba2gHVzuE75Sx1II8A",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "大豆",
@@ -2997,14 +3555,18 @@
       "quickSearch": 0,
       "searchable": 1,
       "api": "csp_AppQi",
-      "ext": "Ruh/okyt5lxEpcdQOao0NkSkj8M9vdB0soaZbGJldzA3817rfAzlvyWHCewZEFD4+BBCXxVVHkmAtv6gi+JRQlKwhK1WjuT8blTygReol77ICMmtZZPsmzfgjOtOXiEJ"
+      "ext": "Ruh/okyt5lxEpcdQOao0NkSkj8M9vdB0soaZbGJldzA3817rfAzlvyWHCewZEFD4+BBCXxVVHkmAtv6gi+JRQlKwhK1WjuT8blTygReol77ICMmtZZPsmzfgjOtOXiEJ",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_FreeOk",
       "name": "🔥️Frek┃影视",
       "type": 3,
       "quickSearch": 0,
-      "api": "csp_FreeOk"
+      "api": "csp_FreeOk",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "AppQi1",
@@ -3014,7 +3576,9 @@
       "changeable": "0",
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "BciM/oLDYQqSU++RAsI5xz2Dmz98Blyw0pp0T+0QPiq/bSU1IhcLmPsn25NijfG6B3fLoAmVGEL0/tWb+o0nZYn1u5i3pWNxWaYYmNV1x0c="
+      "ext": "BciM/oLDYQqSU++RAsI5xz2Dmz98Blyw0pp0T+0QPiq/bSU1IhcLmPsn25NijfG6B3fLoAmVGEL0/tWb+o0nZYn1u5i3pWNxWaYYmNV1x0c=",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "追忆",
@@ -3022,7 +3586,9 @@
       "type": 3,
       "api": "csp_AppSy",
       "quickSearch": 0,
-      "ext": "oJGDh+VBrPcwnx19VbSGqy9EkivA/Gc+cSt3uSBzyPzDTmKYyoi6Wr4VgqU2u0Sh7AAuGc4/a7UWVU6BEmFetA=="
+      "ext": "oJGDh+VBrPcwnx19VbSGqy9EkivA/Gc+cSt3uSBzyPzDTmKYyoi6Wr4VgqU2u0Sh7AAuGc4/a7UWVU6BEmFetA==",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "麻花",
@@ -3031,7 +3597,9 @@
       "quickSearch": 0,
       "searchable": 1,
       "api": "csp_AppGet",
-      "ext": "L5CUOokkdA53FISUojI6hPrPTI97cTkdA/ji0bBBqAxKRl2ZBcdyMIPZYXkkVxwyvG4rB4PEPXKIt7+cirUe3BI+KdfWiEtEO4bT/XoF0PYU0GWsBFU3ARUcHsGqNpNy"
+      "ext": "L5CUOokkdA53FISUojI6hPrPTI97cTkdA/ji0bBBqAxKRl2ZBcdyMIPZYXkkVxwyvG4rB4PEPXKIt7+cirUe3BI+KdfWiEtEO4bT/XoF0PYU0GWsBFU3ARUcHsGqNpNy",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_Bili",
@@ -3047,7 +3615,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.333
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "娱乐",
@@ -3060,7 +3630,9 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "ext": ""
+      "ext": "",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "QD4K",
@@ -3074,7 +3646,9 @@
         "api": "http://dmmax.juxiafan.com/icciu_api.php/v1.vod",
         "datasignkey": "6QQNUsP3PkD2ajJCPCY8",
         "apisignkey": "lvdoutv-1.0.0"
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "巧技",
@@ -3093,7 +3667,9 @@
       "type": 3,
       "searchable": 1,
       "quickSearch": 0,
-      "api": "csp_Gz360"
+      "api": "csp_Gz360",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "厂长",
@@ -3101,7 +3677,9 @@
       "type": 3,
       "quickSearch": 0,
       "api": "csp_Czsapp",
-      "ext": "https://www.czzymovie.com"
+      "ext": "https://www.czzymovie.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_LiteApple",
@@ -3109,7 +3687,9 @@
       "type": 3,
       "searchable": 1,
       "quickSearch": 0,
-      "api": "csp_LiteApple"
+      "api": "csp_LiteApple",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_Jpys",
@@ -3117,7 +3697,9 @@
       "type": 3,
       "searchable": 1,
       "quickSearch": 0,
-      "api": "csp_Jpys"
+      "api": "csp_Jpys",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_BookTing",
@@ -3125,7 +3707,9 @@
       "api": "csp_BookTing",
       "type": 3,
       "quickSearch": 0,
-      "ext": "https://m.i275.com"
+      "ext": "https://m.i275.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "ygcl",
@@ -3150,7 +3734,9 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "ext": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/%E5%85%94%E5%B0%8F%E8%B4%9D.js"
+      "ext": "https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/%E5%85%94%E5%B0%8F%E8%B4%9D.js",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_少儿",
@@ -3166,7 +3752,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.333
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_小学",
@@ -3182,7 +3770,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.333
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_初中",
@@ -3198,7 +3788,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.333
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "csp_高中",
@@ -3214,7 +3806,9 @@
       "style": {
         "type": "rect",
         "ratio": 1.333
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "MV",
@@ -3225,7 +3819,9 @@
       "quickSearch": 0,
       "filterable": 1,
       "order_num": 142,
-      "ext": "https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/js/我的哔哩.js?type=url&params=https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/Bilibili/歌曲MV.json"
+      "ext": "https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/js/我的哔哩.js?type=url&params=https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/Bilibili/歌曲MV.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "美食",
@@ -3236,7 +3832,9 @@
       "quickSearch": 0,
       "filterable": 1,
       "order_num": 142,
-      "ext": "https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/js/我的哔哩.js?type=url&params=https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/Bilibili/美食.json"
+      "ext": "https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/js/我的哔哩.js?type=url&params=https://py.nxog.eu.org/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/main/Bilibili/美食.json",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     },
     {
       "key": "Aid",
@@ -3248,12 +3846,16 @@
       "style": {
         "type": "rect",
         "ratio": 3.8
-      }
+      },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+      "source": "影视"
     }
   ],
   "metadata": {
     "description": "自动合并的影视站点集合",
     "total_sites": 313,
-    "last_updated": "2025-10-18 05:49:19"
+    "jar_added": 316,
+    "jar_existing": 20,
+    "last_updated": "2025-10-18 09:37:34"
   }
 }
