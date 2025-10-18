@@ -1,1 +1,25 @@
-
+{
+  "sites": [],
+  "metadata": {
+    "description": "自动合并的影视站点集合",
+    "sources": [
+      {
+        "path": "OK/api.json",
+        "sites_count": 0
+      },
+      {
+        "path": "王二小/api.json",
+        "sites_count": 0
+      },
+      {
+        "path": "潇洒/api.json",
+        "sites_count": 0
+      },
+      {
+        "path": "巧技/api.json",
+        "sites_count": 0
+      }
+    ],
+    "last_updated": "a153f80"
+  }
+}
