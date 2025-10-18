@@ -44,10 +44,11 @@ jobs:
         
         # 要处理的文件列表
         SOURCE_FILES = [
-            "OK/api.json",
-            "王二小/api.json",
-            "潇洒/api.json",
-            "巧技/api.json"
+            "https://github.com/leexuben/TV-BOX/tree/main/tvbox/OK/api.json",
+            "https://github.com/leexuben/TV-BOX/tree/main/tvbox/王二小/api.json",
+            "https://github.com/leexuben/TV-BOX/tree/main/tvbox/潇洒/api.json",
+            "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/影视",
+            "https://github.com/leexuben/TV-BOX/tree/main/tvbox/巧技/api.json"
         ]
 
         def load_json(path):
