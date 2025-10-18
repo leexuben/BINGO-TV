@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Run merge script
+    - name: Run merge script with JAR integration
       run: |
         python << 'EOF'
         import json
@@ -33,12 +33,28 @@ jobs:
         import os
         from datetime import datetime
 
-        # 源文件URL列表
-        SOURCE_URLS = [
-            "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/api.json",
-            "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json", 
-            "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/api.json",
-            "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/影视"
+        # 源文件配置：每个API文件对应一个JAR文件
+        SOURCE_CONFIGS = [
+            {
+                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/api.json",
+                "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/王二小/spider.jar",
+                "source": "王二小"
+            },
+            {
+                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/api.json",
+                "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+                "source": "潇洒"
+            },
+            {
+                "api_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/api.json",
+                "jar_url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/巧技/spider.jar",
+                "source": "巧技"
+            },
+            {
+                "api_url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/影视",
+                "jar_url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/refs/heads/main/jar/spider.jar",
+                "source": "影视"
+            }
         ]
         
         # 目标文件路径
@@ -104,45 +120,105 @@ jobs:
                 print(f"   ❌ 获取失败: {e}")
                 return None
 
+        def add_jar_to_site(site, jar_url, source_name):
+            """只为没有jar字段的站点添加jar信息"""
+            # 检查是否已经有jar字段
+            if 'jar' in site and site['jar']:
+                return site, False  # 返回False表示未添加
+            
+            # 检查是否有jar字段但为空
+            if 'jar' in site and not site['jar']:
+                site['jar'] = jar_url
+                site['source'] = source_name
+                return site, True
+            
+            # 没有jar字段，添加jar信息
+            site['jar'] = jar_url
+            site['source'] = source_name
+            
+            return site, True
+
         def main():
-            print("🚀 开始合并站点数据...")
+            print("🚀 开始合并站点数据（融合JAR添加功能）...")
             print("=" * 60)
             
             all_sites = []
             processed_files = []
+            jar_added_count = 0
+            jar_existing_count = 0
             
-            for url in SOURCE_URLS:
-                print(f"📥 处理: {url}")
-                content = fetch_url_content(url)
+            for config in SOURCE_CONFIGS:
+                api_url = config["api_url"]
+                jar_url = config["jar_url"]
+                source_name = config["source"]
+                
+                print(f"📥 处理: {source_name}")
+                
+                content = fetch_url_content(api_url)
                 if content:
                     sites = extract_sites_from_content(content)
                     if sites:
-                        all_sites.extend(sites)
+                        source_jar_added = 0
+                        source_jar_existing = 0
+                        
+                        modified_sites = []
+                        for site in sites:
+                            # 只为没有jar的站点添加jar信息
+                            modified_site, jar_added = add_jar_to_site(site, jar_url, source_name)
+                            modified_sites.append(modified_site)
+                            
+                            if jar_added:
+                                source_jar_added += 1
+                                jar_added_count += 1
+                            else:
+                                source_jar_existing += 1
+                                jar_existing_count += 1
+                        
+                        all_sites.extend(modified_sites)
                         processed_files.append({
-                            "url": url,
-                            "sites_count": len(sites)
+                            "source": source_name,
+                            "sites_count": len(sites),
+                            "jar_added": source_jar_added,
+                            "jar_existing": source_jar_existing
                         })
                         print(f"   ✅ 提取到 {len(sites)} 个站点")
+                        if source_jar_added > 0:
+                            print(f"       新增JAR: {source_jar_added} 个")
+                        if source_jar_existing > 0:
+                            print(f"       已有JAR: {source_jar_existing} 个")
                     else:
                         print(f"   ⚠️  未找到sites数据")
+                else:
+                    print(f"   ❌ 无法获取文件内容")
                 print("-" * 40)
             
             if not all_sites:
                 print("❌ 未提取到任何站点数据")
                 return
             
-            # 去重处理
+            # 去重处理（基于key字段）
             unique_sites = []
             seen_keys = set()
+            duplicate_count = 0
+            
             for site in all_sites:
                 key = site.get('key', '')
-                if key not in seen_keys:
-                    unique_sites.append(site)
+                if key and key in seen_keys:
+                    duplicate_count += 1
+                    continue
+                
+                unique_sites.append(site)
+                if key:
                     seen_keys.add(key)
             
             print("📊 合并统计:")
             print(f"   总站点数: {len(all_sites)}")
             print(f"   去重后站点数: {len(unique_sites)}")
+            print(f"   重复站点数: {duplicate_count}")
+            if jar_added_count > 0:
+                print(f"   新增JAR站点数: {jar_added_count}")
+            if jar_existing_count > 0:
+                print(f"   已有JAR站点数: {jar_existing_count}")
             
             # 创建合并结果
             result_data = {
@@ -150,6 +226,8 @@ jobs:
                 "metadata": {
                     "description": "自动合并的影视站点集合",
                     "total_sites": len(unique_sites),
+                    "jar_added": jar_added_count,
+                    "jar_existing": jar_existing_count,
                     "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 }
             }
@@ -158,7 +236,7 @@ jobs:
             with open(TARGET_FILE, 'w', encoding='utf-8') as f:
                 json.dump(result_data, f, ensure_ascii=False, indent=2)
             
-            print("✅ 合并完成!")
+            print("✅ 合并完成! 站点数据已融合JAR信息")
 
         if __name__ == "__main__":
             main()
@@ -177,18 +255,7 @@ jobs:
         # 配置认证
         git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/leexuben/BINGO-TV.git
         
-        # 检查工作目录状态
-        echo "📊 工作目录状态:"
-        git status
-        
-        # 检查是否有未暂存的更改
-        if ! git diff --quiet; then
-            echo "📝 发现未暂存的更改，先暂存这些更改..."
-            git add .
-            git status
-        fi
-        
-        # 暂存所有更改（包括新生成的文件）
+        # 添加所有更改
         git add .
         
         # 检查是否有更改需要提交
@@ -197,10 +264,10 @@ jobs:
             exit 0
         fi
         
-        # 提交更改（使用更简单的提交策略）
-        git commit -m "Auto-update: Merged sites data $(date +'%Y-%m-%d %H:%M:%S')"
+        # 提交更改
+        git commit -m "Auto-update: Merged sites data with JAR integration $(date +'%Y-%m-%d %H:%M:%S')"
         
-        # 直接推送，不使用rebase
+        # 推送更改
         git push origin main
         
         echo "✅ 更改已成功提交并推送"
