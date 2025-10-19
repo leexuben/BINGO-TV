@@ -7,8 +7,6 @@
       "api": "csp_Douban",
       "searchable": 0
     },
- 
-    
     {
       "key": "Mp4电影",
       "name": "Mp4电影｜磁力",
@@ -836,6 +834,140 @@
         "type": "rect",
         "ratio": 3.8
       },
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar"
+    },
+    {
+      "key": "至尊",
+      "name": "💖官解①|4K弹幕",
+      "type": 3,
+      "api": "csp_AppZzun",
+      "ext": "http://154.219.113.13:12121/json/app.txt",
+      "jar": "http://47.120.41.246:8025/vip/jar/banhu.php"
+    },
+    {
+      "key": "魔尊",
+      "name": "💖官解②|4K弹幕",
+      "type": 3,
+      "api": "csp_HBcms10",
+      "ext": "http://154.219.113.13:12121/json/cms.txt",
+      "jar": "http://47.120.41.246:8025/vip/jar/banhu.php"
+    },
+    {
+      "key": "竹生",
+      "name": "💖免扫网盘①|4K",
+      "type": 3,
+      "api": "csp_HBT4",
+      "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qVTROall2ZEdWemRDNXdhSEEvYzJsMFpUMXNZV0pwSXlNamJHRmlhUT09",
+      "jar": "http://47.120.41.246:8025/vip/jar/banhu.php"
+    },
+    {
+      "key": "归安",
+      "name": "💖免扫网盘②|4K",
+      "type": 3,
+      "api": "csp_HBT4",
+      "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qUTROall2ZEdWemRDNXdhSEEvYzJsMFpUMXRhV2hrY2lNakkyMXBhR1J5",
+      "jar": "http://47.120.41.246:8025/vip/jar/banhu.php"
+    },
+    {
+      "key": "薄心",
+      "name": "💖免扫网盘③|4K",
+      "type": 3,
+      "api": "csp_HBT4",
+      "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qUTROall2ZEdWemRDNXdhSEEvYzJsMFpUMWxjbmhwWVc4akl5TmxjbmhwWVc4PQ==",
+      "jar": "http://47.120.41.246:8025/vip/jar/banhu.php"
+    },
+    {
+      "key": "甜橙",
+      "name": "💖免扫网盘④|4K",
+      "type": 3,
+      "api": "csp_HBT4",
+      "ext": "YUhSMGNEb3ZMekUxTkM0eU1Ua3VNVEV6TGpFek9qUTROall2ZEdWemRDNXdhSEEvYzJsMFpUMXZkV2RsSXlNamIzVm5aUT09",
+      "jar": "http://47.120.41.246:8025/vip/jar/banhu.php"
+    },
+    {
+      "key": "浪酷影视",
+      "name": "🔥浪酷┃影视",
+      "type": 3,
+      "api": "csp_AppRJ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": {
+        "url": "http://v.lkuys.cn"
+      },
+      "jar": "http://47.120.41.246:8025/vip/jar/ouge.php"
+    },
+    {
+      "key": "瓜子影视",
+      "name": "🔥瓜子┃影视",
+      "type": 3,
+      "api": "csp_Gz360",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "http://47.120.41.246:8025/vip/jar/ouge.php"
+    },
+    {
+      "key": "苹果影视",
+      "name": "🔥苹果┃影视",
+      "type": 3,
+      "api": "csp_LiteApple",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "http://47.120.41.246:8025/vip/jar/ouge.php"
+    },
+    {
+      "key": "如意采集资源",
+      "name": "🔥如意┃采集",
+      "type": 1,
+      "api": "https://cj.rycjapi.com/api.php/provide/vod/",
+      "playerType": 1,
+      "searchable": 1,
+      "changeable": 1,
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar"
+    },
+    {
+      "key": "荐片",
+      "name": "🔥荐片┃磁力",
+      "quickSearch": 0,
+      "searchable": 1,
+      "type": 3,
+      "api": "csp_Jianpian",
+      "style": {
+        "type": "rect",
+        "ratio": 1.333
+      },
+      "ext": "https://ev2089.zxbwv.com",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar"
+    },
+    {
+      "key": "鲸鱼",
+      "name": "🔥鲸鱼┃小米",
+      "quickSearch": 0,
+      "searchable": 1,
+      "type": 3,
+      "api": "csp_AppQi",
+      "ext": "rP+4azM8YFgp3eAhyeALtUUEFpbkqmzGj2V5VZryxRbpkSjlsHbarRCZPOInvId4s3WK9rZ2YJsDy8NvMqQKQXowVmh33j+qD55VxmvMzzffqLi7UXvCKdy6PzbDhzFq",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar"
+    },
+    {
+      "key": "云速",
+      "name": "☁️云速┃4K",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 0,
+      "api": "csp_AppQi",
+      "ext": "9ee0oa0Y30GapSvZ2C2RVE2HwH08KKvP0VhAZCVWpnluXpZNLRZrNCMeKyCWw1JOnmBt4WntUB96Gzw7GkroAUK4RePU806mDtHSmD09164W8EWpaWaU/Gg8nPkgUt5F",
+      "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar"
+    },
+    {
+      "key": "厂长",
+      "name": "🏭厂长┃影视",
+      "type": 3,
+      "quickSearch": 0,
+      "api": "csp_Czsapp",
+      "ext": "https://www.czzymovie.com",
       "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar"
     }
   ],
