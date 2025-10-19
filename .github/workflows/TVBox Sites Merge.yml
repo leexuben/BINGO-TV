@@ -1,0 +1,182 @@
+name: TVBox Sites Merge
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  merge-sites:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        repository: leexuben/BINGO-TV
+        path: bingo-tv
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Merge and fix sites
+      run: |
+        python << 'EOF'
+        import json
+        import requests
+        
+        # 源文件列表
+        sources = [
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
+            },
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json", 
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
+            },
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar", 
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
+            },
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
+                "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
+            }
+        ]
+        
+        target_file = "bingo-tv/综合影视.json"
+        
+        def get_sites_from_url(url):
+            try:
+                response = requests.get(url, timeout=10)
+                if response.status_code == 200:
+                    content = response.text
+                    # 尝试解析JSON
+                    try:
+                        data = json.loads(content)
+                        if isinstance(data, dict) and 'sites' in data:
+                            return data['sites']
+                        elif isinstance(data, list):
+                            return data
+                    except:
+                        # 尝试提取JSON部分
+                        start = content.find('{')
+                        end = content.rfind('}') + 1
+                        if start != -1 and end != -1:
+                            data = json.loads(content[start:end])
+                            if isinstance(data, dict) and 'sites' in data:
+                                return data['sites']
+                return []
+            except:
+                return []
+        
+        def fix_site_paths(site, base_url, jar_url):
+            # 添加jar
+            if 'jar' not in site:
+                site['jar'] = jar_url
+            
+            # 修复相对路径
+            if 'api' in site and site['api'].startswith('./'):
+                site['api'] = base_url + site['api'][2:]
+            
+            if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
+                site['ext'] = base_url + site['ext'][2:]
+                
+            return site
+        
+        # 读取目标文件
+        try:
+            with open(target_file, 'r', encoding='utf-8') as f:
+                target_data = json.load(f)
+        except:
+            target_data = {}
+        
+        # 确保有sites数组
+        if 'sites' not in target_data:
+            target_data['sites'] = []
+        
+        existing_sites = target_data['sites']
+        existing_keys = set()
+        
+        for site in existing_sites:
+            key = site.get('key', '')
+            if key:
+                existing_keys.add(key)
+        
+        # 合并所有源
+        for source in sources:
+            sites = get_sites_from_url(source['url'])
+            for site in sites:
+                # 处理站点
+                fixed_site = fix_site_paths(site, source['base'], source['jar'])
+                
+                # 去重
+                key = fixed_site.get('key', '')
+                if key and key not in existing_keys:
+                    existing_sites.append(fixed_site)
+                    existing_keys.add(key)
+        
+        # 更新目标数据
+        target_data['sites'] = existing_sites
+        
+        # 保存
+        with open(target_file, 'w', encoding='utf-8') as f:
+            json.dump(target_data, f, ensure_ascii=False, indent=2)
+        
+        print("合并完成")
+        EOF
+
+    - name: Test result
+      run: |
+        cd bingo-tv
+        echo "=== 测试合并结果 ==="
+        if [ -f "综合影视.json" ]; then
+          echo "✅ 文件存在"
+          # 检查文件大小
+          echo "文件大小: $(wc -c < 综合影视.json) bytes"
+          # 检查sites数量
+          python << 'EOF'
+          import json
+          try:
+              with open("综合影视.json", "r", encoding="utf-8") as f:
+                  data = json.load(f)
+              sites_count = len(data.get('sites', []))
+              print(f"站点数量: {sites_count}")
+              if sites_count > 0:
+                  print("前3个站点:")
+                  for i, site in enumerate(data['sites'][:3]):
+                      name = site.get('name', '未知')
+                      key = site.get('key', '无key')
+                      print(f"  {i+1}. {name} (key: {key})")
+          except Exception as e:
+              print(f"解析错误: {e}")
+          EOF
+        else
+          echo "❌ 文件不存在"
+        fi
+
+    - name: Commit changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        cd bingo-tv
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add 综合影视.json
+        if git diff --cached --quiet; then
+          echo "无变化"
+        else
+          git commit -m "自动合并站点 $(date +'%Y-%m-%d')"
+          git push origin main
+        fi
