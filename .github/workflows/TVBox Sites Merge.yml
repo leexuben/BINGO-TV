@@ -34,6 +34,12 @@ jobs:
         
         # 源文件配置
         sources = [
+        {
+                "name": "bingo",
+                "url": "https://raw.githubusercontent.com/leexuben/BINGO-TV/main/20251020.json",
+                "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/潇洒/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/BINGO-TV/main/"
+            },
             {
                 "name": "王二小",
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/api.json",
