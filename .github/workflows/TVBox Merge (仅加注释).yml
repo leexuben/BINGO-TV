@@ -1,10 +1,12 @@
-name: TVBox Merge (仅加注释)
+name: TVBox Final Working Solution
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
-  merge-sites:
+  final-solution:
     runs-on: ubuntu-latest
     
     steps:
@@ -23,113 +25,121 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Merge sites (您的原代码，仅加注释)
-      run: |
-        python << 'EOF'
-        import json
-        import requests
-        
-        # 源文件配置（您的原代码）
-        sources = [
-            {
-                "name": "王二小",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
-            },
-            {
-                "name": "潇洒", 
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
-            },
-            {
-                "name": "巧技",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
-            },
-            {
-                "name": "影视",
-                "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
-                "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
-            }
-        ]
-        
-        target_file = "bingo-tv/综合影视.json"
-        
-        def get_sites(url):
-            try:
-                response = requests.get(url, timeout=30)
-                if response.status_code == 200:
-                    data = json.loads(response.text)
-                    if isinstance(data, dict) and 'sites' in data:
-                        return data['sites']
-                    elif isinstance(data, list):
-                        return data
-                return []
-            except:
-                return []
-        
-        # 读取目标文件（您的原代码）
-        try:
-            with open(target_file, 'r', encoding='utf-8') as f:
-                target_data = json.load(f)
-        except:
-            target_data = {}
-        
-        if 'sites' not in target_data:
-            target_data['sites'] = []
-        
-        existing_sites = target_data['sites']
-        existing_keys = {site.get('key', '') for site in existing_sites}
-        
-        # 从每个源文件获取数据（您的原代码）
-        for source in sources:
-            print(f"正在处理: {source['name']}")
-            sites = get_sites(source['url'])
-            
-            for site in sites:
-                # 为站点添加正确的jar和修复路径（您的原代码）
-                if 'jar' not in site:
-                    site['jar'] = source['jar']
-                
-                if 'api' in site and site['api'].startswith('./'):
-                    site['api'] = source['base'] + site['api'][2:]
-                
-                if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
-                    site['ext'] = source['base'] + site['ext'][2:]
-                
-                # 去重添加（您的原代码）
-                key = site.get('key', '')
-                if key and key not in existing_keys:
-                    existing_sites.append(site)
-                    existing_keys.add(key)
-        
-        target_data['sites'] = existing_sites
-        
-        # ====== 仅在这里加注释：不修改您的逻辑 ======
-        # 添加合并注释（说明处理了多少源、去重后站点数）
-        target_data["merge_comment"] = f"合并了{len(sources)}个源，去重后共{len(existing_sites)}个站点"
-        # ========================================
-        
-        # 保存文件（您的原代码）
-        with open(target_file, 'w', encoding='utf-8') as f:
-            json.dump(target_data, f, ensure_ascii=False, indent=2)
-        
-        print("合并完成")
-        EOF
-
-    - name: Verify results（验证注释是否添加成功）
+    - name: Merge sites with correct formatting
       run: |
         cd bingo-tv
+        
+        # 创建独立的 Python 脚本文件（避免 YAML 多行字符串问题）
+        cat > merge_sites.py << 'EOF'
+import json
+import requests
+
+# 源文件配置
+sources = [
+    {
+        'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json',
+        'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar',
+        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/'
+    },
+    {
+        'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json',
+        'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar',
+        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/'
+    },
+    {
+        'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json',
+        'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar',
+        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/'
+    },
+    {
+        'url': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视',
+        'jar': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar',
+        'base': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/'
+    }
+]
+
+target_file = '综合影视.json'
+
+# 读取目标文件
+try:
+    with open(target_file, 'r', encoding='utf-8') as f:
+        target_data = json.load(f)
+except:
+    target_data = {}
+
+if 'sites' not in target_data:
+    target_data['sites'] = []
+
+existing_sites = target_data['sites']
+existing_keys = {site.get('key', '') for site in existing_sites}
+
+# 处理每个源文件
+for source in sources:
+    try:
+        response = requests.get(source['url'], timeout=30)
+        if response.status_code == 200:
+            data = json.loads(response.text)
+            sites = data.get('sites', []) if isinstance(data, dict) else data
+            
+            for site in sites:
+                # 复制站点数据
+                new_site = site.copy()
+                
+                # 添加jar（如果没有）
+                if 'jar' not in new_site:
+                    new_site['jar'] = source['jar']
+                
+                # 修复相对路径
+                if 'api' in new_site and isinstance(new_site['api'], str) and new_site['api'].startswith('./'):
+                    new_site['api'] = source['base'] + new_site['api'][2:]
+                
+                if 'ext' in new_site and isinstance(new_site['ext'], str) and new_site['ext'].startswith('./'):
+                    new_site['ext'] = source['base'] + new_site['ext'][2:]
+                
+                # 去重添加
+                key = new_site.get('key', '')
+                if key and key not in existing_keys:
+                    existing_sites.append(new_site)
+                    existing_keys.add(key)
+                    
+    except Exception as e:
+        print(f'处理源文件失败: {e}')
+        continue
+
+# 更新目标数据
+target_data['sites'] = existing_sites
+
+# 保存文件
+with open(target_file, 'w', encoding='utf-8') as f:
+    json.dump(target_data, f, ensure_ascii=False, indent=2)
+
+print('✅ 合并完成')
+print(f'📊 总站点数: {len(existing_sites)}')
+EOF
+
+        # 运行 Python 脚本
+        python3 merge_sites.py
+        
+        # 清理临时文件
+        rm merge_sites.py
+
+    - name: Verify results
+      run: |
+        cd bingo-tv
+        echo "=== 验证结果 ==="
         python3 -c "
 import json
 try:
     with open('综合影视.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
-    print(f'✅ 注释已添加: {data.get("merge_comment", "无")}')
+    sites = data.get('sites', [])
+    print(f'✅ 总站点数: {len(sites)}')
+    if sites:
+        print('前3个站点的jar字段:')
+        for i, site in enumerate(sites[:3]):
+            name = site.get('name', '未知')
+            jar = site.get('jar', '无jar')
+            print(f'  {i+1}. {name}: {jar[:50]}...')
 except Exception as e:
     print(f'验证错误: {e}')
 "
@@ -146,5 +156,5 @@ except Exception as e:
           echo "没有更改"
           exit 0
         fi
-        git commit -m "仅添加合并注释"
+        git commit -m "Final: Working solution with all features"
         git push origin main
