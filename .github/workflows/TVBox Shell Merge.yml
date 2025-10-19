@@ -1,4 +1,4 @@
-name: TVBox Shell Merge
+name: TVBox Full Merge with Jar
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  shell-merge:
+  full-merge:
     runs-on: ubuntu-latest
     
     steps:
@@ -17,54 +17,110 @@ jobs:
         path: bingo-tv
         token: ${{ secrets.GH_TOKEN }}
 
-    - name: Install jq for JSON processing
+    - name: Install jq and curl
       run: sudo apt-get update && sudo apt-get install -y jq curl
 
-    - name: Merge sites using pure shell
+    - name: Merge with full jar support
       run: |
         cd bingo-tv
         
         # 创建临时目录
         mkdir -p temp
         
-        # 下载源文件
-        curl -s -o temp/source1.json "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json"
-        curl -s -o temp/source2.json "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json"
-        curl -s -o temp/source3.json "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json"
-        curl -s -o temp/source4.json "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视"
+        # 源文件配置（包含jar地址）
+        sources=(
+          "王二小|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
+          "潇洒|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
+          "巧技|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
+          "影视|https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视|https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar|https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
+        )
         
-        # 读取目标文件（保留所有其他字段）
-        if [ -f "综合影视.json" ]; then
+        # 下载源文件并处理
+        for source in "${sources[@]}"; do
+          IFS='|' read -r name url jar base <<< "$source"
+          echo "处理: $name"
+          
+          if curl -s -o "temp/${name}_raw.json" "$url"; then
+            if jq empty "temp/${name}_raw.json" 2>/dev/null; then
+              # 添加jar字段并修复路径
+              jq '
+                def fix_paths(obj, base_url):
+                  obj | walk(
+                    if type == "object" then
+                      . | to_entries | map(
+                        if .key == "api" and .value | type == "string" and .value | startswith("./") then
+                          {key: .key, value: base_url + (.value | .[2:])}
+                        elif .key == "ext" and .value | type == "string" and .value | startswith("./") then
+                          {key: .key, value: base_url + (.value | .[2:])}
+                        else
+                          .
+                        end
+                      ) | from_entries
+                    else
+                      .
+                    end
+                  );
+                
+                if type == "array" then
+                  map(. + {jar: "'"$jar"'"} | fix_paths(.; "'"$base"'"))
+                elif type == "object" and has("sites") then
+                  .sites |= map(. + {jar: "'"$jar"'"} | fix_paths(.; "'"$base"'"))
+                else
+                  .
+                end
+              ' "temp/${name}_raw.json" > "temp/${name}_processed.json"
+              
+              echo "✅ $name 处理成功"
+            else
+              echo "❌ $name JSON格式错误，跳过"
+            fi
+          else
+            echo "❌ $name 下载失败"
+          fi
+        done
+        
+        # 读取目标文件
+        if [ -f "综合影视.json" ] && jq empty "综合影视.json" 2>/dev/null; then
           cp "综合影视.json" temp/target.json
         else
           echo '{}' > temp/target.json
         fi
         
-        # 提取所有sites数组
+        # 合并所有处理后的源文件
         echo '[]' > temp/all_sites.json
         
-        # 处理每个源文件
-        for i in {1..4}; do
-          if [ -s "temp/source$i.json" ]; then
-            # 提取sites数组
-            jq '.sites // []' "temp/source$i.json" > "temp/sites$i.json"
-            
-            # 合并到总数组
-            jq '. + input' temp/all_sites.json "temp/sites$i.json" > temp/combined.json
-            mv temp/combined.json temp/all_sites.json
+        for file in temp/*_processed.json; do
+          if [ -f "$file" ] && [ -s "$file" ]; then
+            echo "合并: $(basename $file)"
+            if jq '
+              if type == "array" then . 
+              elif type == "object" and has("sites") then .sites
+              else []
+              end
+            ' "$file" > temp/current_sites.json 2>/dev/null; then
+              
+              jq '. + input' temp/all_sites.json temp/current_sites.json > temp/combined.json
+              mv temp/combined.json temp/all_sites.json
+            fi
           fi
         done
         
         # 去重（基于key字段）
-        jq 'group_by(.key) | map(.[0])' temp/all_sites.json > temp/unique_sites.json
+        jq '
+          group_by(.key) | map(.[0])
+        ' temp/all_sites.json > temp/unique_sites.json
         
-        # 更新目标文件（只替换sites字段，保留其他所有字段）
+        # 更新目标文件（只替换sites字段）
         jq '.sites = input' temp/target.json temp/unique_sites.json > "综合影视.json"
         
         # 统计信息
         total_count=$(jq 'length' temp/all_sites.json)
         unique_count=$(jq '.sites | length' "综合影视.json")
-        echo "✅ 合并完成: 总${total_count}个站点, 去重后${unique_count}个站点"
+        jar_count=$(jq '.sites | map(select(.jar)) | length' "综合影视.json")
+        
+        echo "✅ 合并完成!"
+        echo "📊 总站点: $total_count, 去重后: $unique_count"
+        echo "📦 有jar字段: $jar_count"
         
         # 清理
         rm -rf temp
@@ -75,11 +131,11 @@ jobs:
         echo "=== 验证结果 ==="
         echo "文件大小: $(wc -c < 综合影视.json) bytes"
         echo "站点数量: $(jq '.sites | length' 综合影视.json)"
-        echo "文件结构: $(jq 'keys' 综合影视.json)"
+        echo "有jar字段的站点: $(jq '.sites | map(select(.jar)) | length' 综合影视.json)"
         
-        # 显示前3个站点的key和name
-        echo "=== 前3个站点 ==="
-        jq '.sites[0:3] | map({key: .key, name: .name})' 综合影视.json
+        # 显示前3个站点的jar字段
+        echo "=== 前3个站点的jar字段 ==="
+        jq '.sites[0:3] | map({name: .name, jar: .jar})' 综合影视.json
 
     - name: Commit changes
       env:
@@ -93,6 +149,6 @@ jobs:
           echo "没有更改"
           exit 0
         fi
-        git commit -m "Merge: Sites data updated"
+        git commit -m "Merge: Sites with jar fields"
         git push origin main
         echo "✅ 更改已提交"
