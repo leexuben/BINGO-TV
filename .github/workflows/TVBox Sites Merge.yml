@@ -1,4 +1,4 @@
-name: TVBox Complete Merge
+name: TVBox Sites Merge
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  complete-merge:
+  merge-sites:
     runs-on: ubuntu-latest
     
     steps:
@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Merge all sites
+    - name: Merge sites
       run: |
         python << 'EOF'
         import json
@@ -35,25 +35,21 @@ jobs:
         # 源文件配置
         sources = [
             {
-                "name": "王二小",
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
                 "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
             },
             {
-                "name": "潇洒", 
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
-                "jar": "https://raw.githubusercontent.com/极狐/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
             },
             {
-                "name": "巧技",
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
                 "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
             },
             {
-                "name": "影视",
                 "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
                 "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
@@ -66,22 +62,11 @@ jobs:
             try:
                 response = requests.get(url, timeout=30)
                 if response.status_code == 200:
-                    content = response.text
-                    try:
-                        data = json.loads(content)
-                        if isinstance(data, dict) and 'sites' in data:
-                            return data['sites']
-                        elif isinstance(data, list):
-                            return data
-                    except:
-                        start = content.find('{')
-                        end = content.rfind('}') + 1
-                        if start != -1 and end != -1:
-                            data = json.loads(content[start:end])
-                            if isinstance(data, dict) and 'sites' in data:
-                                return data['sites']
-                            elif isinstance(data, list):
-                                return data
+                    data = json.loads(response.text)
+                    if isinstance(data, dict) and 'sites' in data:
+                        return data['sites']
+                    elif isinstance(data, list):
+                        return data
                 return []
             except:
                 return []
@@ -108,10 +93,10 @@ jobs:
                     site['jar'] = source['jar']
                 
                 # 修复相对路径
-                if 'api' in site and isinstance(site['api'], str) and site['api'].startswith('./'):
+                if 'api' in site and site['api'].startswith('./'):
                     site['api'] = source['base'] + site['api'][2:]
                 
-                if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
+                if 'ext' in site and site['ext'].startswith('./'):
                     site['ext'] = source['base'] + site['ext'][2:]
                 
                 # 去重添加
@@ -122,7 +107,7 @@ jobs:
         
         target_data['sites'] = existing_sites
         
-        # 保存文件
+        # 保存文件（修正后的代码）
         with open(target_file, 'w', encoding='utf-8') as f:
             json.dump(target_data, f, ensure_ascii=False, indent=2)
         EOF
@@ -136,9 +121,9 @@ import json
 with open('综合影视.json', 'r') as f:
     data = json.load(f)
 sites = data.get('sites', [])
-print(f'合并后站点数量: {len(sites)}')
+print(f'合并后站点数量：{len(sites)}')
 if sites:
-    print('前3个站点的jar字段:')
+    print('前3个站点的jar字段：')
     for i, site in enumerate(sites[:3]):
         jar = site.get('jar', '无jar')
         key = site.get('key', '无key')
