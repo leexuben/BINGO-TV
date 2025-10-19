@@ -36,9 +36,9 @@ jobs:
         sources = [
             {
                 "name": "王二小",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/"
+                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F/"
             },
                  {
                 "name": "影视",
@@ -48,15 +48,15 @@ jobs:
             },
             {
                 "name": "潇洒", 
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E6%BD%87%E6%B4%92/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E6%BD%87%E6%B4%92/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E6%BD%87%E6%B4%92/"
+                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E6%BD%87%E6%B4%92/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E6%BD%87%E6%B4%92/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E6%BD%87%E6%B4%92/"
             },
             {
                 "name": "巧技",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E5%B7%A7%E6%8A%80/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E5%B7%A7%E6%8A%80/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/tvbox/%E5%B7%A7%E6%8A%80/"
+                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E5%B7%A7%E6%8A%80/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E5%B7%A7%E6%8A%80/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/%E5%B7%A7%E6%8A%80/"
             }
         ]
         
