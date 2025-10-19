@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Merge sites
+    - name: Merge sites from sources
       run: |
         python << 'EOF'
         import json
@@ -35,21 +35,25 @@ jobs:
         # 源文件配置
         sources = [
             {
+                "name": "王二小",
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二极狐/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
             },
             {
+                "name": "潇洒",
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
                 "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
             },
             {
+                "name": "巧技",
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
+                "jar": "https://raw.githubusercontent.com/极狐/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
+                "base": "极狐://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
             },
             {
+                "name": "影视",
                 "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
                 "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
@@ -71,6 +75,18 @@ jobs:
             except:
                 return []
         
+        def fix_site_paths(site, base_url, jar_url):
+            if 'jar' not in site:
+                site['jar'] = jar_url
+            
+            if 'api' in site and isinstance(site['api'], str) and site['api'].startswith('./'):
+                site['api'] = base_url + site['api'][2:]
+            
+            if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
+                site['ext'] = base_url + site['ext'][2:]
+            
+            return site
+        
         # 读取目标文件
         try:
             with open(target_file, 'r', encoding='utf-8') as f:
@@ -88,54 +104,22 @@ jobs:
         for source in sources:
             sites = get_sites(source['url'])
             for site in sites:
-                # 为站点添加正确的jar
-                if 'jar' not in site:
-                    site['jar'] = source['jar']
-                
-                # 修复相对路径
-                if 'api' in site and site['api'].startswith('./'):
-                    site['api'] = source['base'] + site['api'][2:]
-                
-                if 'ext' in site and site['ext'].startswith('./'):
-                    site['ext'] = source['base'] + site['ext'][2:]
-                
-                # 去重添加
-                key = site.get('key', '')
+                fixed_site = fix_site_paths(site, source['base'], source['jar'])
+                key = fixed_site.get('key', '')
                 if key and key not in existing_keys:
-                    existing_sites.append(site)
+                    existing_sites.append(fixed_site)
                     existing_keys.add(key)
         
         target_data['sites'] = existing_sites
         
-        # 保存文件（修正后的代码）
+        # 保存文件
         with open(target_file, 'w', encoding='utf-8') as f:
             json.dump(target_data, f, ensure_ascii=False, indent=2)
+        
+        print("合并完成")
         EOF
 
-    - name: Check result
-      run: |
-        cd bingo-tv
-        if [ -f "综合影视.json" ]; then
-          python3 -c "
-import json
-with open('综合影视.json', 'r') as f:
-    data = json.load(f)
-sites = data.get('sites', [])
-print(f'合并后站点数量：{len(sites)}')
-if sites:
-    print('前3个站点的jar字段：')
-    for i, site in enumerate(sites[:3]):
-        jar = site.get('jar', '无jar')
-        key = site.get('key', '无key')
-        name = site.get('name', '无name')
-        print(f'  {i+1}. {name} (key: {key})')
-        print(f'     jar: {jar[:60]}...')
-"
-        else
-          echo "文件不存在"
-        fi
-
-    - name: Commit changes
+    - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
@@ -147,6 +131,6 @@ if sites:
           echo "没有检测到更改"
           exit 0
         fi
-        git commit -m "Merge: Complete sites update $(date +'%Y-%m-%d %H:%M:%S')"
+        git commit -m "Merge: Sites update $(date +'%Y-%m-%d %H:%M:%S')"
         git push origin main
         echo "更改已提交"
