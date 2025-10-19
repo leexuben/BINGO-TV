@@ -1,0 +1,98 @@
+name: TVBox Shell Merge
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  shell-merge:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        repository: leexuben/BINGO-TV
+        path: bingo-tv
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Install jq for JSON processing
+      run: sudo apt-get update && sudo apt-get install -y jq curl
+
+    - name: Merge sites using pure shell
+      run: |
+        cd bingo-tv
+        
+        # 创建临时目录
+        mkdir -p temp
+        
+        # 下载源文件
+        curl -s -o temp/source1.json "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json"
+        curl -s -o temp/source2.json "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json"
+        curl -s -o temp/source3.json "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json"
+        curl -s -o temp/source4.json "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视"
+        
+        # 读取目标文件（保留所有其他字段）
+        if [ -f "综合影视.json" ]; then
+          cp "综合影视.json" temp/target.json
+        else
+          echo '{}' > temp/target.json
+        fi
+        
+        # 提取所有sites数组
+        echo '[]' > temp/all_sites.json
+        
+        # 处理每个源文件
+        for i in {1..4}; do
+          if [ -s "temp/source$i.json" ]; then
+            # 提取sites数组
+            jq '.sites // []' "temp/source$i.json" > "temp/sites$i.json"
+            
+            # 合并到总数组
+            jq '. + input' temp/all_sites.json "temp/sites$i.json" > temp/combined.json
+            mv temp/combined.json temp/all_sites.json
+          fi
+        done
+        
+        # 去重（基于key字段）
+        jq 'group_by(.key) | map(.[0])' temp/all_sites.json > temp/unique_sites.json
+        
+        # 更新目标文件（只替换sites字段，保留其他所有字段）
+        jq '.sites = input' temp/target.json temp/unique_sites.json > "综合影视.json"
+        
+        # 统计信息
+        total_count=$(jq 'length' temp/all_sites.json)
+        unique_count=$(jq '.sites | length' "综合影视.json")
+        echo "✅ 合并完成: 总${total_count}个站点, 去重后${unique_count}个站点"
+        
+        # 清理
+        rm -rf temp
+
+    - name: Verify results
+      run: |
+        cd bingo-tv
+        echo "=== 验证结果 ==="
+        echo "文件大小: $(wc -c < 综合影视.json) bytes"
+        echo "站点数量: $(jq '.sites | length' 综合影视.json)"
+        echo "文件结构: $(jq 'keys' 综合影视.json)"
+        
+        # 显示前3个站点的key和name
+        echo "=== 前3个站点 ==="
+        jq '.sites[0:3] | map({key: .key, name: .name})' 综合影视.json
+
+    - name: Commit changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        cd bingo-tv
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add 综合影视.json
+        if git diff --cached --quiet; then
+          echo "没有更改"
+          exit 0
+        fi
+        git commit -m "Merge: Sites data updated"
+        git push origin main
+        echo "✅ 更改已提交"
