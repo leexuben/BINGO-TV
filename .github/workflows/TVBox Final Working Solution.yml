@@ -28,11 +28,11 @@ jobs:
     - name: Run merge script (绝对正确的格式)
       run: |
         cd bingo-tv
-        
+        import json
+        import requests
+
         # 创建独立的 Python 脚本文件（避免 YAML 多行字符串问题）
         cat > merge_sites.py << 'EOF'
-import json
-import requests
 
 # 源文件配置
 sources = [
