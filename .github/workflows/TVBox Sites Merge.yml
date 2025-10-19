@@ -16,7 +16,6 @@ jobs:
         repository: leexuben/BINGO-TV
         path: bingo-tv
         token: ${{ secrets.GH_TOKEN }}
-        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -26,141 +25,85 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Merge sites with jar
+    - name: Merge sites
       run: |
-        python << 'EOF'
-        import json
-        import requests
-        
-        # 源文件配置
-        sources = [
-            {
-                "name": "王二小",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
-            },
-            {
-                "name": "潇洒",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
-            },
-            {
-                "name": "巧技",
-                "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
-            },
-            {
-                "name": "影视",
-                "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
-                "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
-                "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
-            }
-        ]
-        
-        target_file = "bingo-tv/综合影视.json"
-        
-        def get_sites(url):
-            try:
-                response = requests.get(url, timeout=30)
-                if response.status_code == 200:
-                    data = json.loads(response.text)
-                    if isinstance(data, dict) and 'sites' in data:
-                        return data['sites']
-                    elif isinstance(data, list):
-                        return data
-                return []
-            except:
-                return []
-        
-        # 读取目标文件
-        try:
-            with open(target_file, 'r', encoding='utf-8') as f:
-                target_data = json.load(f)
-        except:
-            target_data = {}
-        
-        if 'sites' not in target_data:
-            target_data['sites'] = []
-        
-        existing_sites = target极狐['sites']
-        existing_keys = {site.get('key', '') for site in existing_sites}
-        
-        # 从每个源文件获取数据并添加jar
-        for source in sources:
-            sites = get_sites(source['url'])
-            for site in sites:
-                # 确保每个站点都有jar字段
-                if 'jar' not in site or not site['jar']:
-                    site['jar'] = source['jar']
-                
-                # 修复相对路径
-                if 'api' in site and isinstance(site['api'], str) and site['api'].startswith('./'):
-                    site['api'] = source['base'] + site['api'][2:]
-                
-                if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
-                    site['ext'] = source['base'] + site['ext'][2:]
-                
-                # 去重添加
-                key = site.get('key', '')
-                if key and key not in existing_keys:
-                    existing_sites.append(site)
-                    existing_keys.add(key)
-        
-        target_data['sites'] = existing_sites
-        
-        # 保存文件
-        with open(target_file, 'w', encoding='utf-8') as f:
-            json.dump(target_data, f, ensure_ascii=False, indent=2)
-        
-        print("合并完成，已添加jar字段")
-        EOF
-
-    - name: Verify jar fields
-      run: |
-        cd bingo-tv
-        python3 -c "
+        python3 << 'EOF'
 import json
-try:
-    with open('综合影视.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    sites = data.get('sites', [])
-    print(f'总站点数: {len(sites)}')
-    
-    # 检查jar字段
-    sites_with_jar = 0
-    sites_without_jar = 0
-    jar_urls = set()
-    
-    for site in sites:
-        jar = site.get('jar', '')
-        if jar and jar.startswith('http'):
-            sites_with_jar += 1
-            jar_urls.add(jar)
-        else:
-            sites_without_jar += 1
-    
-    print(f'有jar的站点: {sites_with_jar}')
-    print(f'无jar的站点: {sites_without_jar}')
-    print(f'使用的jar地址: {list(jar_urls)}')
-    
-    # 显示前5个站点的jar信息
-    print('前5个站点的jar字段:')
-    for i, site in enumerate(sites[:5]):
-        name = site.get('name', '未知')
-        key = site.get('key', '无key')
-        jar = site.get('jar', '无jar')
-        print(f'  {i+1}. {name} (key: {key})')
-        print(f'     jar: {jar}')
-        print('     ---')
-        
-except Exception as e:
-    print(f'验证错误: {e}')
-"
+import requests
 
-    - name: Commit and push changes
+sources = [
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
+        "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
+        "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar", 
+        "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
+        "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
+        "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
+    }
+]
+
+target_file = "bingo-tv/综合影视.json"
+
+def get_sites(url):
+    try:
+        response = requests.get(url, timeout=30)
+        if response.status_code == 200:
+            data = json.loads(response.text)
+            if isinstance(data, dict) and 'sites' in data:
+                return data['sites']
+            elif isinstance(data, list):
+                return data
+        return []
+    except:
+        return []
+
+try:
+    with open(target_file, 'r', encoding='utf-8') as f:
+        target_data = json.load(f)
+except:
+    target_data = {}
+
+if 'sites' not in target_data:
+    target_data['sites'] = []
+
+existing_sites = target_data['sites']
+existing_keys = {site.get('key', '') for site in existing_sites}
+
+for source in sources:
+    sites = get_sites(source['url'])
+    for site in sites:
+        if 'jar' not in site:
+            site['jar'] = source['jar']
+        
+        if 'api' in site and site['api'].startswith('./'):
+            site['api'] = source['base'] + site['api'][2:]
+        
+        key = site.get('key', '')
+        if key and key not in existing_keys:
+            existing_sites.append(site)
+            existing_keys.add(key)
+
+target_data['sites'] = existing_sites
+
+with open(target_file, 'w', encoding='utf-8') as f:
+    json.dump(target_data, f, ensure_ascii=False, indent=2)
+
+print("合并完成")
+EOF
+
+    - name: Commit changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
@@ -169,9 +112,8 @@ except Exception as e:
         git config user.email "actions@github.com"
         git add 综合影视.json
         if git diff --cached --quiet; then
-          echo "没有检测到更改"
+          echo "没有更改"
           exit 0
         fi
-        git commit -m "Fix: Add jar fields to all sites $(date +'%Y-%m-%d %H:%M:%S')"
+        git commit -m "Update sites"
         git push origin main
-        echo "更改已提交"
