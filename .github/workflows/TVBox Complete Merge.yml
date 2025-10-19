@@ -1,4 +1,4 @@
-name: TVBox Complete Merge
+name: Fix Relative Paths
 
 on:
   workflow_dispatch:
@@ -6,113 +6,136 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  complete-merge:
+  fix-paths:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout repository
+    - name: Checkout target repository
       uses: actions/checkout@v4
       with:
         repository: leexuben/BINGO-TV
         path: bingo-tv
         token: ${{ secrets.GH_TOKEN }}
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - name: Install dependencies
-      run: pip install requests
-
-    - name: Merge sites data
+    - name: Fix relative paths script
       run: |
         cd bingo-tv
-        python3 -c "
+        python3 << "EOF"
 import json
-import requests
+import os
 
-# 源文件配置
-sources = [
-    {
-        'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json',
-        'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar',
-        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/'
-    },
-    {
-        'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json',
-        'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar',
-        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/'
-    },
-    {
-        'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json',
-        'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar',
-        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/'
-    },
-    {
-        'url': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视',
-        'jar': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar',
-        'base': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/'
-    }
-]
+SOURCE_FILE = "综合影视.json"
+TARGET_FILE = "综合影视.json"
 
-target_file = '综合影视.json'
+# 基础URL配置
+BASE_URLS = {
+    "王二小": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/",
+    "潇洒": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/",
+    "巧技": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/",
+    "影视": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
+}
 
-# 读取目标文件
-try:
-    with open(target_file, 'r', encoding='utf-8') as f:
-        target_data = json.load(f)
-except:
-    target_data = {}
+def fix_relative_paths(sites):
+    fixed_count = 0
+    for site in sites:
+        jar_url = site.get('jar', '')
+        base_url = None
+        
+        # 根据jar URL判断来源
+        if '王二小' in jar_url:
+            base_url = BASE_URLS['王二小']
+        elif '潇洒' in jar_url:
+            base_url = BASE_URLS['潇洒']
+        elif '巧技' in jar_url:
+            base_url = BASE_URLS['巧技']
+        elif 'ljlfct01' in jar_url:
+            base_url = BASE_URLS['影视']
+        else:
+            continue  # 如果没有匹配的jar来源，跳过此站点
+        
+        # 修复 api 字段
+        if 'api' in site and isinstance(site['api'], str) and site['api'].startswith('./'):
+            original_path = site['api']
+            site['api'] = base_url + original_path[2:]
+            fixed_count += 1
+            print(f"  修复 api: {original_path} -> {site['api']}")
 
-if 'sites' not in target_data:
-    target_data['sites'] = []
-
-existing_sites = target_data['sites']
-existing_keys = {site.get('key', '') for site in existing_sites}
-
-# 处理每个源文件
-for source in sources:
-    try:
-        response = requests.get(source['url'], timeout=30)
-        if response.status_code == 200:
-            data = json.loads(response.text)
-            sites = data.get('sites', []) if isinstance(data, dict) else data
+        # 修复 ext 字段
+        if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
+            original_path = site['ext']
+            site['ext'] = base_url + original_path[2:]
+            fixed_count += 1
+            print(f"  修复 ext: {original_path} -> {site['ext']}")
             
-            for site in sites:
-                # 添加jar
-                if 'jar' not in site:
-                    site['jar'] = source['jar']
-                
-                # 修复路径
-                if 'api' in site and site['api'].startswith('./'):
-                    site['api'] = source['base'] + site['api'][2:]
-                
-                # 去重添加
-                key = site.get('key', '')
-                if key and key not in existing_keys:
-                    existing_sites.append(site)
-                    existing_keys.add(key)
-                    
+    return fixed_count
+
+def main():
+    print("🚀 开始修复相对路径...")
+    print("=" * 60)
+    
+    try:
+        with open(SOURCE_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        # 处理数据格式：可能是对象（包含sites键）或直接是站点列表
+        if isinstance(data, dict) and 'sites' in data:
+            print("📊 检测到对象格式，处理'sites'键")
+            sites = data['sites']
+            other_data = {k: v for k, v in data.items() if k != 'sites'}
+        elif isinstance(data, list):
+            print("📊 检测到数组格式")
+            sites = data
+            other_data = {}
+        else:
+            print("❌ 无法识别的JSON结构")
+            return False
+        
+        print(f"📊 找到 {len(sites)} 个站点")
+        
+        fixed_count = fix_relative_paths(sites)
+        print(f"✅ 修复了 {fixed_count} 个相对路径")
+        
+        # 重新构建完整数据，确保其他集合不被改动
+        if other_data:
+            result_data = other_data
+            result_data['sites'] = sites
+        else:
+            result_data = sites
+        
+        with open(TARGET_FILE, 'w', encoding='utf-8') as f:
+            json.dump(result_data, f, ensure_ascii=False, indent=2)
+        
+        print("=" * 60)
+        print("📋 修复完成，文件已保存。")
+        return True
+        
     except Exception as e:
-        print(f'处理源文件失败: {e}')
+        print(f"❌ 处理文件失败: {e}")
+        return False
 
-target_data['sites'] = existing_sites
+if __name__ == "__main__":
+    main()
+EOF
 
-# 保存文件
-with open(target_file, 'w', encoding='utf-8') as f:
-    json.dump(target_data, f, ensure_ascii=False, indent=2)
-
-print('合并完成')
-"
-
-    - name: Commit changes
+    - name: Commit and push changes
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         cd bingo-tv
-        git config user.name 'github-actions'
-        git config user.email 'actions@github.com'
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/leexuben/BINGO-TV.git
         git add 综合影视.json
-        git commit -m 'Update: Merge sites data'
+        if git diff --cached --quiet; then
+          echo "📝 没有检测到更改"
+          exit 0
+        fi
+        git commit -m "Fix: Convert relative paths to absolute URLs $(date +'%Y-%m-%d %H:%M:%S')"
         git push origin main
+        echo "✅ 相对路径修复完成并已推送"
