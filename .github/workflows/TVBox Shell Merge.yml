@@ -1,4 +1,4 @@
-name: TVBox Full Merge with Jar
+name: TVBox Sites Merge
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  full-merge:
+  merge-sites:
     runs-on: ubuntu-latest
     
     steps:
@@ -17,125 +17,154 @@ jobs:
         path: bingo-tv
         token: ${{ secrets.GH_TOKEN }}
 
-    - name: Install jq and curl
-      run: sudo apt-get update && sudo apt-get install -y jq curl
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
 
-    - name: Merge with full jar support
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Merge and fix sites
       run: |
-        cd bingo-tv
+        python << 'EOF'
+        import json
+        import requests
         
-        # 创建临时目录
-        mkdir -p temp
+        # 源文件列表
+        sources = [
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
+            },
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json", 
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
+            },
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
+                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar", 
+                "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
+            },
+            {
+                "url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
+                "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
+                "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
+            }
+        ]
         
-        # 源文件配置（包含jar地址）
-        sources=(
-          "王二小|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
-          "潇洒|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
-          "巧技|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar|https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
-          "影视|https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视|https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar|https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
-        )
+        target_file = "bingo-tv/综合影视.json"
         
-        # 下载源文件并处理
-        for source in "${sources[@]}"; do
-          IFS='|' read -r name url jar base <<< "$source"
-          echo "处理: $name"
-          
-          if curl -s -o "temp/${name}_raw.json" "$url"; then
-            if jq empty "temp/${name}_raw.json" 2>/dev/null; then
-              # 添加jar字段并修复路径
-              jq '
-                def fix_paths(obj, base_url):
-                  obj | walk(
-                    if type == "object" then
-                      . | to_entries | map(
-                        if .key == "api" and .value | type == "string" and .value | startswith("./") then
-                          {key: .key, value: base_url + (.value | .[2:])}
-                        elif .key == "ext" and .value | type == "string" and .value | startswith("./") then
-                          {key: .key, value: base_url + (.value | .[2:])}
-                        else
-                          .
-                        end
-                      ) | from_entries
-                    else
-                      .
-                    end
-                  );
+        def get_sites_from_url(url):
+            try:
+                response = requests.get(url, timeout=10)
+                if response.status_code == 200:
+                    content = response.text
+                    # 尝试解析JSON
+                    try:
+                        data = json.loads(content)
+                        if isinstance(data, dict) and 'sites' in data:
+                            return data['sites']
+                        elif isinstance(data, list):
+                            return data
+                    except:
+                        # 尝试提取JSON部分
+                        start = content.find('{')
+                        end = content.rfind('}') + 1
+                        if start != -1 and end != -1:
+                            data = json.loads(content[start:end])
+                            if isinstance(data, dict) and 'sites' in data:
+                                return data['sites']
+                return []
+            except:
+                return []
+        
+        def fix_site_paths(site, base_url, jar_url):
+            # 添加jar
+            if 'jar' not in site:
+                site['jar'] = jar_url
+            
+            # 修复相对路径
+            if 'api' in site and site['api'].startswith('./'):
+                site['api'] = base_url + site['api'][2:]
+            
+            if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
+                site['ext'] = base_url + site['ext'][2:]
                 
-                if type == "array" then
-                  map(. + {jar: "'"$jar"'"} | fix_paths(.; "'"$base"'"))
-                elif type == "object" and has("sites") then
-                  .sites |= map(. + {jar: "'"$jar"'"} | fix_paths(.; "'"$base"'"))
-                else
-                  .
-                end
-              ' "temp/${name}_raw.json" > "temp/${name}_processed.json"
-              
-              echo "✅ $name 处理成功"
-            else
-              echo "❌ $name JSON格式错误，跳过"
-            fi
-          else
-            echo "❌ $name 下载失败"
-          fi
-        done
+            return site
         
         # 读取目标文件
-        if [ -f "综合影视.json" ] && jq empty "综合影视.json" 2>/dev/null; then
-          cp "综合影视.json" temp/target.json
-        else
-          echo '{}' > temp/target.json
-        fi
+        try:
+            with open(target_file, 'r', encoding='utf-8') as f:
+                target_data = json.load(f)
+        except:
+            target_data = {}
         
-        # 合并所有处理后的源文件
-        echo '[]' > temp/all_sites.json
+        # 确保有sites数组
+        if 'sites' not in target_data:
+            target_data['sites'] = []
         
-        for file in temp/*_processed.json; do
-          if [ -f "$file" ] && [ -s "$file" ]; then
-            echo "合并: $(basename $file)"
-            if jq '
-              if type == "array" then . 
-              elif type == "object" and has("sites") then .sites
-              else []
-              end
-            ' "$file" > temp/current_sites.json 2>/dev/null; then
-              
-              jq '. + input' temp/all_sites.json temp/current_sites.json > temp/combined.json
-              mv temp/combined.json temp/all_sites.json
-            fi
-          fi
-        done
+        existing_sites = target_data['sites']
+        existing_keys = set()
         
-        # 去重（基于key字段）
-        jq '
-          group_by(.key) | map(.[0])
-        ' temp/all_sites.json > temp/unique_sites.json
+        for site in existing_sites:
+            key = site.get('key', '')
+            if key:
+                existing_keys.add(key)
         
-        # 更新目标文件（只替换sites字段）
-        jq '.sites = input' temp/target.json temp/unique_sites.json > "综合影视.json"
+        # 合并所有源
+        for source in sources:
+            sites = get_sites_from_url(source['url'])
+            for site in sites:
+                # 处理站点
+                fixed_site = fix_site_paths(site, source['base'], source['jar'])
+                
+                # 去重
+                key = fixed_site.get('key', '')
+                if key and key not in existing_keys:
+                    existing_sites.append(fixed_site)
+                    existing_keys.add(key)
         
-        # 统计信息
-        total_count=$(jq 'length' temp/all_sites.json)
-        unique_count=$(jq '.sites | length' "综合影视.json")
-        jar_count=$(jq '.sites | map(select(.jar)) | length' "综合影视.json")
+        # 更新目标数据
+        target_data['sites'] = existing_sites
         
-        echo "✅ 合并完成!"
-        echo "📊 总站点: $total_count, 去重后: $unique_count"
-        echo "📦 有jar字段: $jar_count"
+        # 保存
+        with open(target_file, 'w', encoding='utf-8') as f:
+            json.dump(target_data, f, ensure_ascii=False, indent=2)
         
-        # 清理
-        rm -rf temp
+        print("合并完成")
+        EOF
 
-    - name: Verify results
+    - name: Test result
       run: |
         cd bingo-tv
-        echo "=== 验证结果 ==="
-        echo "文件大小: $(wc -c < 综合影视.json) bytes"
-        echo "站点数量: $(jq '.sites | length' 综合影视.json)"
-        echo "有jar字段的站点: $(jq '.sites | map(select(.jar)) | length' 综合影视.json)"
-        
-        # 显示前3个站点的jar字段
-        echo "=== 前3个站点的jar字段 ==="
-        jq '.sites[0:3] | map({name: .name, jar: .jar})' 综合影视.json
+        echo "=== 测试合并结果 ==="
+        if [ -f "综合影视.json" ]; then
+          echo "✅ 文件存在"
+          # 检查文件大小
+          echo "文件大小: $(wc -c < 综合影视.json) bytes"
+          # 检查sites数量
+          python << 'EOF'
+          import json
+          try:
+              with open("综合影视.json", "r", encoding="utf-8") as f:
+                  data = json.load(f)
+              sites_count = len(data.get('sites', []))
+              print(f"站点数量: {sites_count}")
+              if sites_count > 0:
+                  print("前3个站点:")
+                  for i, site in enumerate(data['sites'][:3]):
+                      name = site.get('name', '未知')
+                      key = site.get('key', '无key')
+                      print(f"  {i+1}. {name} (key: {key})")
+          except Exception as e:
+              print(f"解析错误: {e}")
+          EOF
+        else
+          echo "❌ 文件不存在"
+        fi
 
     - name: Commit changes
       env:
@@ -146,9 +175,8 @@ jobs:
         git config user.email "actions@github.com"
         git add 综合影视.json
         if git diff --cached --quiet; then
-          echo "没有更改"
-          exit 0
+          echo "无变化"
+        else
+          git commit -m "自动合并站点 $(date +'%Y-%m-%d')"
+          git push origin main
         fi
-        git commit -m "Merge: Sites with jar fields"
-        git push origin main
-        echo "✅ 更改已提交"
