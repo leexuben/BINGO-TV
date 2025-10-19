@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Merge and fix sites
+    - name: Complete merge with all features
       run: |
         cd bingo-tv
         python3 -c "
@@ -35,21 +35,25 @@ import requests
 # 源文件配置
 sources = [
     {
+        'name': '王二小',
         'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json',
         'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar',
         'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/'
     },
     {
+        'name': '潇洒', 
         'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json',
         'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar',
         'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/'
     },
     {
+        'name': '巧技',
         'url': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json',
         'jar': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar',
-        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/t极狐/巧技/'
+        'base': 'https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/'
     },
     {
+        'name': '影视',
         'url': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视',
         'jar': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar',
         'base': 'https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/'
@@ -58,7 +62,7 @@ sources = [
 
 target_file = '综合影视.json'
 
-# 读取目标文件
+# 读取目标文件（保留所有其他集合）
 try:
     with open(target_file, 'r', encoding='utf-8') as f:
         target_data = json.load(f)
@@ -80,10 +84,12 @@ for source in sources:
             content = response.text
             try:
                 data = json.loads(content)
+                # 提取sites数组
                 sites = data.get('sites', []) if isinstance(data, dict) else data
                 
+                # 处理每个站点
                 for site in sites:
-                    # 复制站点数据
+                    # 复制站点数据（保持所有字段）
                     new_site = site.copy()
                     
                     # 添加jar（如果没有）
@@ -97,7 +103,7 @@ for source in sources:
                     if 'ext' in new_site and isinstance(new_site['ext'], str) and new_site['ext'].startswith('./'):
                         new_site['ext'] = source['base'] + new_site['ext'][2:]
                     
-                    # 去重添加
+                    # 去重添加（基于key字段）
                     key = new_site.get('key', '')
                     if key and key not in existing_keys:
                         existing_sites.append(new_site)
@@ -108,14 +114,49 @@ for source in sources:
     except requests.RequestException:
         pass
 
-# 更新目标数据（保留所有其他集合）
+# 更新目标数据（只更新sites，保留其他所有集合）
 target_data['sites'] = existing_sites
 
 # 保存文件
 with open(target_file, 'w', encoding='utf-8') as f:
     json.dump(target_data, f, ensure_ascii=False, indent=2)
 
-print('合并完成')
+print('✅ 合并完成')
+print(f'📊 总站点数: {len(existing_sites)}')
+"
+
+    - name: Verify results
+      run: |
+        cd bingo-tv
+        echo "=== 验证结果 ==="
+        python3 -c "
+import json
+try:
+    with open('综合影视.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    sites = data.get('sites', [])
+    print(f'站点总数: {len(sites)}')
+    
+    # 检查jar字段
+    jars = set()
+    for site in sites[:5]:
+        jar = site.get('jar', '无jar')
+        name = site.get('name', '未知')
+        if jar and jar.startswith('http'):
+            jars.add(jar)
+            print(f'✅ {name}: 有jar字段')
+        else:
+            print(f'❌ {name}: 无jar字段')
+    
+    print(f'使用的jar地址: {list(jars)}')
+    
+    # 检查其他集合是否保留
+    other_fields = [k for k in data.keys() if k != 'sites']
+    print(f'保留的其他集合: {other_fields}')
+    
+except Exception as e:
+    print(f'验证错误: {e}')
 "
 
     - name: Commit changes
@@ -127,9 +168,9 @@ print('合并完成')
         git config user.email "actions@github.com"
         git add 综合影视.json
         if git diff --cached --quiet; then
-          echo "没有更改"
+          echo "没有更改需要提交"
         else
-          git commit -m "Merge: Complete sites update with jars and fixed paths"
+          git commit -m "Complete: Merge sites with jars and fixed paths"
           git push origin main
-          echo "更新完成"
+          echo "✅ 更改已提交"
         fi
