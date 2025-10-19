@@ -1,0 +1,92 @@
+name: Simple Sites Merge
+
+on:
+  workflow_dispatch:
+
+jobs:
+  simple-merge:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        repository: leexuben/BINGO-TV
+        path: bingo-tv
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Simple merge script
+      run: |
+        cd bingo-tv
+        
+        # 创建独立的Python文件（避免YAML语法问题）
+        cat > merge.py << 'SCRIPT_END'
+import json
+import requests
+
+# 源文件列表
+sources = [
+    "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
+    "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
+    "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
+    "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视"
+]
+
+target_file = "综合影视.json"
+
+# 读取目标文件
+try:
+    with open(target_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+except:
+    data = {}
+
+if 'sites' not in data:
+    data['sites'] = []
+
+existing_sites = data['sites']
+existing_keys = {site.get('key', '') for site in existing_sites}
+
+# 合并所有源文件
+for url in sources:
+    try:
+        response = requests.get(url, timeout=30)
+        if response.status_code == 200:
+            content = response.text
+            source_data = json.loads(content)
+            sites = source_data.get('sites', []) if isinstance(source_data, dict) else source_data
+            
+            for site in sites:
+                key = site.get('key', '')
+                if key and key not in existing_keys:
+                    existing_sites.append(site)
+                    existing_keys.add(key)
+                    
+    except Exception as e:
+        print(f"Error processing {url}: {e}")
+
+# 更新并保存
+data['sites'] = existing_sites
+
+with open(target_file, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"Merge completed: {len(existing_sites)} sites")
+SCRIPT_END
+
+        # 运行Python脚本
+        python3 merge.py
+        
+        # 清理
+        rm merge.py
+
+    - name: Commit changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        cd bingo-tv
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add 综合影视.json
+        git commit -m "Simple merge"
+        git push origin main
