@@ -1,4 +1,4 @@
-name: Merge sites with correct formatting
+name: Merge TVBox Sites
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  merge-sites:
+  merge-job:
     runs-on: ubuntu-latest
     
     steps:
@@ -15,7 +15,7 @@ jobs:
       with:
         repository: leexuben/BINGO-TV
         path: bingo-tv
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -29,126 +29,126 @@ jobs:
       run: |
         cd bingo-tv
         cat > merge_sites.py << 'EOF'
-    import json
-    import requests
-    
-    # 源文件配置
-    sources = [
-        {
-            "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
-            "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
-            "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
-        },
-        {
-            "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
-            "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
-            "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
-        },
-        {
-            "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
-            "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
-            "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
-        },
-        {
-            "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
-            "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
-            "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
-        }
-    ]
-    
-    target_file = '综合影视.json'
-    
-    # 读取目标文件
+import json
+import requests
+
+# 源文件配置
+sources = [
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/api.json",
+        "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/王二小/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
+        "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/api.json",
+        "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/巧技/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/影视",
+        "jar": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/jar/spider.jar",
+        "base": "https://raw.githubusercontent.com/leexuben/ljlfct01.github.io/main/"
+    }
+]
+
+target_file = '综合影视.json'
+
+# 读取目标文件
+try:
+    with open(target_file, 'r', encoding='utf-8') as f:
+        target_data = json.load(f)
+except:
+    target_data = {}
+
+if 'sites' not in target_data:
+    target_data['sites'] = []
+
+existing_sites = target_data['sites']
+existing_keys = {site.get('key', '') for site in existing_sites}
+
+# 处理每个源文件
+for source in sources:
     try:
-        with open(target_file, 'r', encoding='utf-8') as f:
-            target_data = json.load(f)
-    except:
-        target_data = {}
-    
-    if 'sites' not in target_data:
-        target_data['sites'] = []
-    
-    existing_sites = target_data['sites']
-    existing_keys = {site.get('key', '') for site in existing_sites}
-    
-    # 处理每个源文件
-    for source in sources:
-        try:
-            response = requests.get(source['url'], timeout=30)
-            if response.status_code == 200:
-                data = json.loads(response.text)
-                sites = data.get('sites', []) if isinstance(data, dict) else data
+        response = requests.get(source['url'], timeout=30)
+        if response.status_code == 200:
+            data = json.loads(response.text)
+            sites = data.get('sites', []) if isinstance(data, dict) else data
+            
+            for site in sites:
+                new_site = site.copy()
                 
-                for site in sites:
-                    new_site = site.copy()
+                if 'jar' not in new_site:
+                    new_site['jar'] = source['jar']
+                
+                if 'api' in new_site and isinstance(new_site['api'], str) and new_site['api'].startswith('./'):
+                    new_site['api'] = source['base'] + new_site['api'][2:]
+                
+                if 'ext' in new_site and isinstance(new_site['ext'], str) and new_site['ext'].startswith('./'):
+                    new_site['ext'] = source['base'] + new_site['ext'][2:]
+                
+                key = new_site.get('key', '')
+                if key and key not in existing_keys:
+                    existing_sites.append(new_site)
+                    existing_keys.add(key)
                     
-                    if 'jar' not in new_site:
-                        new_site['jar'] = source['jar']
-                    
-                    if 'api' in new_site and isinstance(new_site['api'], str) and new_site['api'].startswith('./'):
-                        new_site['api'] = source['base'] + new_site['api'][2:]
-                    
-                    if 'ext' in new_site and isinstance(new_site['ext'], str) and new_site['ext'].startswith('./'):
-                        new_site['ext'] = source['base'] + new_site['ext'][2:]
-                    
-                    key = new_site.get('key', '')
-                    if key and key not in existing_keys:
-                        existing_sites.append(new_site)
-                        existing_keys.add(key)
-                        
-        except Exception as e:
-            print(f'处理源文件失败: {e}')
-            continue
-    
-    # 更新目标数据
-    target_data['sites'] = existing_sites
-    
-    # 保存文件
-    with open(target_file, 'w', encoding='utf-8') as f:
-        json.dump(target_data, f, ensure_ascii=False, indent=2)
-    
-    print('✅ 合并完成')
-    print(f'📊 总站点数: {len(existing_sites)}')
-    EOF
-    
-        - name: Run merge script
-          run: |
-            cd bingo-tv
-            python3 merge_sites.py
-            rm merge_sites.py
-    
-        - name: Verify results
-          run: |
-            cd bingo-tv
-            echo "=== 验证结果 ==="
-            python3 -c "
-    import json
-    try:
-        with open('综合影视.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        sites = data.get('sites', [])
-        print(f'✅ 总站点数: {len(sites)}')
-        if sites:
-            print('前3个站点的jar字段:')
-            for i, site in enumerate(sites[:3]):
-                name = site.get('name', '未知')
-                jar = site.get('jar', '无jar')
-                print(f'  {i+1}. {name}: {jar[:50]}...')
     except Exception as e:
-        print(f'验证错误: {e}')
-            "
-    
-        - name: Commit changes
-          env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run: |
-            cd bingo-tv
-            git config user.name "github-actions"
-            git config user.email "actions@github.com"
-            git add 综合影视.json
-            if git diff --cached --quiet; then
-                echo "没有更改"
-                exit 0
-            fi
-            git commit -m "Update merged sites"
-            git push origin main
+        print(f'处理源文件失败: {e}')
+        continue
+
+# 更新目标数据
+target_data['sites'] = existing_sites
+
+# 保存文件
+with open(target_file, 'w', encoding='utf-8') as f:
+    json.dump(target_data, f, ensure_ascii=False, indent=2)
+
+print('✅ 合并完成')
+print(f'📊 总站点数: {len(existing_sites)}')
+EOF
+
+    - name: Run merge script
+      run: |
+        cd bingo-tv
+        python3 merge_sites.py
+        rm merge_sites.py
+
+    - name: Verify results
+      run: |
+        cd bingo-tv
+        echo "=== 验证结果 ==="
+        python3 -c "
+import json
+try:
+    with open('综合影视.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    sites = data.get('sites', [])
+    print(f'✅ 总站点数: {len(sites)}')
+    if sites:
+        print('前3个站点的jar字段:')
+        for i, site in enumerate(sites[:3]):
+            name = site.get('name', '未知')
+            jar = site.get('jar', '无jar')
+            print(f'  {i+1}. {name}: {jar[:50]}...')
+except Exception as e:
+    print(f'验证错误: {e}')
+        "
+
+    - name: Commit changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd bingo-tv
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add 综合影视.json
+        if git diff --cached --quiet; then
+            echo "没有更改"
+            exit 0
+        fi
+        git commit -m "Update merged sites"
+        git push origin main
