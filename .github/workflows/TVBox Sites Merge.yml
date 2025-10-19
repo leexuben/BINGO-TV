@@ -1,4 +1,4 @@
-name: TVBox Sites Merge
+name: TVBox Complete Merge
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  merge-sites:
+  complete-merge:
     runs-on: ubuntu-latest
     
     steps:
@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Merge sites from sources
+    - name: Merge all sites
       run: |
         python << 'EOF'
         import json
@@ -43,7 +43,7 @@ jobs:
             {
                 "name": "潇洒", 
                 "url": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/api.json",
-                "jar": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
+                "jar": "https://raw.githubusercontent.com/极狐/leexuben/TV-BOX/main/tvbox/潇洒/spider.jar",
                 "base": "https://raw.githubusercontent.com/leexuben/TV-BOX/main/tvbox/潇洒/"
             },
             {
@@ -66,11 +66,22 @@ jobs:
             try:
                 response = requests.get(url, timeout=30)
                 if response.status_code == 200:
-                    data = json.loads(response.text)
-                    if isinstance(data, dict) and 'sites' in data:
-                        return data['sites']
-                    elif isinstance(data, list):
-                        return data
+                    content = response.text
+                    try:
+                        data = json.loads(content)
+                        if isinstance(data, dict) and 'sites' in data:
+                            return data['sites']
+                        elif isinstance(data, list):
+                            return data
+                    except:
+                        start = content.find('{')
+                        end = content.rfind('}') + 1
+                        if start != -1 and end != -1:
+                            data = json.loads(content[start:end])
+                            if isinstance(data, dict) and 'sites' in data:
+                                return data['sites']
+                            elif isinstance(data, list):
+                                return data
                 return []
             except:
                 return []
@@ -90,16 +101,14 @@ jobs:
         
         # 从每个源文件获取数据
         for source in sources:
-            print(f"正在处理: {source['name']}")
             sites = get_sites(source['url'])
-            
             for site in sites:
-                # 为站点添加正确的jar和修复路径
+                # 为站点添加正确的jar
                 if 'jar' not in site:
                     site['jar'] = source['jar']
                 
                 # 修复相对路径
-                if 'api' in site and site['api'].startswith('./'):
+                if 'api' in site and isinstance(site['api'], str) and site['api'].startswith('./'):
                     site['api'] = source['base'] + site['api'][2:]
                 
                 if 'ext' in site and isinstance(site['ext'], str) and site['ext'].startswith('./'):
@@ -116,9 +125,30 @@ jobs:
         # 保存文件
         with open(target_file, 'w', encoding='utf-8') as f:
             json.dump(target_data, f, ensure_ascii=False, indent=2)
-        
-        print("合并完成")
         EOF
+
+    - name: Check result
+      run: |
+        cd bingo-tv
+        if [ -f "综合影视.json" ]; then
+          python3 -c "
+import json
+with open('综合影视.json', 'r') as f:
+    data = json.load(f)
+sites = data.get('sites', [])
+print(f'合并后站点数量: {len(sites)}')
+if sites:
+    print('前3个站点的jar字段:')
+    for i, site in enumerate(sites[:3]):
+        jar = site.get('jar', '无jar')
+        key = site.get('key', '无key')
+        name = site.get('name', '无name')
+        print(f'  {i+1}. {name} (key: {key})')
+        print(f'     jar: {jar[:60]}...')
+"
+        else
+          echo "文件不存在"
+        fi
 
     - name: Commit changes
       env:
@@ -129,8 +159,9 @@ jobs:
         git config user.email "actions@github.com"
         git add 综合影视.json
         if git diff --cached --quiet; then
-          echo "没有更改"
+          echo "没有检测到更改"
           exit 0
         fi
-        git commit -m "Merge sites from 4 sources"
+        git commit -m "Merge: Complete sites update $(date +'%Y-%m-%d %H:%M:%S')"
         git push origin main
+        echo "更改已提交"
