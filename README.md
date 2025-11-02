@@ -469,7 +469,19 @@ https://emoji6.com/emojiall/
 
     图标网址
     https://www.iconfinder.com/search?q=tv
+## TVBox 老电视版
 
+如果你家的电视安装系统较老（安卓 8、安卓 4 等），以上新版 TVBOX 可能无法运行，可以尝试以下旧版 APP
+
+TVBox 1.0 626 版：[城通](https://url67.ctfile.com/f/14869667-743597662-ea6eda?p=kyon)（访问密码: kyon）
+
+TVBox 4.3.3 多解析版： [城通](https://url67.ctfile.com/f/14869667-743598857-9cb391?p=kyon)（访问密码: kyon）
+
+TVBox 1.0 支持安卓 4.0: [城通](https://url67.ctfile.com/f/14869667-743598999-f93c1e?p=kyon)（访问密码: kyon）
+
+TVBox 1.0.0 支持安卓 4.0: [城通](https://url67.ctfile.com/f/14869667-743598995-411950?p=kyon)（访问密码: kyon）
+
+TVbox4 1.0.0：[城通](https://url67.ctfile.com/f/14869667-743599010-6bd195?p=kyon)（访问密码: kyon）
 
 
 [回到顶部](#readme)
