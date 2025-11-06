@@ -19,7 +19,8 @@
     { "key": "csp_Jianpian", "name": "🧲荐片", "type": 3,"jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【南风线路】/spider.jar", "api": "csp_Jianpian", "searchable": 1, "quickSearch": 1, "filterable": 1, "ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【南风线路】/json/jianpian.json" },
 	{ "key": "✨新荐片✨", "name": "✨新荐片.py✨","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/pg.jar", "type": 3, "api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/PY/新荐片.py", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
     { "key": "✨荐片✨", "name": "✨荐片.py✨","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/pg.jar", "type": 3, "api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/PY/荐片.py", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
-	
+	{"key": "Wexwwe","name": "🌐格斗┃WWE🌐","type": 3, "api": "csp_Wexwwe","jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1730871513226/wex.txt;md5;325936078985fa816425ab0f3dde3117","searchable": 1,"changeable": 0},
+
 	
 	{"key": "瓜子影视", "name": "🍉瓜子┃蓝光┃无广", "type": 3, "api": "csp_Gz360", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/摸鱼儿/jars/瓜子影视.jar", "searchable": 1, "quickSearch": 1, "filterable": 1 },
     {"key": "csp_Guazi","name": "😳瓜子┃优质","type": 3,"api": "csp_Guazi","searchable": 1,"jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvbox/pro/jar/vox.jar"},	
