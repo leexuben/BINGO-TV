@@ -1,6 +1,6 @@
 
 {
-    "spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/spider.jar",
+    "spider": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/spider.jar",
 	 "lives": [
 		{"name": "live","type": 0,"url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/collect-txt/refs/heads/main/bbxx.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
         {"name": "tv","type": 0,"url": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/TVS.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
@@ -20,6 +20,12 @@
 	{ "key": "✨新荐片✨", "name": "✨新荐片.py✨","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/pg.jar", "type": 3, "api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/PY/新荐片.py", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
     { "key": "✨荐片✨", "name": "✨荐片.py✨","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/pg.jar", "type": 3, "api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/PY/荐片.py", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
 	{"key": "Wexwwe","name": "🌐格斗┃WWE🌐","type": 3, "api": "csp_Wexwwe","jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1730871513226/wex.txt;md5;325936078985fa816425ab0f3dde3117","searchable": 1,"changeable": 0},
+    { "key": "腾讯视频", "name": "腾讯｜视频", "type": 3, "api": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/api/drpy2.min.js", "ext": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/js/TXSP.js" },
+    { "key": "优酷视频", "name": "优酷｜视频", "type": 3, "api": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/api/drpy2.min.js", "ext": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/js/YKSP.js" },
+    { "key": "芒果视频", "name": "芒果｜视频", "type": 3, "api": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/api/drpy2.min.js", "ext": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/js/MGSP.js" },
+    { "key": "爱奇艺", "name": "爱奇艺｜视频", "type": 3, "api": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/api/drpy2.min.js", "ext": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/js/AQY.js" },
+    { "key": "三六零", "name": "三六零｜视频", "type": 3, "api": "csp_SP360" },
+    { "key": "小斑快映", "name": "快映｜4K", "type": 3, "api": "csp_PanWebShare", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1, "ext": "raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/json/xbky.json" },
 
 	
 	{"key": "瓜子影视", "name": "🍉瓜子┃蓝光┃无广", "type": 3, "api": "csp_Gz360", "jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/摸鱼儿/jars/瓜子影视.jar", "searchable": 1, "quickSearch": 1, "filterable": 1 },
@@ -29,11 +35,7 @@
 	{ "key": "py_DianYingTanTang", "name": "✨🫐电影天堂(T4)✨","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/pg.jar","type": 4, "api": "https://py.doube.eu.org/spider?site=DianYingTanTang", "searchable": 1, "quickSearch": 0, "filterable": 0, "changeable": 0 },
     { "key": "py_OleVod", "name": "✨🍉欧乐影院(T4)✨","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/PG/pg.jar", "type": 4, "api": "https://py.doube.eu.org/spider?site=OleVod", "searchable": 1, "quickSearch": 0, "filterable": 0, "changeable": 0 },
 
-	{"key": "腾讯视频","name": "腾讯｜视频","type": 3,"api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/api/drpy2.min.js","ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/js/TXSP.js"},
-	{"key": "优酷视频","name": "优酷｜视频","type": 3,"api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/api/drpy2.min.js","ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/js/YKSP.js"},
-	{"key": "芒果视频","name": "芒果｜视频","type": 3,"api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/api/drpy2.min.js","ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/js/MGSP.js"},
-	{"key": "爱奇艺","name": "爱奇异｜视频","type": 3,"api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/api/drpy2.min.js","ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/js/AQY.js"},
-		
+
 	{"key": "如意采集资源","name": "感谢ljlfct01♨️🔥如意┃采集","jar": "http://47.120.41.246:8025/vip/jar/xiaomi.php","type": 1,"api": "https://cj.rycjapi.com/api.php/provide/vod/","playerType": 1,"searchable": 1,"changeable": 1},	
 	{ "key": "热播影视", "name": "🔥热播┃影视", "jar": "http://47.120.41.246:8025/vip/jar/ouge.php","type": 3, "api": "csp_AppRJ", "searchable": 1, "quickSearch": 1, "filterable": 0, "ext": { "url": "http://v.rbotv.cn" } },
     { "key": "浪酷影视", "name": "🔥浪酷┃影视", "jar": "http://47.120.41.246:8025/vip/jar/ouge.php", "type": 3, "api": "csp_AppRJ", "searchable": 1, "quickSearch": 1, "filterable": 0, "ext": { "url": "http://v.lkuys.cn" } },
