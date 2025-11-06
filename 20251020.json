@@ -128,6 +128,17 @@
 	{"key": "美剧天堂","name": "美剧天堂♨️｜磁力","type": 3,"api": "csp_MeijuTT","searchable": 1,"quickSearch": 1,"filterable": 1},
 	{"key": "电影天堂","name": "电影天堂♨️｜磁力","type": 3,"api": "csp_DyGod","searchable": 1,"quickSearch": 1,"filterable": 1},
     {"key": "热播影视","name": "热播♨️｜APP","type": 3,"api": "csp_AppRJ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": {"url": "http://v.rbotv.cn"}},
+	
+
+		
+    { "key": "超全", "name": "⚽超全┃看球","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "csp_ZbzGuard", "searchable": 0, "quickSearch": 0, "changeable": 0, "style": { "type": "list" },
+	{ "key": "88", "name": "⚽88┃看球","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "csp_Sir88Guard", "timeout": 15, "searchable": 0, "changeable": 0, "style": { "type": "list" } },
+	{ "key": "看球", "name": "⚽手机┃看球","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "csp_KanqiuGuard", "timeout": 15, "searchable": 0, "changeable": 0, "style": { "type": "list" } },
+	{ "key": "MTV", "name": "🎧明星┃MV","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "csp_BiliGuard", "style": { "type": "rect", "ratio": 1.597 },
+	{ "key": "虎牙直播js", "name": "🐯虎牙┃直播","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "./api/drpy2.js", "ext": "./js/huya2.js", "style": { "type": "rect", "ratio": 1.755 },
+	{ "key": "斗鱼js", "name": "🐟斗鱼┃直播","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "./api/drpy2.min.js", "ext": "./js/斗鱼直播.js", "style": { "type": "rect", "ratio": 1.755 },
+	{ "key": "有声小说", "name": "🎧有声┃小说","jar": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxTW/本地【饭太硬线】/spider.jar", "type": 3, "api": "csp_Tingshu275Guard", "searchable": 0, "quickSearch": 0, "changeable": 0 },
+	
 
 	{"key": "剧王短剧","name": "剧王｜短剧","type": 3,"api": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/py/剧王短剧.py","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
 	{"key": "剧屋短剧","name": "剧屋｜短剧","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%BD%87%E6%B4%92/json/DJWu.json"},
