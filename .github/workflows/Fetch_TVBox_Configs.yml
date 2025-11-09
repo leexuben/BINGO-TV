@@ -25,6 +25,6 @@ jobs:
 
       - name: 运行脚本
         env:
-          GITHUB_TOKEN: ${{ secrets.TVBOX_TOKEN }}  # 从 Secrets 里读取 Token
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # 从 Secrets 里读取 Token
         run: |
           python merge/fetch_tvbox_configs.py
