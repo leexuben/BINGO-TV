@@ -8,11 +8,11 @@ from datetime import datetime
 # fetch_tvbox_configs.py
 # ======================
 
-GITHUB_TOKEN = os.getenv('TVBOX_TOKEN')  # 用于读写你的目标仓库
-if GITHUB_TOKEN:
-    print(f"当前 TVBOX_TOKEN 值: {TVBOX_TOKEN[:5]}...(共{len(TVBOX_TOKEN)}位)")
+GH_TOKEN = os.getenv('GH_TOKEN')  # 用于读写你的目标仓库
+if GH_TOKEN:
+    print(f"当前 GH_TOKEN 值: {GH_TOKEN[:5]}...(共{len(GH_TOKEN)}位)")
 else:
-    print("TVBOX_TOKEN 环境变量未设置")
+    print("GH_TOKEN 环境变量未设置")
 GITHUB_USERNAME = 'leexuben'
 REPO_NAME = 'BINGO-TV'  # 注意：这里只是仓库名，不是 leexuben/TVBOX-merge
 FILE_PATH = 'source.txt'  # 比如根目录下的 source.txt
@@ -26,7 +26,7 @@ KEYWORDS = ['荐片', '采集', '.spider']  # 你关注的 tvbox 配置相关关
 
 def search_github_code():
     headers = {
-        'Authorization': f'token {GITHUB_TOKEN}',
+        'Authorization': f'token {GH_TOKEN}',
         'Accept': 'application/vnd.github.v3+json'
     }
 
@@ -71,7 +71,7 @@ def search_github_code():
 
 def update_source_txt(content_list):
     headers = {
-        'Authorization': f'token {GITHUB_TOKEN}',
+        'Authorization': f'token {GH_TOKEN}',
         'Accept': 'application/vnd.github.v3+json'
     }
 
