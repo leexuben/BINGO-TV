@@ -25,7 +25,7 @@ def search_github_code(keyword):
 
     try:
         response = requests.get(url, headers=headers)
-        if response.tatus_code == 200:
+        if response.status_code == 200:
             data = response.json()
             items = data.get('items', [])
             results = []
@@ -34,13 +34,13 @@ def search_github_code(keyword):
                 path = item['path']
                 html_url = item['html_url']
                 content_response = requests.get(item['download_url'], headers=headers)
-                if content_response.tatus_code == 200:
+                if content_response.status_code == 200:
                     content = content_response.text
                     snippet = f"=== 来源: {html_url} ===\n{content}\n==================================================="
                     results.append(snippet)
             return result
         else:
-            print(f"❌ 搜索关键词 '{keyword}' 失败：{response.tatus_code}, {response.text}")
+            print(f"❌ 搜索关键词 '{keyword}' 失败：{response.status_code}, {response.text}")
             return []
     except Exception as e:
         print(f"❌ 搜索关键词 '{keyword}' 出错：{e}")
@@ -68,14 +68,14 @@ def update_source_txt(content_list):
 
     try:
         response = requests.get(url, headers=headers)
-        if response.tatus_code == 200:
+        if response.status_code == 200:
             data = response.json()
             sha = data.get('sha')
             print(f"📄 {FILE_PATH} 已存在，将更新")
-        elif response.tatus_code == 404:
+        elif response.status_code == 404:
             print(f"📄 {FILE_PATH} 不存在，将创建")
         else:
-            print(f"❌ 获取文件信息失败：{response.tatus_code}, {response.text}")
+            print(f"❌ 获取文件信息失败：{response.status_code}, {response.text}")
             return
     except Exception as e:
         print(f"❌ 查询文件 {FILE_PATH} 时出错：{e}")
@@ -91,10 +91,10 @@ def update_source_txt(content_list):
 
     try:
         resp = requests.put(url, headers=headers, json=data)
-        if resp.tatus_code in [200, 201]:
+        if resp.status_code in [200, 201]:
             print("✅ 成功更新/创建 source.txt 文件")
         else:
-            print(f"❌ 更新失败：{resp.tatus_code}, {resp.text}")
+            print(f"❌ 更新失败：{resp.status_code}, {resp.text}")
     except Exception as e:
         print(f"❌ 提交文件时出错：{e}")
 
@@ -110,7 +110,7 @@ def main():
         else:
             all_saved_contents.append(f"⚠️ 未找到包含关键词 '{keyword}' 的代码文件。")
 
-    update_source_txt(all_saved_content)
+    update_source_txt(all_saved_contents)
 
 if __name__ == '__main__':
     main()
