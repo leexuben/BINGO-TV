@@ -1,30 +1,47 @@
-name: Fetch_TVBox_Configs
+name: Fetch and Save TVBox Raw URLs (全网 GitHub 搜索)
 
 on:
-  # 可以设置为每天定时运行，或者手动触发
+  workflow_dispatch:  # 手动触发
   schedule:
-    - cron: '0 2 * * *'  # UTC 时间每天 02:00（北京时间 10:00），可自行调整
-  workflow_dispatch:     # 允许手动运行
+    - cron: '0 2 * * *'  # 每天 UTC 02:00 自动运行（可选）
 
 jobs:
-  run-script:
+  fetch-and-commit:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 检出代码
+      - name: 检出代码（启用 git 历史记录，用于提交）
         uses: actions/checkout@v3
+        with:
+          ref: main  # 或 merge，根据您的分支
+          token: ${{ secrets.GH_TOKEN }}  # 👈 使用具有写入权限的 Token
+          fetch-depth: 0  # 获取全部历史，以便 git push 正常工作
 
       - name: 设置 Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: 安装依赖（requests）
+      - name: 安装依赖
         run: |
           pip install requests
 
-      - name: 运行脚本
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # 从 Secrets 里读取 Token
+      - name: 运行脚本，生成 Raw URLs 文件
         run: |
-          python merge/fetch_tvbox_configs.py
+          python merge/fetch_tvbox_raw_urls.py
+
+      - name: 配置 Git 用户信息
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: 添加、提交并推送 tvbox_raw_sources.txt 到 /merge/
+        run: |
+          # 检查文件是否存在
+          if [ -f "merge/tvbox_raw_sources.txt" ]; then
+            git add merge/tvbox_raw_sources.txt
+            git commit -m "🤖 自动更新 TVBox 全网 Raw 源文件链接 (关键词：荐片、采集、.spider)" || echo "无变更，跳过提交"
+            git push || echo "推送失败，可能无变更或权限问题"
+          else
+            echo "⚠️ tvbox_raw_sources.txt 文件未生成，跳过提交"
+          fi
