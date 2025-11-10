@@ -4,17 +4,17 @@ import os
 # ======================
 # 1. 配置
 # ======================
-KEYWORDS = ['荐片', '采集', '.spider']  # 您要搜索的 3 个关键词
-OUTPUT_FILE = 'tvbox_raw_sources.txt'  # 输出文件名（保存在 merge/ 目录下）
+KEYWORDS = ['荐片', '采集', '.spider']  # 你要搜索的 3 个关键词
+OUTPUT_FILE = 'tvbox_raw_sources.txt'  # 输出文件名（会保存在 merge/ 目录下）
 
-# 从环境变量获取 GitHub Token（您需要在 GitHub Actions 的 Secrets 中配置 MY_GH_TOKEN）
-GITHUB_TOKEN = os.getenv('MY_GH_TOKEN')
+# 从环境变量读取你的 GitHub Token，变量名是 MY_GH_TOKEN（你在 GitHub Secrets 里配的）
+MY_GH_TOKEN = os.getenv('MY_GH_TOKEN')
 
-# 构造请求头：如果配置了 Token，就带上 Authorization，否则匿名（不推荐）
+# 构造请求头：如果配置了 Token，就带上 Authorization，否则匿名（不推荐，但能跑）
 HEADERS = {}
-if GITHUB_TOKEN:
+if MY_GH_TOKEN:
     HEADERS = {
-        'Authorization': f'token {GITHUB_TOKEN}',
+        'Authorization': f'token {MY_GH_TOKEN}',
         'Accept': 'application/vnd.github.v3+json'
     }
 else:
@@ -53,7 +53,7 @@ def main():
     unique_raw_urls = list(set(all_raw_urls))
     print(f"🔢 总共找到 {len(unique_raw_urls)} 个唯一 Raw URL")
 
-    # 保存到文件（在 merge/ 目录下）
+    # 保存到文件（会在 merge/ 目录下）
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         for url in unique_raw_urls:
             f.write(url + '\n')
