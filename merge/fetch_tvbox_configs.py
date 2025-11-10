@@ -128,35 +128,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-________________________________________	
-	
-name: Fetch_TVBox_Configs
-
-on:
-  # 可以设置为每天定时运行，或者手动触发
-  schedule:
-    - cron: '0 2 * * *'  # UTC 时间每天 02:00（北京时间 10:00），可自行调整
-  workflow_dispatch:     # 允许手动运行
-
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v3
-
-      - name: 设置 Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: 安装依赖（requests）
-        run: |
-          pip install requests
-
-      - name: 运行脚本
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # 从 Secrets 里读取 Token
-        run: |
-          python merge/fetch_tvbox_configs.py
