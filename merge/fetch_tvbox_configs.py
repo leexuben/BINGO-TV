@@ -12,10 +12,12 @@ GH_TOKEN = os.getenv('GH_TOKEN')  # 用于读写你的目标仓库
 if GH_TOKEN:
     print(f"当前 GH_TOKEN 值: {GH_TOKEN[:5]}...(共{len(GH_TOKEN)}位)")
 else:
-    print("GH_TOKEN 环境变量未设置")
+    print("❌ GH_TOKEN 环境变量未设置。请确保在 GitHub Secrets 中设置了 GH_TOKEN。")
+    exit(1)
+
 GITHUB_USERNAME = 'leexuben'
 REPO_NAME = 'BINGO-TV'  # 注意：这里只是仓库名，不是 leexuben/TVBOX-merge
-FILE_PATH = 'merge/source.txt'  # 比如根目录下的 source.txt
+FILE_PATH = 'merge/source.txt'  # GitHub 仓库中的文件路径，例如根目录下的 merge/source.txt
 
 # 🔍 搜索关键词（你可以自行增删，比如 tvbox、m3u、源、接口等）
 KEYWORDS = ['荐片', '采集', '.spider']  # 你关注的 tvbox 配置相关关键词
@@ -96,12 +98,16 @@ def update_source_txt(content_list):
         return
 
     # 编码为 base64
-    encoded_content = base64.b64encode('\n'.join(all_contents_with_header).encode('utf-8')).decode('utf-8')
+    try:
+        encoded_content = base64.b64encode('\n'.join(all_contents_with_header).encode('utf-8')).decode('utf-8')
+    except Exception as e:
+        print(f"❌ 编码内容失败: {e}")
+        return
 
     data = {
         'message': '🤖 自动更新：抓取 tvbox 相关配置代码片段',
         'content': encoded_content,
-        'branch': 'main'  # 或 master
+        'branch': 'main'  # 或 master，根据你的仓库分支名称进行调整
     }
     if sha:
         data['sha'] = sha
