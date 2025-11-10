@@ -53,7 +53,7 @@ def update_source_txt(content_list):
         'Accept': 'application/vnd.github.v3+json'
     }
 
-    current_time = datetime.datetime.utcnow().trftime('%Y-%m-%d %H:%M:%S (UTC)')
+    current_time = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S (UTC)')
     header = f"🔍 自动抓取时间: {current_time}\n📌 以下为包含关键词的 tvbox 配置相关代码片段：\n\n"
 
     if not content_list:
