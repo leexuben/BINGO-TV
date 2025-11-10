@@ -1,7 +1,7 @@
 import os
 import base64
 import datetime
-import请求
+import requests
 
 # ==================== 配置区（请根据你的实际情况修改）====================
 GH_TOKEN = os.getenv('GH_TOKEN')  # 统一使用 GH_TOKEN，确保 GitHub Secrets 和 workflow 里也是这个名称
