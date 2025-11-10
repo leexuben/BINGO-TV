@@ -6,7 +6,7 @@ from datetime import datetime
 # ======================
 # 1. 配置部分
 # ======================
-GH_TOKEN = os.getenv('MY_GH_TOKEN')  # 使用具有写入权限的 Token，请配置到 GitHub Actions Secrets 中
+GH_TOKEN = os.getenv('GH_TOKEN')  # 使用具有写入权限的 Token，请配置到 GitHub Actions Secrets 中
 if not GH_TOKEN:
     print("❌ 错误：未设置 MY_GH_TOKEN 环境变量！请配置具有写入权限的 GitHub Token。")
     exit(1)
