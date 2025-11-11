@@ -14,8 +14,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: main  # 或 merge，根据您的分支
-          token: ${{ secrets.MY_GH_TOKEN }}  # 使用有写入权限的 Token
-          fetch-depth: 0  # 必须拉全历史，否则 git push 会失败
+          token: ${{ secrets.MY_GH_TOKEN }}
+          fetch-depth: 0
 
       - name: 设置 Python
         uses: actions/setup-python@v4
@@ -26,8 +26,14 @@ jobs:
         run: |
           pip install requests
 
+      # 🔥 新增：配置 Git 用户信息
+      - name: 配置 Git 用户名和邮箱
+        run: |
+          git config --global user.email "745425103@qq.com"  # 替换为真实邮箱
+          git config --global user.name "leexuben"    # 替换为真实用户名
+
       - name: 运行脚本，生成并自动提交 tvbox_raw_sources.txt
         env:
-          MY_GH_TOKEN: ${{ secrets.MY_GH_TOKEN }}  # 传入脚本使用的 Token（可用于 API 搜索，也可用于 HTTPS Git Push）
+          MY_GH_TOKEN: ${{ secrets.MY_GH_TOKEN }}
         run: |
           python merge/fetch_tvbox_raw_urls.py
