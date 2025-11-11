@@ -28,6 +28,6 @@ jobs:
 
       - name: 运行脚本，生成并自动提交 tvbox_raw_sources.txt
         env:
-          MY_GH_TOKEN:${{ secrets.MY_GH_TOKEN }}  # 传入脚本使用的 Token（可用于 API 搜索，也可用于 HTTPS Git Push）
+          MY_GH_TOKEN: ${{ secrets.MY_GH_TOKEN }}  # 传入脚本使用的 Token（可用于 API 搜索，也可用于 HTTPS Git Push）
         run: |
           python fetch_tvbox_raw_urls.py
