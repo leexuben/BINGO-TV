@@ -72,8 +72,7 @@ def main():
     if unique_raw_urls:
         with open(output_path, 'w', encoding='utf-8') as f:
             for url in unique_raw_urls:
-                f.write(url + '
-')
+                f.write(url + '')
         print(f"✅ Raw URL已成功保存到文件: {output_path}")
 
         # Git操作
