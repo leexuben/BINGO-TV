@@ -30,4 +30,4 @@ jobs:
         env:
           MY_GH_TOKEN: ${{ secrets.MY_GH_TOKEN }}  # 传入脚本使用的 Token（可用于 API 搜索，也可用于 HTTPS Git Push）
         run: |
-          python fetch_tvbox_raw_urls.py
+          python merge/fetch_tvbox_raw_urls.py
