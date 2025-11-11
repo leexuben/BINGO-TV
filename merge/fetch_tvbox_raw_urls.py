@@ -48,8 +48,7 @@ def save_to_file(repos):
     output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
     with open(output_path, 'w', encoding='utf-8') as f:
         for repo in repos:
-            f.write(repo + '
-')
+            f.write(repo + '')
     print(f"已保存 {len(repos)} 个仓库名到 {output_path}，按更新时间排序，最新的在前。")
 
 if __name__ == "__main__":
