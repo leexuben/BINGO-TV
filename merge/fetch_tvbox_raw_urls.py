@@ -8,7 +8,7 @@ import subprocess
 # 1. 配置
 # ======================
 KEYWORDS = ['荐片', '采集', '.spider']  # 您要搜索的 3 个关键词
-OUTPUT_DIR = 'merge'  # 输出目录
+OUTPUT_DIR = '.'  # 输出目录，因为最终文件要放到 merge 目录，这里先放当前目录，后续再移动
 OUTPUT_FILE = 'tvbox_raw_sources.txt'  # 输出文件名
 TOKEN_ENV_NAME = 'MY_GH_TOKEN'  # 环境变量名，用于 GitHub API 搜索认证（可选）
 
@@ -72,8 +72,8 @@ def main():
     # ======================
     # 5. 确保 merge/ 目录存在，然后保存到 merge/tvbox_raw_sources.txt
     # ======================
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
+    os.makedirs('merge', exist_ok=True)
+    output_path = os.path.join('merge', OUTPUT_FILE)
 
     with open(output_path, 'w', encoding='utf-8') as f:
         for url in unique_raw_urls:
@@ -108,3 +108,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
