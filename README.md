@@ -77,6 +77,20 @@ https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情 (https://already.free.hr/V
 
 http://pandown.pro/tvbox/tvbox.json  巧技
 
+叶川宝盒接口：
+
+https://codeberg.org/maskcao/maskcao/raw/branch/main/叶川宝盒.json
+
+https://codeberg.org/maskcao/maskcao/raw/branch/main/x.json  （备用）
+
+王二小：
+
+http://tvbox.王二小放牛娃.top  （主接口）
+
+https://9280.kstore.space/wex.json   （防屏蔽接口）
+
+小米接口：https://mpanso.me/DEMO.json
+
 # 直播源汇总：https://www.juwanhezi.com/more/live
 
 # IPTV直播源地址：https://iptv.hacks.tools/
