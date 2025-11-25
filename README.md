@@ -67,7 +67,6 @@ http://ceshi.肥猫.com/PandaQ
 
 http://www.mpanso.com/小米/DEMO.json
 
-http://tvbox.王二小放牛娃.xyz/
 
 https://weixine.net/ysc.json   运输车
 
