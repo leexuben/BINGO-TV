@@ -1,6 +1,6 @@
 
 {
-    "spider": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/TV-BOX/refs/heads/main/备份/tvboxqq/潇洒/spider.jar",
+    "spider": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar",
 	 "lives": [
 		{"name": "live","type": 0,"url": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/collect-txt/refs/heads/main/bbxx.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
         {"name": "tv","type": 0,"url": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/tv/TVS.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"}
