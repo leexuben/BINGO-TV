@@ -177,7 +177,7 @@
 	{"key": "小学课堂","name": "小学｜课堂","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": {"json": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/json/小学课堂.json","cookie": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/json/bilibili.json"},"style": {"type": "rect","ratio": 1.597}},
 	{"key": "初中课堂","name": "初中｜课堂","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": {"json": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/json/初中课堂.json","cookie": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/json/bilibili.json"},"style": {"type": "rect","ratio": 1.597}},
 	{"key": "高中教育","name": "高中｜课堂","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": {"json": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/json/高中课堂.json","cookie": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/json/bilibili.json"},"style": {"type": "rect","ratio": 1.597}},
-	{"key": "急救教学","name": "急救｜教学","type": 3,"api": "csp_FirstAid","searchable": 0,"quickSearch": 0,"changeable": 0,"style": {"type": "rect","ratio": 3.8},"gridview": "0-0-4.1"}
+	{"key": "急救教学","name": "急救｜教学","type": 3,"api": "csp_FirstAid","searchable": 0,"quickSearch": 0,"changeable": 0,"style": {"type": "rect","ratio": 3.8},"gridview": "0-0-4.1"}],
 	"parses": [
 	{"name":"解析聚合","type":3,"url":"Demo"},
 	{"name":"Json并发","type":2,"url":"Parallel"},
