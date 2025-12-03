@@ -18,6 +18,7 @@
 	{"key": "csp_Guazi","name": "😳瓜子┃优质","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/vox.jar"},
 	{"key": "瓜子影视","name": "瓜子｜影视","type": 3,"api": "csp_Gz360","searchable": 1,"quickSearch": 1,"filterable": 1},	
     {"key":"csp_Gz360","name":"🍉瓜子","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1},
+	{"key":"巧技二","name":"巧技┃仅搜索","jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/fix250711.jar","type":3,"api":"csp_qiao2","playerType":2,"ext":"7lj763gg402i79425739i7jghj118797l4hj840gi18633331l4708g2h7145403549g44l8ii56i187681hkjj3hhgh1ih3l32j250lk1k786lj20j468hk3hli4l46gig4i3g7g2722328j0136h01i7g5183k22k7gg3i72hk81gl8k9839kl7i0707"},	
 	{ "key": "贱贱", "name": "🐭荐片┃速览┃纯净", "jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/spider.jar", "type": 3, "api": "csp_JPJGuard", "playerType": 2, "searchable": 1, "quickSearch": 1, "changeable": 0 },	
 	{ "key": "荐片", "name": "荐片┃影视", "api": "csp_Jianpian", "type": 3,"jar":"https://g.blfrp.cn/https://raw.githubusercontent.com/heroaku/TVboxo/refs/heads/main/fm.jar", "playerType": "2", "ext": "https://ev2089.zxbwv.com" },
 	{"key": "荐片","name": "♨️荐片｜磁力","api": "csp_Jianpian","type": 3,"ext": "https://api.ztcgi.com"},	
