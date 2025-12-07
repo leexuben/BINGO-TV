@@ -28,7 +28,7 @@
     { "key": "文采", "name": "💮文采┃秒播┃纯净","jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/spider.jar","type": 3, "api": "csp_JpysGuard", "playerType": 2, "searchable": 1, "quickSearch": 1, "changeable": 1 },
 	
 	{"key": "csp_ShuaiJiao","name": "🤺摔跤┃体育", "jar":"https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/vox.jar","type": 3,"api": "csp_ShuaiJiao","searchable": 0,"quickSearch": 1,"filterable": 0,"ext": "[object Object]"},
-	{"key": "Wexwwe","name": "🌐格斗┃WWE🌐","type": 3, "api": "csp_Wexwwe","jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/wwe.jar","searchable": 1,"changeable": 0},
+	{"key": "Wexwwe","name": "🌐格斗┃WWE🌐","type": 3, "api": "csp_Wexwwe","jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/dbac0975ac37cb43/wex.png;md5;2fae453e2661200bdb1f6305972fc663","searchable": 1,"changeable": 0},
     { "key": "py_OleVod", "name": "✨🍉欧乐影院(T4)✨","jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/yuanwangokk-1/TV-BOX/main/PG/pg.jar",  "type": 4, "api": "https://py.doube.eu.org/spider?site=OleVod", "searchable": 1, "quickSearch": 0, "filterable": 0, "changeable": 0 },
 	
 		
