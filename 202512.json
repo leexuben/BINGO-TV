@@ -15,8 +15,7 @@
     {"key": "csp_Guazi","name": "😳瓜子┃优质","type": 3,"api": "csp_Guazi","searchable": 1,"jar":"https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/vox.jar"},	
 	{ "key": "星星", "name": "⭐️星星┃超清┃弹幕", "type": 3, "quickSearch": 1, "api": "csp_AppGet", "jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/jars/玩偶哥哥.jar", "ext": { "url": "http://starani.qcanime.xyz", "site": "", "dataKey": "123456789StarAni", "dataIv": "123456789StarAni", "deviceId": "", "version": "", "ua": "okhttp/3.10.0 BDYS/109.0.0.8" } },
 	{"key": "csp_Guazi","name": "😳瓜子┃优质","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/vox.jar"},
-	{"key": "瓜子影视","name": "瓜子｜影视","type": 3,"api": "csp_Gz360","searchable": 1,"quickSearch": 1,"filterable": 1},	
-    {"key":"csp_Gz360","name":"🍉瓜子","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1},
+	
 	{"key":"巧技二","name":"巧技┃仅搜索","jar":"https://hub.gitmirror.com/raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/fix250711.jar","type":3,"api":"csp_qiao2","playerType":2,"ext":"7lj763gg402i79425739i7jghj118797l4hj840gi18633331l4708g2h7145403549g44l8ii56i187681hkjj3hhgh1ih3l32j250lk1k786lj20j468hk3hli4l46gig4i3g7g2722328j0136h01i7g5183k22k7gg3i72hk81gl8k9839kl7i0707"},	
 	{ "key": "贱贱", "name": "🐭荐片┃速览┃纯净", "jar": "https://g.blfrp.cn/https://raw.githubusercontent.com/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/spider.jar", "type": 3, "api": "csp_JPJGuard", "playerType": 2, "searchable": 1, "quickSearch": 1, "changeable": 0 },	
 	{ "key": "荐片", "name": "荐片┃影视", "api": "csp_Jianpian", "type": 3,"jar":"https://g.blfrp.cn/https://raw.githubusercontent.com/heroaku/TVboxo/refs/heads/main/fm.jar", "playerType": "2", "ext": "https://ev2089.zxbwv.com" },
@@ -51,7 +50,8 @@
 	{ "key": "d'd", "name": "修罗|弹幕", "type": 3, "api": "csp_HBPQ", "ext": { "数组": "card card-sm card-link&&</div>", "图片": "src=\"&&\"", "标题": "mb-0 card-title text-truncate\">&&<", "副标题": "start-0 text-red-fg\">&&</span>", "链接": "href=\"&&\"", "简介": "剧情简介：&&\"", "线路标题": "磁力+>&&<", "播放数组": "download-list&&</tbody>", "播放列表": "<tr&&</tr>", "播放标题": "text-muted\">&&</td>[不包含:网盘下载]", "跳转播放链接": "href=\"&&\"", "分类url": "https://v.xlys.ltd.ua/s/all/{catePg}?type={cateId};;d0", "分类": "电影$0#电视剧$1" } },
     { "key": "苹果", "name": "苹果|弹幕", "type": 3, "api": "csp_HBPguo" },
     { "key": "天天", "name": "天天|弹幕", "type": 3, "api": "csp_HBtiantian", "ext": "http://tt.ysdqjs.cn/" },
-    
+    {"key": "瓜子影视","name": "瓜子｜影视","type": 3,"api": "csp_Gz360","searchable": 1,"quickSearch": 1,"filterable": 1},	
+    {"key":"csp_Gz360","name":"🍉瓜子","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1},
 
 	
 		
