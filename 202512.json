@@ -8,6 +8,12 @@
     "wallpaper": "http://bobohome.ignorelist.com:20247/bing",
 	"logo": "https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/1.gif",
     "sites": [
+	{"key":"NewDouBan","name":"🐮【公众号：王二小放牛娃】🐮","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/txt/20260414181247-ae51abfbfe.txt","jar":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportGuaZi","name":"🌐瓜子┃体育🌐","type":3,"api":"csp_SportGuaZiGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportKanQiuTong","name":"🌐球通┃体育🌐","type":3,"api":"csp_SportKanQiuTongGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportKanqiu","name":"🌐八八┃体育🌐","type":3,"api":"csp_SportKanqiuGuard","searchable":1,"changeable":0,"jar":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportWwe","name":"🌐WWE┃体育🌐","type":3,"api":"csp_SportWweGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/spider.jar"},
+	
     { "key": "直播转点播", "name": "📺电视直播","jar":"https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/refs/heads/main/jar/xcz.jar", "type": 3, "api": "https://gitee.com/wzbdyr/hqds/raw/master/lib/live.js", "searchable": 0, "quickSearch": 1, "filterable": 0, "ext": "https://gitee.com/wzbdyr/hqds/raw/master/lib/live.json" },
 	{ "key": "jianpian", "name": "荐片|弹幕", "type": 3, "api": "csp_Jianpian", "ext": "http://4icnx7.qyjzlh.com" },
 	{"key": "瓜子影视", "name": "🍉瓜子┃蓝光┃无广", "type": 3, "api": "csp_Gz360", "jar": "https://daili.korice.eu.org/https://raw.githubusercontent.com/yuanwangokk-1/TV-BOX/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%91%B8%E9%B1%BC%E5%84%BF/jars/%E7%93%9C%E5%AD%90%E5%BD%B1%E8%A7%86.jar", "searchable": 1, "quickSearch": 1, "filterable": 1 },
