@@ -3,7 +3,7 @@
     "spider": "https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar",
 	"lives":[
     {
-      "name": "fmm",
+      "name": "collect-txt",
       "type": 0,
       "url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/collect-txt/refs/heads/main/bbxx.txt",
       "playerType": 1,
