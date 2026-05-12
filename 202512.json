@@ -102,26 +102,6 @@
             "ext": "https://aysappto.oss-cn-chengdu.aliyuncs.com/q19.txt|fff32466kkfff616|122"
         },
         {
-            "key": "段友",
-            "name": "♨️段友｜1080P",
-            "type": 3,
-            "searchable": 1,
-            "changeable": 1,
-            "api": "csp_AppGet",
-             "jar": "https://img2.gelonghui.com/library/755ee-d3dbe41a-8c4e-46bd-987c-a0d625cac773.png;md5;755ee94255ccac2ea2307fe7f368d4ed",
-            "ext": "https://shangjihuoke.com|8E2DC386FD452D05"
-        },
-        {
-            "key": "暮气",
-            "name": "♨️星河｜1080P",
-            "type": 3,
-            "searchable": 1,
-            "changeable": 1,
-            "api": "csp_AppGet",
-             "jar": "https://img2.gelonghui.com/library/755ee-d3dbe41a-8c4e-46bd-987c-a0d625cac773.png;md5;755ee94255ccac2ea2307fe7f368d4ed",
-            "ext": "https://daen-1256234123.cos.ap-shanghai.myqcloud.com/MuQi/mqxhqj.txt|kj37zs29q22jk96t|122"
-        },
-        {
             "key": "仓鼠APP",
             "name": "🐭仓鼠｜1080P",
             "type": 3,
