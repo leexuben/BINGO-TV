@@ -65,6 +65,7 @@
             "order_num": 0,
             "changeable": 0
         },
+		{"key":"SportWwe","name":"🌐WWE┃体育🌐","type":3,"api":"csp_SportWweGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tvboxtg/main/王二小/spider.jar"},
         {
             "key": "csp_Bili",
             "name": "📺哔哩┃哔哩",
