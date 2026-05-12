@@ -1,0 +1,456 @@
+{
+    "spider": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/refs/heads/main/XiaoMi/spider.jar",
+    "wallpaper": "https://www.wexwp.cc/bizhi.php",
+    "logo": "https://wkphoto.bj.bcebos.com/bba1cd11728b47106798119ad3cec3fdfc032335.jpg",
+    "lives": [
+        {
+            "name": "📺 平台直播",
+            "type": 0,
+            "ua": "okhttp/3.15"
+        }
+    ],
+    "sites": [
+        {
+            "key": "豆豆",
+            "name": "🎬豆瓣┃精选 仅供测试",
+            "type": 3,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0,
+            "api": "csp_Douban",
+            "searchable": 0
+        },
+        {
+            "key": "config",
+            "name": "⚙️Cookie┃配置 贩卖后果自负",
+            "type": 3,
+            "api": "csp_Config",
+            "searchable": 0
+        },
+	{
+      "key": "瓜子影视",
+      "name": "🍉瓜子┃蓝光┃无广",
+      "type": 3,
+      "api": "csp_Gz360",
+      "jar": "https://tv.leetvbox.qzz.io/tvbox/yuanwangokk-1/TV-BOX/main/%E5%A4%87%E4%BB%BD/tvboxqq/%E6%91%B8%E9%B1%BC%E5%84%BF/jars/%E7%93%9C%E5%AD%90%E5%BD%B1%E8%A7%86.jar",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },	
+    {"key":"SportGuaZi","name":"🌐瓜子┃体育🌐","type":3,"api":"csp_SportGuaZiGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://tv.leetvbox.qzz.io/tvbox/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportKanQiuTong","name":"🌐球通┃体育🌐","type":3,"api":"csp_SportKanQiuTongGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://tv.leetvbox.qzz.io/tvbox/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportKanqiu","name":"🌐八八┃体育🌐","type":3,"api":"csp_SportKanqiuGuard","searchable":1,"changeable":0,"jar":"https://tv.leetvbox.qzz.io/tvbox/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    {"key":"SportWwe","name":"🌐WWE┃体育🌐","type":3,"api":"csp_SportWweGuard","searchable":1,"changeable":0,"style":{"type":"list"},"jar":"https://tv.leetvbox.qzz.io/tvbox/ls125781003/tvboxtg/main/王二小/spider.jar"},
+    { "key": "直播转点播", "name": "📺电视直播","jar":"https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/refs/heads/main/jar/xcz.jar", "type": 3, "api": "https://gitee.com/wzbdyr/hqds/raw/master/lib/live.js", "searchable": 0, "quickSearch": 1, "filterable": 0, "ext": "https://gitee.com/wzbdyr/hqds/raw/master/lib/live.json" },
+	
+    {"key": "csp_Guazi","name": "😳瓜子┃优质😳","type": 3,"api": "csp_Guazi","searchable": 1,"jar":"https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/main/jar/vox.jar"},	
+	{"key": "csp_Guazi","name": "😳瓜子┃优质","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/main/jar/vox.jar"},
+	{"key": "小黄人","name": "小黄人┃App","type": 3,"api": "csp_AppV6","playerType": 2,"ext": "7lj763gg0939795i007gi487k212jljig0lg9j079jjh6l74040k03lgl818531h1g985gg59j5ijj94330jg198h6hk10k2l164714ig6k88hk766i728k06ghl0041ljl2iih6h42j623ghh432k41jjg4063k32l9lk6l35l294g58gi26hkj285j056g73j62kl7hj09ki07ij78327k43i65jj99j5h2l9i0gj3735ik9754i9jj112365979111h2407kk4l92l5h37k218h7665li2913l2479g6h7lh64i65lg4g536ih3555kk1j58907955l881331ki46jkii647g3g796l0094h9560h6ij6ij708314j850307l54366khl34495614879j8g99h50h7132l4h63ijh950j3h1i5ghligjjhjgljkj1328972g8g08k7k1kk5hi7k93ik9421676j1g4891838i4kilk59k25i14g8kh8g6l220020lhh0l76i6llkki911360710691j0jk6081ih40012789g325hj8829076j12lkll6g710j6h9660lg9h24h97j5l16372627j4k795kjij14hi2908lh621j04859j9h33g41531090530j4ij5j55443l661i595l34008501i867jl3g52l3954g85088jk3hl1335364k0i996ijkk2i7k85g2ll00il4k88969g834ihh1232gi3igi719k9g7ijh0l54358j4737ikhjg998g4311lg37219k7g8g48j448963675170l74k689h5ii0128j49285j6j999h67752j82i0ii088hk7g9776jh0g72g5i926030347h3khh452g553j32883255l4j18169k4k6i5041914h0l3k9ih0321984kjj31k73hh54l1jl56gl416khl06l0j488h434kk6jhj3l2ji193i2hjkki2g9ki81l7l6l4931g7l406klk1699j92l10g3j226302ilg3ji5419gh5jj27k37053ll47ij8114j8lk030lk76l193i1j7j4j3k94gk989k23653gl637i3106j983h54002995ikg835lh9931hlkl869414k59g332239jh6j6h9g96783735975ll1g32i21067976486lk8906l439190kkj448l35h87ji67767h58g66k989gk82l98lgg1kl3il07h664k579337715839k24l4777i67144j0ghghg5338k2kg1l0jj36ji6512g90g144k971g4223i244hl28870k8jih64128i1j455h176303ik527h47805228lg37j8gll9659k320gl1i8l64gk3i94g6g9hj41653g25j917i3i831k50k4l24422jh010k8kl39gh727h4kk1gi44426j56j55k7h4gh94102k5846k9h4jj64jh406211k71jg74g77l52i6jj09jlh45895252k3l19343l8i9922kg8gh35185gl070i89l238j81h61403j84k4jg74i5jl42l562ihg61ih284ik8j83k16gl25lg098g141632258h93i35j8h51ih3006gh06j5hi61536j2k5iih98i89g04120385gg9j71163i182ih7j09h1h5l8k0k3j25j321997j7h88i59l0j1g618i2j464h93i02g830043ljl0gil828ij863gilj605g8k74380h1gkkg2hl31ih9hi3180h58j097h246173h3642j592751909648il2j39003363hjj5l25g9968ikh419409i5i18jlj3996gk5113723h2hkgh3jk4hg754kl3597g87i6h697460h6367745ig2902040782il3llki906251lj3l54747j431j81k9k9h6822j4ljikhi1350g9gk512h4732020i89j22gi75k0342kg79l41hi4178676k5l9k28286ji98433l9717803g4j5ig1815hh786h5gi729kgl8g1k6i6jh64033211k6g8i1ghk45k50ghkj0437i86586108g6344j1589h7g550g794737khi521j65g3l4j28764kkkg2988l948525j7h5101j82g94l55kj6k2j4296i776l5ik348kjh023ik2821563k38j1ilh35995hl8lkhk69h3j2jh3i52h0524983l1j04866g79jl0j619545jg586jki7777477713iiil5801l3j23ih7126k74ij258693l0723j5662l6374k84g4k4j4i47gi07iihi2kg4kl4lk07jk33j0ji6h5445g2458l94g44lg9012gi49l4g6806hg93j7h9j3gk130j86j67kh8gg4h96l88gl34888ig325li5lg64k768i8l7hh4388645ll71h61ki6gili2714642i26424l6jil2hh2l3l3720j903kk8h459386743257ihj81884354j6h13096j41k8035gi5g7k1kh505l29hg4j7g6806l50ig79ljjiijk64325j586742ii84kgg81h6g8i20j58ij8247g244569l0198i3679290j872k1853hh1k473737k2jkg749h67h3h604h98074092k2i4968932i8l6613g0jj14h7kiji55278h5863l64gkgh7g9g35052ikg44g4434j8iijj3400g53074j9i542lg3i244gg2757l344l4liji40lhj3li2h66j6240k306h4g9k3j875kl16243i671ij3354195l342jghlh8lii5jk0g2580lj5766h6h1h2g5i5h7741jk626h9761841l0337l20095gk2i47653gh648l2i4340905ig7lk83gl39l21802jgjhi82jlj5894h99421h4kli6jjll52gi0k3328346h6891ijj66kl296hi4i3h6l2ghkii8185157lg6g8j856l371jh228732l1lk1i16l1j750898h3136656k1j1kgk26ji6ilg902j44llj309il4j6hi7h494l230l5i185k91l81638k89596ih2lj77hl944912986jll7hli7ilj1i7g97k2976hi1lh586540948g4lh6i9228409442h08659ik449760i21j9gjhk39j8jl30h9l5i0h89i2k648731khikk2i2992j930136g923031j1hgj8lj0099kk366i6094345k39365k17lh60798g6h5ki7jli58k923lj0h0943hh1300lli38kgg8k00j90k03ll8hjk92kk94i51g753j49788097gl1j7l608i910l6678k30h3i7k70gg7553g390gji07h522gi5g52j32i097h1959gikk1i19i44k2jj1645843jh0ghhgjl8j5ggh5g536l066i62ij38843k8j0h37h2g89gk616094gl2k69k4h3jkh2h633l4k391l1k8gj40k483hl88li8j96778h3k79169i0lg8441liil6l61584706k01k1276i14g4jl5glg017li3842k2554h1303i92l484j4l94lljk712i4h4g6037582ii839780k432hjig906k371k506j9g0h619420h6941g31hi41k4g24ji83h8493933ji94k8j13844802jg9052g0kk8k5g4lkh15jk87913065h876lk88k5g6kk803h146288h6291lgi65kij912j8g7461736j093lihi47957283jgh761198g8j45916269h6998kikl676j0h13h96j9j6203gggj97077jk097l4gl21540ljk6jk5l215kj87lgj49h0jj1g7j87826h33jj102ii97i593388k628hg7h1j7ik351i0g341i01608513844hik1025h0709gjl10h4998i41hgll07h611461jk8i71520lh526k96i3gjl165j16784709g0318jk1316hhik6276j2h29077l75g527j992i6k8jjjlj733j8lg2j67h188i8gi80j516934h9i9ig4i6l4ilj05gl6298g9i906k07355j156i0gli158h0gl749h96811gl63i3gh0hk201505hk021gkk634hg9ij12887gl4i1kkh470637l5llghkj7j62g32hjhl76jk2hg3j44l7i0j9j21820ji308h8kl90k908gk4355651679h45k7i2g6041ll3hl531g5i2l681ik606l5k75177l52l424g54i4g2jlj24k754469j1124i7gk5l88j11iik84hk09h58228542l3h8k8224l0g848jj00386h3lh99h91h97lil8i7h1k0g78j65g82k72jg95h15jgi7j7jjl8gh418g58h210ghl29h5i464hkhggij73g2li35090j3jlkj448lgjh3h55490gg9h13g72h95j061h2i56j14402ig83g9009j7gh7h46j639ij16ig38hl87hgg785h43lgk955979l01l9i48473l349hji56j431711410g0243j2736l702g48ggj671gj52l4l9il247h94h562471h98ih7g0k2kgk4k644k30i0512igglk55j83494k58i748lk5gl2gh9gg5l50jjh54j2l62igh23l0k3hh110509715k95l26950k2h47854h54603i054h467hkggl4kl08956h3710h9","jar": "http://cdn.qiaoji8.com/fix260410.jar;md5;1069df603996411da45b18bc718959ca"},
+	{"key":"巧技二","name":"巧技┃仅搜索","jar":"https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/refs/heads/main/jar/fix250711.jar","type":3,"api":"csp_qiao2","playerType":2,"ext":"7lj763gg402i79425739i7jghj118797l4hj840gi18633331l4708g2h7145403549g44l8ii56i187681hkjj3hhgh1ih3l32j250lk1k786lj20j468hk3hli4l46gig4i3g7g2722328j0136h01i7g5183k22k7gg3i72hk81gl8k9839kl7i0707"},	
+
+        {
+            "key": "天天",
+            "name": "🚀秒播┃1080P",
+            "type": 3,
+            "quickSearch": 1,
+            "searchable": 1,
+            "api": "csp_AppRJ",
+            "timeout": 12,
+            "ext": "vxw35/hHSj07Q+maxQzOVMq1rjRCOTXpUCx8iKu5jIg="
+        },
+        {
+            "key": "csp_Wwys",
+            "name": "🌾农民┃1080P",
+            "type": 3,
+            "api": "csp_Wwys",
+            "timeout": 12,
+            "ext": "https://vip.wwgz.cn:5200"
+        },
+        {
+            "key": "csp_Music",
+            "name": "🎵音乐┃在线",
+            "type": 3,
+            "api": "csp_Music",
+            "quickSearch": 0,
+            "timeout": 12,
+            "searchable": 0,
+            "style": {
+                "type": "rect",
+                "ratio": 1.333
+            },
+            "ext": ""
+        },
+        {
+            "key": "88看球",
+            "name": "🏀体育┃1080P",
+            "type": 3,
+            "api": "csp_Kanqiu",
+            "style": {
+                "type": "rect",
+                "ratio": 1.333
+            },
+            "searchable": 0,
+            "quickSearch": 0,
+            "filterable": 1,
+            "timeout": 12,
+            "order_num": 0,
+            "changeable": 0
+        },
+        {
+            "key": "csp_Bili",
+            "name": "📺哔哩┃哔哩",
+            "type": 3,
+            "api": "csp_Bili",
+            "quickSearch": 0,
+            "timeout": 12,
+            "searchable": 1,
+            "ext": {
+                "json": "https://cik07-cos.7moor-fs2.com/im/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/50e4430df0b5644f/bilibil.json",
+                "cookie": ""
+            },
+            "style": {
+                "type": "rect",
+                "ratio": 1.333
+            }
+        },
+        {
+            "key": "葫芦",
+            "name": "🪽葫芦┃1080P",
+            "type": 3,
+            "api": "csp_AppGet",
+            "ext": "https://mobile-1251126973.cos.ap-guangzhou.myqcloud.com/maccos_config.txt|8R33VQSxzmCaHpEX|V122|okhttp/3.10.0"
+        },
+        {
+            "key": "新首发",
+            "name": "👻标清┃1080P",
+            "type": 3,
+            "api": "csp_AppGet",
+            "ext": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/600.txt|FTgP4Gq8zPiqbt7M|V122|okhttp/3.10.0"
+        },
+        {
+            "key": "四叶草",
+            "name": "🍀幸运┃1080P",
+            "type": 3,
+            "api": "csp_AppGet",
+            "ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/sss.txt|wNCwbXzr0Bm6cS2C|V122|okhttp/3.10.0"
+        },
+        {
+            "key": "猪猪",
+            "name": "🐷猪猪┃1080P",
+            "type": 3,
+            "api": "csp_AppGet",
+            "ext": "https://qj4.catbb.xyz|eecbio48dsq13kkk|V122|okhttp/3.10.0"
+        },
+        {
+            "key": "爱营",
+            "name": "💥爱影┃1080P",
+            "type": 3,
+            "searchable": 1,
+            "changeable": 1,
+            "api": "csp_AppGet",
+            "ext": "https://aysappto.oss-cn-chengdu.aliyuncs.com/q23.txt|nzEqOgYk3QzHuEP8|V122|okhttp/3.10.0"
+        },
+        {
+            "key": "3QQQ",
+            "name": "🍅大鹅┃1080P",
+            "type": 3,
+            "timeout": 15,
+            "api": "csp_App3Q"
+        },
+        {
+            "key": "独播库",
+            "name": "🌳独播┃1080P",
+            "type": 3,
+            "api": "./api/2042044022836473856#dbokutv.js"
+        },
+        {
+            "key": "csp_SaoHuo",
+            "name": "🔥火火┃1080P",
+            "type": 3,
+            "api": "csp_SaoHuo"
+        },
+        {
+            "key": "麦田",
+            "name": "🌾麦田┃1080P",
+            "type": 3,
+            "api": "csp_AppV6",
+            "ext": "http://172.247.227.203:25321/mtys.php"
+        },
+        {
+            "key": "听心99",
+            "name": "🦉欣欣┃1080P",
+            "type": 3,
+            "api": "csp_App99",
+            "ext": {
+                "host": "https://api.12321app.com",
+                "LoginPath": "/app/log",
+                "version": "0b4328287a5d953e",
+                "appkey": "a0a18659a9977a47e53442cd084b536c",
+                "versionName": "2.8.1",
+                "name": "听心视频",
+                "package": "com.iksp.adsys.jjsp",
+                "buildNumber": "2001",
+                "buildSignature": "03DD38CE4C3D62D0F0DEFACC06768D14EB382C7BD77A05B2EBF4D66E154A0D47"
+            }
+        },
+        {
+            "key": "追番达人99",
+            "name": "🐎追番┃1080P",
+            "type": 3,
+            "api": "csp_App99",
+            "ext": {
+                "host": "https://app2026.ystva.com",
+                "LoginPath": "/app/log",
+                "version": "f341a4e57976d59e",
+                "appkey": "f3a8a193a7dc782cbc294159fcd91faf",
+                "versionName": "6.1.1",
+                "name": "追番达人",
+                "package": "com.yuaiweiwu.aixue.zfdr",
+                "buildNumber": "2001",
+                "buildSignature": "03DD38CE4C3D62D0F0DEFACC06768D14EB382C7BD77A05B2EBF4D66E154A0D47"
+            }
+        },
+        {
+            "key": "大师兄",
+            "name": "💨八戒┃1080P",
+            "type": 3,
+            "jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/refs/heads/main/XiaoMi/jars/大师兄.jar",
+            "api": "csp_AppV6",
+            "playerType": 2,
+            "ext": "7lj763gg0939790h44298182lk5j9k99k2g4ih53jl9i376l514k16hilj0443400h9k4jgh8312j1912818glikl7lh1jk9k4222k1kg696igkk32ig6lhj3kl50j08lkl6j0h6gi7k2j31jj0k7i1784l25g757hhkl42i7jg68illihj867l82g53532j62i92kljhj5llh498k24796l57j55ji0ji2g22i501jl541j9j4i68i5j602744l10413k457hl80l91j5l44139j23g64h27k08l5509h202gl84338hi17082hkj5746g298j640i002jk1265h745j289303h6i6j6j15jgkg15485h8g935hk83g9g7j661l4i557jl56h6l0h40i5j9hkiig7066523l2h24gj9k1083g6l2gihh2j5hhgkgij04j8900jhg4l6731hkhij7kk2i594536563674gki85li59jhk79067964197h5k7k2641h03l45074jkkklhik123407146l1i0jk90k1hgl151076ig7i4gi0858h62j37lh8l4hl519ghi7g04h2h900jlj7ll333i736549624gjk8k508g9499gj3jj7050jjhgh4i57326j83301i0kkl88040ih52gj8j0gk0h4g5g7lh561k2gk6k7k56h01598ji23g27k3i17878j92k2gj1l5ih8h0jj73k94g9hl5g7h229i10g099k09l958h3hk18l72h1j43gg7177g4h7ll8987644383606klgh9h4ll42h7293k694kl20j539g6jl17ig655461138jgj7306i1296k3i03586k6l32j5hlik4051187741218271j8j4g3i1h6719877l10k1ijl220i8hlil3j3g129ll3k2i5164lkg12k253kk1h8j5l0gki49jg25hlii704l5ih74439hlj9jih5ki53242ijgh6359i8i5j4h2j2i4581l244j4ij728490hk0k34542916i2lig57836gg7kji3l160234i24hik5g18h790488748j680k5i0l885lj66kjk78j2i57i5021g283ik9g38g62259h1lgi811ihki506k5934g7h737hg9360lll98l4j8i049903l1354lg00019g0934h005h8jjkl60j91k7j74i96h8h26hk59i653209lgj07g1g298k48jllgh00l4i742gi72l27038157gji9j32gh0k5672167k2588h31967l3867g50k503ik403781ki72j47hh4363l0708k4g961k4hl8g4j35ilk143h3424010i165lj612h50k68l61ghl9h80kh874k14ggk2ilg018hi5l1g34262196lkl45ih981jkl42271l4232k93hk8ih3g814i6h63h0g64l300i42il1g0454921j12h4844ii714ih71lg172326009812833h62kj8009kijk5hhg763031235l45h78614l7h9k579h6lj290i98851gll70024834hgj2lg5hk3l905i346gij11kl5j9i7h5j5k12hl061l488k061564g398i2150h9j343901865h7567g874i1gghl5ihg8il8hh0650h6308l2i5053997g8g12g16l3l7h5lhlji71i1i23h0ljl1h14688h7g13987h548h33k34hi6h2i63h424jhl1kik26kl3h60662846j6j0749l8kh95018kl1971j5j5gjk9hg70542391j77hjj65l127627h6h8h0hi003i2hih6h0k9k878lj858k30iljgik0l9248jk25l4h701l6gllhkhi54g24g926jgj884266514056805k2h15hh442i3170ilik20h88i561k0682k04459i154i03ikglg6220i4jii1g32067il925g450k0i1241l3il2jjl6k186gjj53h611il59k650i4kjhi87i798hg6h01g306ig104145ig9h68i092ghhh59jig99j12383792452h44206glk62g67gj204hk874l5li8646g65i9085244i092g70ig9h8657kg0413466ii87k9i32hglh24hi2li7174735i520ik608ilg71292838j5k1h39271ghg5288g930lg6h75626l71h8h5g011k9l9lgk691i04166h7996g452kij4l4l72881k6kl5701jl707hi415j8h3k67576966g2k94k03k0lj31995h2j26hi69jhjji162625l50j7790093hli0jjkh1ll804i3lhh40lk4k240kh48k0k16l544hg033k594gh0l93682l86h35i1i36klhgjg90lkl54746i2k63481h37hilj3ikig52h0j80k5gj6h879lk6g8ll6k616966h59h42l24h824ljj77g6l03kg260i80h2g2k123251j22jg36k5j14781i6197929il9j03k16h4l1i78693g45k64j0jl0k58hj8493h76gj2202470ig12lh2llj2l5k5541k4h506i3hij81lg9i037jgk22i2l3j12j6l394h51ii2ll0022j292h8036767i835k47071jl9illl2gli06524g66984902j6j1h5g788019hl4712032977h41l0k36073ig880g2jgklh26k736180591639h4k2gjk9gl2071h685923kl5363l5lj0ll91901g12kk29hll4280h9h51870j721516j6g66i379g203932726h42g927h19733k237492l8j0jh148gl95048l5524j4j0l2445130153i802169102i14g586h8g64j2lk28492169li3292877837108k7i9557h3jk31il2lklg494lgl4j91jig614216ki68i2j140l1jg03lk16lljg039h21kj313h8jk79h99j2g89j327i7h9052h9hj71721jg927340956k6jl4i7k0430"
+        },
+        {
+            "key": "荐片",
+            "name": "🧲荐片┃1080P",
+            "quickSearch": 0,
+            "changeable": "0",
+            "searchable": 1,
+            "timeout": 15,
+            "type": 3,
+            "api": "csp_Jianpian",
+            "style": {
+                "type": "rect",
+                "ratio": 1.333
+            },
+            "ext": "https://api.ztcgi.com"
+        },
+        {
+            "key": "Huya",
+            "name": "🎮虎牙┃1080P",
+            "type": 3,
+            "jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/refs/heads/main/XiaoMi/jars/大师兄.jar",
+            "api": "csp_Huya",
+            "searchable": 0,
+            "quickSearch": 0,
+            "changeable": 0,
+            "filterable": 1,
+            "timeout": 10,
+            "style": {
+                "type": "rect",
+                "ratio": 1.433
+            }
+        },
+        {
+            "key": "Douyu",
+            "name": "🎮斗鱼┃1080P",
+            "type": 3,
+            "api": "csp_Douyu",
+            "jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/refs/heads/main/XiaoMi/jars/大师兄.jar",
+            "searchable": 0,
+            "quickSearch": 0,
+            "changeable": 0,
+            "filterable": 1,
+            "timeout": 10,
+            "style": {
+                "type": "rect",
+                "ratio": 1.433
+            }
+        },
+        {
+            "key": "csp_duanju",
+            "name": "🔥短剧┃1080P",
+            "type": 3,
+            "timeout": 12,
+            "api": "csp_DuanJu"
+        },
+        {
+            "key": "csp_Gz360",
+            "name": "🍉瓜子┃1080P",
+            "type": 3,
+            "timeout": 12,
+            "searchable": 1,
+            "quickSearch": 0,
+            "api": "csp_Gz360"
+        },
+        {
+            "key": "csp_Jpys",
+            "name": "🥇金牌┃1080P",
+            "type": 3,
+            "timeout": 12,
+            "searchable": 1,
+            "quickSearch": 0,
+            "api": "csp_Jpys",
+            "ext": "https://ghw9zwp5.com/"
+        },
+    { "key": "下饭", "name": "🍙下饭┃多线┃纯净","jar": "https://tv.leetvbox.qzz.io/tvbox/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/spider.jar", "type": 3, "api": "csp_AppSxGuard", "searchable": 1, "quickSearch": 1, "filterable": 1, "ext": "rfOX1voDIQhH8epBwpmIsuStuSyZxtH332ksdImjS1xHcE9fpWVy8fNjc+8DhNI67j3SJZRGjnM=" },
+    { "key": "糯米", "name": "🍓糯米┃秒播┃纯净","jar": "https://tv.leetvbox.qzz.io/tvbox/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/spider.jar", "type": 3, "api": "csp_NmyswvGuard", "timeout": 15, "searchable": 1, "quickSearch": 1, "changeable": 1 },
+    { "key": "文采", "name": "💮文采┃秒播┃纯净","jar": "https://tv.leetvbox.qzz.io/tvbox/kimwang1978/tvbox/main/%E6%91%B8%E9%B1%BC%E5%84%BF/spider.jar","type": 3, "api": "csp_JpysGuard", "playerType": 2, "searchable": 1, "quickSearch": 1, "changeable": 1 },
+	{ "key": "py_OleVod", "name": "✨🍉欧乐影院(T4)✨","jar": "https://tv.leetvbox.qzz.io/tvbox/yuanwangokk-1/TV-BOX/main/PG/pg.jar",  "type": 4, "api": "https://py.doube.eu.org/spider?site=OleVod", "searchable": 1, "quickSearch": 0, "filterable": 0, "changeable": 0 },
+	
+	{ "key": "d'd", "name": "修罗|弹幕", "type": 3, "api": "csp_HBPQ", "ext": { "数组": "card card-sm card-link&&</div>", "图片": "src=\"&&\"", "标题": "mb-0 card-title text-truncate\">&&<", "副标题": "start-0 text-red-fg\">&&</span>", "链接": "href=\"&&\"", "简介": "剧情简介：&&\"", "线路标题": "磁力+>&&<", "播放数组": "download-list&&</tbody>", "播放列表": "<tr&&</tr>", "播放标题": "text-muted\">&&</td>[不包含:网盘下载]", "跳转播放链接": "href=\"&&\"", "分类url": "https://v.xlys.ltd.ua/s/all/{catePg}?type={cateId};;d0", "分类": "电影$0#电视剧$1" } },
+    { "key": "苹果", "name": "苹果|弹幕","jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar", "type": 3, "api": "csp_HBPguo" },
+    { "key": "天天", "name": "天天|弹幕","jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar", "type": 3, "api": "csp_HBtiantian", "ext": "http://tt.ysdqjs.cn/" },
+    {"key": "瓜子影视","name": "瓜子｜影视","jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar","type": 3,"api": "csp_Gz360","searchable": 1,"quickSearch": 1,"filterable": 1},	
+    {"key":"csp_Gz360","name":"🍉瓜子","jar": "https://tv.leetvbox.qzz.io/tvbox/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1},
+        {
+            "key": "csp_MiSou",
+            "name": "🔍米搜┃盘搜",
+            "type": 3,
+            "timeout": 12,
+            "searchable": 1,
+            "quickSearch": 0,
+            "api": "csp_MiSou"
+        },
+        {
+            "key": "csp_TingBook",
+            "name": "📖听书┃娱乐",
+            "type": 3,
+            "api": "csp_TingBook"
+        },
+        {
+            "key": "Aid",
+            "name": "🚑 急救┃知识",
+            "type": 3,
+            "api": "csp_FirstAid",
+            "searchable": 0,
+            "quickSearch": 0,
+            "style": {
+                "type": "rect",
+                "ratio": 3.8
+            }
+        },
+        {
+            "key": "push_agent",
+            "name": "📤 推送┃播放",
+            "type": 3,
+            "filterable": 0,
+            "changeable": 0,
+            "api": "csp_Push",
+            "searchable": 1,
+            "quickSearch": 1,
+            "ext": ""
+        }
+    ],
+    "parses": [
+        {
+            "name": "📦 Json聚合",
+            "type": 3,
+            "url": "Demo"
+        },
+        {
+            "name": "🎬 影视聚合",
+            "type": 3,
+            "url": "影视"
+        },
+        {
+            "name": "🐮 牛牛解析",
+            "type": 1,
+            "url": "",
+            "ext": {
+                "flag": [
+                    "QD4K",
+                    "iyf",
+                    "duanju",
+                    "gzcj",
+                    "GTV",
+                    "GZYS",
+                    "weggz",
+                    "Ace"
+                ],
+                "header": {
+                    "User-Agent": "okhttp/4.9.1"
+                }
+            }
+        },
+        {
+            "name": "🌃 夜幕解析",
+            "type": 0,
+            "url": ""
+        }
+    ],
+    "rules": [
+        {
+            "name": "农民",
+            "hosts": [
+                "toutiaovod.com"
+            ],
+            "regex": [
+                "video/tos/cn"
+            ]
+        },
+        {
+            "name": "火山",
+            "hosts": [
+                "huoshan.com"
+            ],
+            "regex": [
+                "item_id="
+            ]
+        },
+        {
+            "name": "抖音",
+            "hosts": [
+                "douyin.com"
+            ],
+            "regex": [
+                "is_play_url="
+            ]
+        },
+        {
+            "name": "磁力广告",
+            "hosts": [
+                "magnet"
+            ],
+            "regex": [
+                "更多",
+                "请访问",
+                "example",
+                "社 區",
+                "x u u",
+                "直 播",
+                "更 新",
+                "社 区",
+                "有趣",
+                "有 趣",
+                "英皇体育",
+                "全中文AV在线",
+                "澳门皇冠赌场",
+                "哥哥快来",
+                "美女荷官",
+                "裸聊",
+                "新片首发",
+                "UUE29"
+            ]
+        },
+        {
+            "name": "饭团点击",
+            "hosts": [
+                "dadagui",
+                "freeok",
+                "dadagui"
+            ],
+            "script": [
+                "document.querySelector(\"#playleftiframe\").contentWindow.document.querySelector(\"#start\").click();"
+            ]
+        },
+        {
+            "name": "毛驴点击",
+            "hosts": [
+                "www.maolvys.com"
+            ],
+            "script": [
+                "document.getElementsByClassName('swal-buttonswal-button--confirm')[0].click()"
+            ]
+        }
+    ]
+}
