@@ -10,6 +10,16 @@
         }
     ],
     "sites": [
+		{
+            "key": "豆豆",
+            "name": "🎬豆瓣┃精选 仅供测试",
+            "type": 3,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0,
+            "api": "csp_Douban",
+            "searchable": 0
+        },
         {
             "key": "config",
             "name": "⚙️Cookie┃配置 贩卖后果自负",
