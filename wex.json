@@ -59,7 +59,7 @@
     {"key":"苹果","name":"苹果|弹幕","type":3,"api":"csp_HBPguo","jar":"https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar"},
     {"key":"天天","name":"天天|弹幕","type":3,"api":"csp_HBtiantian","ext":"http://tt.ysdqjs.cn/","jar":"https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar"},
     {"key":"瓜子影视","name":"瓜子｜影视","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar"},
-    {"key":"csp_Gz360","name":"🍉瓜子","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar"} 
+    {"key":"csp_Gz360","name":"🍉瓜子","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://daili.korice.eu.org/https://raw.githubusercontent.com/leexuben/BINGO-TV/main/jar/%E6%BD%87%E6%B4%92.jar"},
     
     {
       "key": "二小",
