@@ -1015,7 +1015,7 @@
 		   {
         "name": "iptvs-app",
         "type": 0,
-        "url": "https://iptvs.dxcp.qzz.io",
+        "url": "https://iptvs.dxcp.qzz.io/txt",
         "playerType": 2
     },   
     {
