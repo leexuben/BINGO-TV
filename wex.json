@@ -1006,6 +1006,12 @@
 	"static-mozai.4gtv.tv"
   ],
   "lives": [
+	   {
+        "name": "migu",
+        "type": 0,
+        "url": "https://migu.dxcp.qzz.io",
+        "playerType": 2
+    },  
     {
         "name": "Kimentanm",
         "type": 0,
