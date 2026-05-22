@@ -1012,6 +1012,12 @@
         "url": "https://migu.dxcp.qzz.io",
         "playerType": 2
     },  
+		   {
+        "name": "iptvs-app",
+        "type": 0,
+        "url": "https://iptvs.dxcp.qzz.io",
+        "playerType": 2
+    },   
     {
         "name": "Kimentanm",
         "type": 0,
