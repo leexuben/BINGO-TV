@@ -14,16 +14,6 @@
       "filterable": 0,
       "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"
     },
-	{
-      "key": "Doubana",
-      "name": "🐮【更新日期:20260518】🐮",
-      "type": 3,
-      "api": "csp_NewDouBanGuard",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0,
-      "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"
-    },
     {
       "key": "Doubana",
       "name": "⬇️【网盘类先扫码】⬇️",
@@ -1017,19 +1007,6 @@
         "type": 0,
         "url": "https://ip.dxcp.qzz.io/sub?hc24SUK5=txt",
         "playerType": 2
-    },   
-    {
-        "name": "Kimentanm",
-        "type": 0,
-        "url": "https://gh.llkk.cc/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-        "playerType": 2
-    },
-    {
-      "name": "综合直播",
-      "type": 0,
-      "playerType": 2,
-      "url": "https://ds65.tv1288.xyz",
-      "ua": "bingcha/1.1 (mianfeifenxiang) "
     }
   ],
   "headers": [
