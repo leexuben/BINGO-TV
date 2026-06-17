@@ -1001,13 +1001,6 @@
         "type": 0,
         "url": "https://migu.dxcp.qzz.io",
         "playerType": 2
-    },  
-		   {
-        "name": "iptvs-app",
-        "type": 0,
-        "url": "https://ip.dxcp.qzz.io/sub?hc24SUK5=txt",
-		"playerType":1,
-		"ua":"okhttp/3.15"	   
     }
   ],
   "headers": [
