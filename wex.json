@@ -996,16 +996,17 @@
 	"static-mozai.4gtv.tv"
   ],
   "lives": [
+	  	    {
+        "name": "tv",
+        "type": 0,
+        "url": "https://t.dxcp.qzz.io/sub?123456=txt",
+        "playerType": 2
+    },
+	  
 	   {
         "name": "migu",
         "type": 0,
         "url": "https://migu.dxcp.qzz.io",
-        "playerType": 2
-    },
-	    {
-        "name": "tv",
-        "type": 0,
-        "url": "https://t.dxcp.qzz.io/sub?123456=txt",
         "playerType": 2
     }
   ],
