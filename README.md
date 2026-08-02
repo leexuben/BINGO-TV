@@ -15,7 +15,263 @@
 所有直接或间接使用本仓库内容的个人和组织，应 24 小时内完成学习和研究，并及时删除本仓库内容。如对本仓库内容的功能有需求，应自行开发相关功能。所有基于本仓库内容的源代码，进行的任何修改，为其他个人或组织的自发行为，与本仓库内容没有任何直接或间接的关系，所造成的一切后果亦与本仓库内容和本仓库管理者无关 :point_left:
 
 # 以上为互联网流传资源，不保证内容的真实性和可靠性。本页面只是收集自用请勿宣传。
+最新大佬们的接口，
+本公众号的主接口： 
+                            http://枫斗.top/tv          激活码：5678
+                            http://枫斗.top/tv         激活码：5678
+                            http://枫斗.top/tv           激活码：5678
+ 
+      有提示需要激活码的就输入，无提示就不用搭理！
 
+注意！注意！
+有的大佬接口做了验证，非原版壳子会闪退，处理方法就是换其他接口使用。
+所有接口没有一一测试，自行测试接口
+
+以下是网络上的大佬的接口，自行测试，
+所有接口皆是搬运的，如有侵权，联系我第一时间删除！
+
+饭太硬接口
+
+http://www.饭太硬.cc/tv
+http://www.饭太硬.net/tv
+
+http://fty.xxooo.cf/tv
+http://www.饭太硬.art/tv
+http://fty.888484.xyz/tv
+http://fty.333232.xyz/tv
+
+
+
+肥猫接口
+
+http://肥猫.net/
+
+http://hello.肥猫.net
+
+http://肥猫.net/tv
+
+https://9877.kstore.space/ONE/one.json
+
+
+
+摸鱼接口
+
+http://我不是.摸鱼儿.top
+
+http://www.小不点.com
+
+
+
+王二小放牛娃接口
+
+https://9280.kstore.vip/newwex.json
+
+http://tvbox.王二小放牛娃.top
+
+http://tv.999888987.xyz/
+
+http://tv.999888123.xyz/
+
+https://9280.kstore.vip/wex.json
+
+https://www.iyouhun.com/tv/wex
+
+http://tvbox.xn--4kq62z5rby2qupq9ub.top
+
+
+
+欧歌接口
+
+https://xn--sdds-rp5imh.v.nxog.top/apitv.php?id=3
+
+
+
+https://xn--54qz74d.u.xn--dkw.xn--6qq986b3xl/apib.php?id=2
+
+
+
+https://xn--i8sz35d1yr.u.nxog.top/apib.php?id=3
+
+
+
+https://xn--z7x900a.e.nxog.top/apib.php?id=4
+
+
+
+凯速地址
+
+https://6800.kstore.vip/fish.json
+
+
+
+小盒子4K接口
+
+http://xhztv.top/4k.json
+
+
+
+二月红接口
+
+https://700sjro44343.vicp.fun/eggp/0211/tv.json
+
+菜妮丝接口
+
+https://tv.菜妮丝.top
+
+
+
+
+宝盒接口
+
+https://宝盒接口.top
+
+潇洒接口https://qist.wyfc.qzz.io/xiaosa/api.json
+
+12.苍蓝
+http://xn--6orr3pi6g9uu.top
+
+
+
+catbox接口
+
+https://catbox.n13.club/jk/t4.json
+
+影视仓接口
+
+http://影视仓.com/
+
+
+
+UUCCC接口
+http://xn--5mqx81b535a.com
+
+
+
+日后接口
+
+http://rihou.cc:555/nzk/nzk0722.json
+
+ 
+
+真心接口
+
+https://cnb.cool/fish2018/zx/-/git/raw/master/FongMi.json
+
+  
+
+      传说接口
+
+      https://chuanshuo.77blog.cn/tv.json
+
+    
+
+   
+
+蓝天接口
+
+      https://gitee.com/lukei7/lib/raw/Luck/%E8%87%AA%E5%BB%BA.json
+
+
+
+  毒盒接口
+
+   https://xn--8owq8u.com/tv/
+
+     小马接口
+
+     https://szyyds.cn/tv/x.json
+
+      蜗牛接口
+
+     https://tv.xn--11x555b.top/svip
+
+   
+
+ 朱雀接口
+
+  https://gitee.com/yiwu369/6758/raw/master/朱雀/api.json
+
+    动漫接口
+
+   https://www.yingm.cc/dm/dm.json
+
+     茄子接口
+
+      https://700sjro44343.vicp.fun/eggp/qzku/tv.json
+
+
+
+ 肥猫接口
+
+http://肥猫.com
+
+    小米接口
+
+ http://miqk.cc/小米/DEMO.json
+
+vox 接口
+
+ https://code.onedev.io/vox/~raw/master/demo.json
+
+    L佬 接口
+
+     https://android.lushunming.qzz.io/json/index.json
+
+   "分享接口
+
+     http://hucongrong.web3v.work/风水/fxz/fxz.json
+
+
+
+ 喵影接口
+
+      https://bitbucket.org/xduo/duoapi/raw/master/xpg.json
+
+  
+
+   脑斧接口
+
+ https://6492.kstore.space/xnf/xnf.json
+
+
+
+   心魔接口
+
+https://fastgit.cc/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json
+
+ 雷蒙接口
+
+https://fastgit.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/lemj.json
+
+
+
+道长接口
+
+https://gitlab.com/duomv/dzhipy/-/raw/main/index.json
+
+
+
+俊佬接口
+
+ http://home.jundie.top:81/top98.json
+
+    
+
+  
+
+
+
+
+
+图片
+
+点点赞转发转发，有任何问题群里@群主
+
+
+
+
+
+暂无评论
 ## OK版影视APP（标准版与Pro）
 夸克：https://pan.quark.cn/s/d2d555b3b54a
 
